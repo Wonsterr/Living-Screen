@@ -2134,6 +2134,8 @@ main {
 .portfolio-header {
     text-align: center;
     margin-bottom: 50px;
+
+    transform: translateY(60px);
 }
 
 /* Controla a organização e a aparência dos conteúdos exibidos na seção de portfólio. */
@@ -2179,6 +2181,7 @@ main {
     max-width: 1200px;
 
     margin: auto;
+    margin-top: 80px;
 }
 
 /* Controla a organização e a aparência dos conteúdos exibidos na seção de portfólio. */
