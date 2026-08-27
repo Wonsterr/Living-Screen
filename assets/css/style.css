@@ -2122,11 +2122,14 @@ main {
     width: 100%;
     min-height: 100vh;
 
-    padding: 100px 8%;
+    padding: 160px 8% 100px;
 
-    background: #f4fbff;
+    background-image: url("../img/fundo\ pagina\ portifolio.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
-
 /* Controla a organização e a aparência dos conteúdos exibidos na seção de portfólio. */
 .portfolio-header {
     text-align: center;
