@@ -460,7 +460,7 @@ main {
     max-width: 650px;
     color: white;
 
-    transform: translateX(-100px);
+    transform: translate(50px, -70px);
 }
 
 
@@ -699,8 +699,8 @@ main {
 .hero-services {
     position: absolute;
 
-    left: 50%;
-    bottom: 30px;
+    left: 53%;
+    bottom: -240px;
 
     transform: translateX(-50%);
 
@@ -947,9 +947,9 @@ main {
 
     right: 300px;
 
-    top: 52%;
+    top: 46%;
 
-    width: 550px;
+    width: 750px;
 
     height: auto;
 
