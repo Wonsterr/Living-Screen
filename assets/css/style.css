@@ -2122,6 +2122,15 @@ main {
    SEÇÃO
 ========================================================= */
 
+/* =========================================================
+   PORTFÓLIO - FRUTIGER AERO | ANOS 2000
+========================================================= */
+
+
+/* =========================================================
+   SEÇÃO
+========================================================= */
+
 #portfolio {
 
     width: 100%;
@@ -2136,7 +2145,6 @@ main {
 }
 
 
-
 /* =========================================================
    CABEÇALHO
 ========================================================= */
@@ -2147,7 +2155,7 @@ main {
 
     text-align: center;
 
-    margin-bottom: 35px;
+    margin-bottom: 40px;
 
     position: relative;
 
@@ -2156,8 +2164,9 @@ main {
 }
 
 
-
-/* SELO */
+/* =========================================================
+   SELO "NOSSO TRABALHO"
+========================================================= */
 
 .portfolio-header > span {
 
@@ -2165,41 +2174,42 @@ main {
 
     padding: 7px 18px;
 
-    border-radius: 30px;
+    border-radius: 20px;
 
     background:
         linear-gradient(
             180deg,
-            #ffffff,
-            #d8f5ff
+            #ffffff 0%,
+            #e9faff 45%,
+            #c7efff 100%
         );
 
-    border: 1px solid
-        rgba(255,255,255,.9);
+    border: 1px solid #ffffff;
 
-    color: #075ec8;
+    color: #0870bd;
 
     font-family: "Orbitron", sans-serif;
 
     font-size: 11px;
 
-    font-weight: 800;
+    font-weight: 700;
 
-    letter-spacing: 4px;
+    letter-spacing: 2px;
 
     box-shadow:
 
-        0 4px 15px
-        rgba(0,80,180,.20),
+        0 3px 8px
+        rgba(0, 55, 120, .25),
 
-        inset 0 2px 5px
-        rgba(255,255,255,.9);
+        inset 0 2px 3px
+        rgba(255,255,255,.95);
 
 }
 
 
-
-/* TÍTULO */
+/* =========================================================
+   TÍTULO
+========================================================= */
 
 .portfolio-header h2 {
 
@@ -2217,29 +2227,34 @@ main {
 
     text-shadow:
 
-        0 3px 10px
-        rgba(0,30,100,.55);
+        0 2px 3px
+        rgba(0, 50, 120, .65),
+
+        0 5px 12px
+        rgba(0, 60, 150, .25);
 
 }
 
 
-
-/* PALAVRA PROJETOS */
+/* =========================================================
+   PALAVRA "PROJETOS"
+========================================================= */
 
 .portfolio-header h2 strong {
 
-    color: #00c8ff;
+    color: #009bd8;
 
     text-shadow:
 
-        0 0 15px
-        rgba(0,210,255,.5);
+        0 2px 3px
+        rgba(0, 70, 120, .35);
 
 }
 
 
-
-/* LINHA DE BRILHO */
+/* =========================================================
+   LINHA ABAIXO DO TÍTULO
+========================================================= */
 
 .titulo-linha {
 
@@ -2255,36 +2270,38 @@ main {
         linear-gradient(
             90deg,
             transparent,
-            #00eaff,
+            #ffffff,
+            #7ddfff,
+            #ffffff,
             transparent
         );
 
     box-shadow:
 
-        0 0 10px
-        rgba(0,220,255,.8);
+        0 2px 5px
+        rgba(0, 90, 160, .35);
 
 }
 
 
-
-/* DESCRIÇÃO */
+/* =========================================================
+   DESCRIÇÃO
+========================================================= */
 
 .portfolio-header p {
 
     margin: 0;
 
-    color: #e9f9ff;
+    color: #eaf9ff;
 
     font-size: 15px;
 
     text-shadow:
 
-        0 2px 6px
-        rgba(0,30,100,.5);
+        0 2px 4px
+        rgba(0, 45, 110, .55);
 
 }
-
 
 
 /* =========================================================
@@ -2306,9 +2323,8 @@ main {
 }
 
 
-
 /* =========================================================
-   CARD
+   CARD PRINCIPAL
 ========================================================= */
 
 .portfolio-card {
@@ -2317,33 +2333,48 @@ main {
 
     overflow: hidden;
 
-    border-radius: 25px;
+    border-radius: 24px;
 
     background:
+
         linear-gradient(
-            145deg,
-            rgba(240,253,255,.98),
-            rgba(175,226,255,.90)
+            180deg,
+            rgba(255,255,255,.95),
+            rgba(220,245,255,.95)
         );
 
     border: 2px solid
-        rgba(255,255,255,.85);
+        rgba(255,255,255,.95);
 
     box-shadow:
 
-        0 25px 60px
-        rgba(0,35,120,.40),
+        0 15px 35px
+        rgba(0, 45, 120, .30),
 
-        0 0 35px
-        rgba(0,220,255,.25),
+        0 4px 10px
+        rgba(0, 90, 170, .15),
 
         inset 0 2px 5px
-        rgba(255,255,255,.9);
-
-    backdrop-filter: blur(10px);
+        rgba(255,255,255,.95);
 
 }
 
+
+/* =========================================================
+   BRILHO NO TOPO DO CARD
+========================================================= */
+
+.portfolio-card::before {
+
+    content: "";
+
+    display: block;
+
+    position: absolute;
+
+    pointer-events: none;
+
+}
 
 
 /* =========================================================
@@ -2362,20 +2393,56 @@ main {
 
     padding: 0 25px;
 
+    position: relative;
+
     background:
+
         linear-gradient(
             180deg,
-            rgba(225,249,255,.98),
-            rgba(175,225,255,.90)
+            #ffffff 0%,
+            #eefbff 45%,
+            #ccefff 100%
         );
 
     border-bottom:
 
         1px solid
-        rgba(255,255,255,.8);
+        rgba(120,200,235,.45);
 
 }
 
+
+/* =========================================================
+   REFLEXO DO TOPO
+========================================================= */
+
+.portfolio-top::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 1px;
+
+    left: 20px;
+
+    right: 20px;
+
+    height: 18px;
+
+    border-radius: 50%;
+
+    background:
+
+        linear-gradient(
+            180deg,
+            rgba(255,255,255,.85),
+            rgba(255,255,255,0)
+        );
+
+    pointer-events: none;
+
+}
 
 
 /* =========================================================
@@ -2393,12 +2460,15 @@ main {
 }
 
 
+/* =========================================================
+   TÍTULO DO PROJETO
+========================================================= */
 
 .portfolio-info h3 {
 
     margin: 0;
 
-    color: #123d72;
+    color: #164d7c;
 
     font-family: "Orbitron", sans-serif;
 
@@ -2409,12 +2479,15 @@ main {
 }
 
 
+/* =========================================================
+   CATEGORIA DO PROJETO
+========================================================= */
 
 .portfolio-info p {
 
     margin: 3px 0 0;
 
-    color: #0879d7;
+    color: #4b91b7;
 
     font-family: "Orbitron", sans-serif;
 
@@ -2423,8 +2496,9 @@ main {
 }
 
 
-
-/* ÍCONE */
+/* =========================================================
+   ÍCONE
+========================================================= */
 
 .portfolio-icon {
 
@@ -2443,25 +2517,25 @@ main {
     color: white;
 
     background:
+
         linear-gradient(
-            145deg,
-            #0879ff,
-            #0052c9
+            180deg,
+            #62c9f5,
+            #1684c7
         );
 
     border: 2px solid
-        rgba(255,255,255,.8);
+        #ffffff;
 
     box-shadow:
 
-        0 5px 15px
-        rgba(0,90,220,.35),
+        0 4px 9px
+        rgba(0,80,150,.25),
 
-        inset 0 2px 5px
-        rgba(255,255,255,.4);
+        inset 0 2px 4px
+        rgba(255,255,255,.75);
 
 }
-
 
 
 /* =========================================================
@@ -2474,71 +2548,82 @@ main {
 
     align-items: center;
 
-    gap: 11px;
+    gap: 10px;
 
 }
 
 
+/* =========================================================
+   BOLINHAS INDIVIDUAIS
+========================================================= */
 
 .portfolio-dots span {
 
-    width: 16px;
+    width: 14px;
 
-    height: 16px;
+    height: 14px;
 
     display: block;
 
     border-radius: 50%;
 
+    border: 1px solid
+        rgba(255,255,255,.8);
+
     box-shadow:
 
-        inset 0 2px 4px
-        rgba(255,255,255,.7),
+        inset 0 2px 3px
+        rgba(255,255,255,.8),
 
-        0 2px 8px
-        rgba(0,80,180,.20);
+        0 2px 4px
+        rgba(0,60,130,.20);
 
 }
 
 
+/* AZUL */
 
 .dot-azul {
 
     background:
+
         linear-gradient(
-            145deg,
-            #00dfff,
-            #008dce
+            180deg,
+            #71d8f5,
+            #1599ce
         );
 
 }
 
 
+/* ROXO */
 
 .dot-roxo {
 
     background:
+
         linear-gradient(
-            145deg,
-            #c62cff,
-            #7620bd
+            180deg,
+            #d58bea,
+            #a54ac1
         );
 
 }
 
 
+/* ROSA */
 
 .dot-rosa {
 
     background:
+
         linear-gradient(
-            145deg,
-            #ff5290,
-            #ec2365
+            180deg,
+            #ff9dbb,
+            #ee6288
         );
 
 }
-
 
 
 /* =========================================================
@@ -2558,7 +2643,6 @@ main {
 }
 
 
-
 /* =========================================================
    PREVIEW
 ========================================================= */
@@ -2572,11 +2656,19 @@ main {
     padding: 10px 0 10px 10px;
 
     background:
-        rgba(230,249,255,.55);
+
+        linear-gradient(
+            180deg,
+            #eafaff,
+            #d7f3ff
+        );
 
 }
 
 
+/* =========================================================
+   IFRAME
+========================================================= */
 
 .portfolio-preview iframe {
 
@@ -2592,8 +2684,12 @@ main {
 
     background: white;
 
-}
+    box-shadow:
 
+        inset 0 1px 4px
+        rgba(0,50,100,.12);
+
+}
 
 
 /* =========================================================
@@ -2611,22 +2707,25 @@ main {
     padding: 35px 30px;
 
     background:
+
         linear-gradient(
-            145deg,
-            rgba(225,248,255,.90),
-            rgba(155,218,255,.72)
+            180deg,
+            #effbff 0%,
+            #d8f4ff 50%,
+            #c3eaff 100%
         );
 
     border-left:
 
         1px solid
-        rgba(255,255,255,.75);
+        rgba(255,255,255,.85);
 
 }
 
 
-
-/* ÍCONE DECORATIVO */
+/* =========================================================
+   ÍCONE DECORATIVO
+========================================================= */
 
 .details-decoration {
 
@@ -2642,28 +2741,29 @@ main {
 
     margin-bottom: 10px;
 
-    color: #00aeea;
+    color: #28a8d5;
 
     font-size: 22px;
 
     filter:
 
         drop-shadow(
-            0 0 5px
-            rgba(0,200,255,.5)
+            0 2px 2px
+            rgba(0,80,130,.25)
         );
 
 }
 
 
-
-/* TÍTULO */
+/* =========================================================
+   TÍTULO
+========================================================= */
 
 .portfolio-details h3 {
 
     margin: 0;
 
-    color: #123d72;
+    color: #164d7c;
 
     font-family: "Orbitron", sans-serif;
 
@@ -2673,17 +2773,23 @@ main {
 
     line-height: 1.2;
 
+    text-shadow:
+
+        0 1px 2px
+        rgba(255,255,255,.8);
+
 }
 
 
-
-/* CATEGORIA */
+/* =========================================================
+   CATEGORIA
+========================================================= */
 
 .details-category {
 
     margin-top: 8px;
 
-    color: #008bd0;
+    color: #1689c0;
 
     font-size: 12px;
 
@@ -2692,14 +2798,15 @@ main {
 }
 
 
-
-/* DESCRIÇÃO */
+/* =========================================================
+   DESCRIÇÃO
+========================================================= */
 
 .details-description {
 
     margin: 20px 0 0;
 
-    color: #214d70;
+    color: #285675;
 
     font-size: 12px;
 
@@ -2708,8 +2815,9 @@ main {
 }
 
 
-
-/* LINHA */
+/* =========================================================
+   LINHA
+========================================================= */
 
 .details-line {
 
@@ -2720,14 +2828,14 @@ main {
     margin: 17px 0;
 
     background:
+
         linear-gradient(
             90deg,
-            rgba(0,140,220,.35),
+            rgba(80,170,210,.45),
             transparent
         );
 
 }
-
 
 
 /* =========================================================
@@ -2751,7 +2859,6 @@ main {
 }
 
 
-
 .details-list li {
 
     display: flex;
@@ -2760,22 +2867,24 @@ main {
 
     gap: 8px;
 
-    color: #176bc0;
+    color: #2475a4;
 
     font-size: 11px;
 
 }
 
 
+/* =========================================================
+   CHECK
+========================================================= */
 
 .details-list i {
 
-    color: #087cff;
+    color: #168bd0;
 
     font-size: 11px;
 
 }
-
 
 
 /* =========================================================
@@ -2792,31 +2901,33 @@ main {
 
     gap: 10px;
 
-    padding: 14px 20px;
+    padding: 13px 20px;
 
-    border-radius: 30px;
+    border-radius: 22px;
 
-    color: white;
+    color: #ffffff;
 
     background:
+
         linear-gradient(
-            135deg,
-            #006cff,
-            #00b9f5
+            180deg,
+            #49b9e8 0%,
+            #1887ca 48%,
+            #0873b7 100%
         );
 
     border:
 
         1px solid
-        rgba(255,255,255,.45);
+        rgba(255,255,255,.85);
 
     box-shadow:
 
-        0 8px 20px
-        rgba(0,100,255,.35),
+        0 5px 10px
+        rgba(0,70,130,.25),
 
-        inset 0 2px 5px
-        rgba(255,255,255,.35);
+        inset 0 2px 4px
+        rgba(255,255,255,.55);
 
     text-decoration: none;
 
@@ -2826,43 +2937,59 @@ main {
 
     font-weight: 800;
 
-    letter-spacing: 1.5px;
+    letter-spacing: 1.2px;
 
-    transition: .3s ease;
+    transition: .25s ease;
 
 }
 
 
+/* =========================================================
+   HOVER DO BOTÃO
+========================================================= */
 
 .btn-projeto:hover {
 
-    transform: translateY(-3px);
+    transform: translateY(-2px);
+
+    background:
+
+        linear-gradient(
+            180deg,
+            #64c9ef,
+            #218fce,
+            #0a79bb
+        );
 
     box-shadow:
 
-        0 12px 28px
-        rgba(0,100,255,.50);
+        0 7px 14px
+        rgba(0,70,130,.30),
+
+        inset 0 2px 4px
+        rgba(255,255,255,.6);
 
 }
 
 
+/* =========================================================
+   ÍCONE DO BOTÃO
+========================================================= */
 
 .btn-projeto i {
 
     font-size: 13px;
 
-    transition: .3s ease;
+    transition: .25s ease;
 
 }
-
 
 
 .btn-projeto:hover i {
 
-    transform: translateX(5px);
+    transform: translateX(4px);
 
 }
-
 
 
 /* =========================================================
@@ -2877,56 +3004,68 @@ main {
 
     justify-content: center;
 
-    gap: 10px;
+    gap: 9px;
 
     margin-top: 28px;
 
 }
 
 
+/* =========================================================
+   BOLINHAS DA PAGINAÇÃO
+========================================================= */
 
 .portfolio-pagination span {
 
-    width: 10px;
+    width: 9px;
 
-    height: 10px;
+    height: 9px;
 
     border-radius: 50%;
 
-    background: #d9f7ff;
+    background:
+
+        linear-gradient(
+            180deg,
+            #ffffff,
+            #b8e8f8
+        );
 
     border: 1px solid
-        rgba(255,255,255,.8);
+        rgba(255,255,255,.95);
 
     box-shadow:
 
-        0 0 8px
-        rgba(0,170,255,.35);
+        0 2px 4px
+        rgba(0,70,130,.25);
 
 }
 
 
+/* =========================================================
+   PAGINAÇÃO ATIVA
+========================================================= */
 
 .portfolio-pagination .pagination-active {
 
-    width: 34px;
+    width: 28px;
 
-    border-radius: 20px;
+    border-radius: 10px;
 
     background:
+
         linear-gradient(
-            90deg,
-            #00dfff,
-            #008dff
+            180deg,
+            #72d9f5,
+            #229bce
         );
 
     box-shadow:
 
-        0 0 12px
-        rgba(0,220,255,.8);
+        0 2px 5px
+        rgba(0,100,160,.30);
 
 }
-
 
 
 /* =========================================================
@@ -2979,6 +3118,9 @@ main {
 }
 
 
+/* =========================================================
+   CELULAR
+========================================================= */
 
 @media (max-width: 600px) {
 
@@ -3017,6 +3159,7 @@ main {
     .portfolio-icon {
 
         width: 36px;
+
         height: 36px;
 
     }
@@ -3046,6 +3189,7 @@ main {
     .portfolio-dots span {
 
         width: 11px;
+
         height: 11px;
 
     }
