@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <!-- Define o padrão de caracteres da página, permitindo acentos e caracteres especiais -->
+    <meta charset="UTF-8">
+
+    <!-- Faz a página se adaptar corretamente em celulares, tablets e computadores -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Nome que aparece na aba do navegador -->
+    <title>Contato | Living Screen</title>
+
+
+    <!-- Cria uma conexão antecipada com o Google Fonts para ajudar no carregamento das fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <!-- Segunda conexão necessária para carregar corretamente os arquivos das fontes -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+
+    <!-- Importa o Font Awesome, usado para adicionar os ícones da página -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+
+    <!-- Conecta esta página ao arquivo CSS responsável pelo visual do contato -->
+    <link rel="stylesheet" href="./contato.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- LOGO
+         Funciona também como um link para voltar à página inicial -->
+    <a href="./index.html" class="logo-contato">
+
+        <!-- Imagem da logo da Living Screen -->
+        <img src="./assets/img/logo-png-sem-o-nome.png" alt="Living Screen">
+
+    </a>
+
+
+    <!-- BOTÃO VOLTAR
+         Leva o usuário de volta para a página inicial do site -->
+    <a href="./index.html" class="voltar-inicio">
+
+        <!-- Ícone de seta para a esquerda -->
+        <i class="fa-solid fa-arrow-left"></i>
+
+        Voltar ao início
+
+    </a>
+
+
+    <!-- CONTEÚDO PRINCIPAL
+         Agrupa o texto de apresentação e o formulário de contato -->
+    <main class="contato-container">
+
+
+        <!-- PARTE DE TEXTO
+             Apresenta o objetivo da página para o usuário -->
+        <div class="contato-texto">
+
+
+            <!-- Pequeno texto de destaque acima do título -->
+            <span>FALE CONOSCO</span>
+
+
+            <!-- Título principal da página -->
+            <h1>
+
+                Entre em
+
+                <!-- Destaca a palavra "Contato" para permitir uma cor ou efeito diferente no CSS -->
+                <strong>Contato</strong>
+
+            </h1>
+
+
+            <!-- Explica de forma rápida para que serve o formulário -->
+            <p>
+                Tem alguma dúvida ou precisa de uma solução em tecnologia?
+                Envie uma mensagem para nossa equipe.
+            </p>
+
+
+        </div>
+
+
+        <!-- FORMULÁRIO
+             Reúne todas as informações que o usuário precisa preencher -->
+        <form class="form-contato" action="https://api.web3forms.com/submit" method="POST">
+
+            <!-- Chave que identifica para qual conta do Web3Forms
+     as mensagens deste formulário serão enviadas -->
+            <input type="hidden" name="access_key" value="9408ee50-c6c4-4cca-89c8-0f24c9e733f9">
+
+
+            <!-- Define o assunto que aparecerá no e-mail recebido -->
+            <input type="hidden" name="subject" value="Nova mensagem - Living Screen">
+
+
+            <!-- Informa de qual página do site a mensagem foi enviada -->
+            <input type="hidden" name="from_name" value="Contato - Living Screen">
+
+
+            <!-- CAMPO NOME
+                 Agrupa o ícone e o input de nome -->
+            <div class="campo">
+
+                <!-- Ícone de usuário -->
+                <i class="fa-regular fa-user"></i>
+
+
+                <!-- Campo onde o usuário digita o nome -->
+                <input type="text" name="nome" placeholder="Seu nome" required>
+
+            </div>
+
+
+            <!-- CAMPO E-MAIL -->
+            <div class="campo">
+
+                <!-- Ícone de envelope -->
+                <i class="fa-regular fa-envelope"></i>
+
+
+                <!-- Campo específico para endereço de e-mail -->
+                <input type="email" name="email" placeholder="Seu Gmail" required>
+
+            </div>
+
+
+            <!-- CAMPO ASSUNTO -->
+            <div class="campo">
+
+                <!-- Ícone relacionado a mensagem -->
+                <i class="fa-regular fa-message"></i>
+
+
+                <!-- Campo onde o usuário informa o assunto do contato -->
+                <input type="text" name="assunto" placeholder="Assunto" required>
+
+            </div>
+
+
+            <!-- CAMPO MENSAGEM
+                 Usa textarea porque permite textos maiores e várias linhas -->
+            <div class="campo mensagem">
+
+                <!-- Ícone de comentário -->
+                <i class="fa-regular fa-comment"></i>
+
+
+                <!-- Área onde o usuário escreve a mensagem completa -->
+                <textarea name="mensagem" placeholder="Digite sua mensagem" required></textarea>
+
+            </div>
+
+
+            <!-- BOTÃO DE ENVIO
+                 Envia os dados preenchidos no formulário -->
+            <button type="submit">
+
+                Enviar Mensagem
+
+                <!-- Ícone de envio -->
+                <i class="fa-solid fa-paper-plane"></i>
+
+            </button>
+
+            <!-- Mensagem que informa se o formulário foi enviado -->
+            <p id="status-form"></p>
+
+        </form>
+
+
+    </main>
+
+    <!-- Faz o formulário enviar sem sair da página -->
+<script>
+
+    const formulario = document.querySelector(".form-contato");
+    const statusForm = document.getElementById("status-form");
+
+    formulario.addEventListener("submit", async function (event) {
+
+        /* Impede que o navegador abra a página padrão do Web3Forms */
+        event.preventDefault();
+
+        /* Mostra que o envio está acontecendo */
+        statusForm.textContent = "Enviando mensagem...";
+
+        const dados = new FormData(formulario);
+
+        try {
+
+            const resposta = await fetch(formulario.action, {
+                method: "POST",
+                body: dados
+            });
+
+            const resultado = await resposta.json();
+
+            if (resultado.success) {
+
+                /* Mensagem mostrada quando o envio funcionar */
+                statusForm.textContent = "✓ Mensagem enviada com sucesso!";
+
+                /* Limpa os campos depois do envio */
+                formulario.reset();
+
+            } else {
+
+                statusForm.textContent = "Não foi possível enviar a mensagem.";
+
+            }
+
+        } catch (erro) {
+
+            statusForm.textContent = "Erro ao enviar. Tente novamente.";
+
+        }
+
+    });
+
+</script>
+
+</body>
+
+</html>

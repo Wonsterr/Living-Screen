@@ -83,9 +83,7 @@ body {
     object-fit: contain;
 
     filter:
-        drop-shadow(
-            0 4px 5px rgba(0, 65, 150, 0.30)
-        );
+        drop-shadow(0 4px 5px rgba(0, 65, 150, 0.30));
 }
 
 
@@ -108,11 +106,9 @@ body {
     border-radius: 999px;
 
     background:
-        linear-gradient(
-            180deg,
+        linear-gradient(180deg,
             rgba(255, 255, 255, 0.24),
-            rgba(0, 130, 230, 0.22)
-        );
+            rgba(0, 130, 230, 0.22));
 
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
@@ -157,11 +153,9 @@ body {
     transform: translateY(-2px);
 
     background:
-        linear-gradient(
-            180deg,
+        linear-gradient(180deg,
             rgba(255, 255, 255, 0.35),
-            rgba(0, 160, 240, 0.28)
-        );
+            rgba(0, 160, 240, 0.28));
 
     box-shadow:
         inset 0 1px 7px rgba(255, 255, 255, 0.38),
@@ -349,11 +343,9 @@ body {
     border-radius: 999px;
 
     background:
-        linear-gradient(
-            to bottom,
+        linear-gradient(to bottom,
             rgba(125, 255, 155, 0.55),
-            rgba(35, 190, 80, 0.48)
-        );
+            rgba(35, 190, 80, 0.48));
 
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
@@ -395,16 +387,67 @@ body {
     transform: translateY(-3px);
 
     background:
-        linear-gradient(
-            to bottom,
+        linear-gradient(to bottom,
             rgba(150, 255, 175, 0.65),
-            rgba(40, 210, 90, 0.58)
-        );
+            rgba(40, 210, 90, 0.58));
 
     box-shadow:
         inset 0 2px 10px rgba(255, 255, 255, 0.30),
         0 0 30px rgba(70, 255, 110, 0.60);
 }
+
+/* Define a aparência da frase "Não tem uma conta?" */
+.cadastro-login {
+    margin-top: 18px;
+
+    padding: 8px 14px;
+
+    background: rgba(0, 80, 20, 0.35);
+
+    border-radius: 15px;
+
+    color: #ffffff;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    text-align: center;
+
+    backdrop-filter: blur(6px);
+
+    text-shadow:
+        0 1px 3px #003d14,
+        0 0 6px rgba(0, 50, 15, 0.9);
+}
+
+
+/* Destaca o link que leva para a página
+   de criação de uma nova conta. */
+.cadastro-login a {
+    color: #ffffff;
+
+    font-weight: 700;
+
+    text-decoration: underline;
+
+    text-shadow:
+        0 1px 3px #004d19,
+        0 0 8px rgba(0, 60, 20, 0.95);
+
+    transition: 0.3s;
+}
+
+
+/* Cria um brilho verde quando o usuário
+   passa o mouse sobre "Cadastre-se". */
+.cadastro-login a:hover {
+    color: #d9ffe2;
+
+    text-shadow:
+        0 0 5px #00ff55,
+        0 0 10px rgba(0, 255, 85, 0.8);
+}
+
 
 
 /* =========================================

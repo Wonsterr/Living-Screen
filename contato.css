@@ -1,0 +1,789 @@
+/* ================================
+    vini
+
+   CONFIGURAÇÕES GERAIS DA PÁGINA
+   ================================ */
+
+/* Remove margens e espaçamentos padrões do navegador
+   e faz o cálculo de tamanho considerar padding e borda */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Define o visual principal da página */
+body {
+    min-height: 100vh;
+
+    font-family: Arial, sans-serif;
+
+    /* Fundo exclusivo da página de contato */
+    background-image: url("./assets/img/fundoContato.png");
+
+    /* Faz a imagem preencher toda a tela */
+    background-size: cover;
+
+    /* Centraliza a imagem */
+    background-position: center;
+
+    /* Impede a repetição da imagem */
+    background-repeat: no-repeat;
+
+    position: relative;
+
+    overflow-x: hidden;
+}
+
+/* ================================
+   LOGO
+   ================================ */
+
+/* Define a posição da logo no canto superior esquerdo */
+.logo-contato {
+
+    /* Mantém a logo posicionada em relação à tela */
+    position: absolute;
+
+    /* Distância do topo */
+    top: 25px;
+
+    /* Distância da esquerda */
+    left: 35px;
+
+    /* Mantém a logo acima dos outros elementos */
+    z-index: 10;
+
+}
+
+
+/* Define o tamanho da imagem da logo */
+.logo-contato img {
+
+    /* Largura da logo */
+    width: 105px;
+
+    /* Mantém a proporção original da imagem */
+    height: auto;
+
+    /* Cria uma transição suave para o efeito de hover */
+    transition: 0.3s;
+
+}
+
+
+/* Efeito ao passar o mouse sobre a logo */
+.logo-contato img:hover {
+
+    /* Aumenta levemente a logo */
+    transform: scale(1.07);
+
+}
+
+
+/* =========================================
+   BOTÃO VOLTAR AO INÍCIO
+   ========================================= */
+
+/* Estiliza o botão para seguir o mesmo visual
+   de vidro utilizado no login e no cadastro */
+.voltar-inicio {
+
+    /* Mantém o botão no canto superior direito */
+    position: absolute;
+
+    top: 35px;
+    right: 40px;
+
+    /* Coloca o ícone e o texto lado a lado */
+    display: inline-flex;
+
+    /* Centraliza o conteúdo dentro do botão */
+    align-items: center;
+    justify-content: center;
+
+    /* Espaço entre a seta e o texto */
+    gap: 8px;
+
+    /* Espaçamento interno do botão */
+    padding: 11px 18px;
+
+    /* Cria a borda clara ao redor do botão */
+    border: 1px solid rgba(255, 255, 255, 0.50);
+
+    /* Deixa o botão completamente arredondado */
+    border-radius: 999px;
+
+    /* Fundo transparente com aparência de vidro */
+    background:
+        linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 0.24),
+            rgba(0, 130, 230, 0.22)
+        );
+
+    /* Desfoca o céu que aparece atrás do botão */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    /* Cor do texto */
+    color: #ffffff;
+
+    /* Remove o sublinhado padrão do link */
+    text-decoration: none;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    /* Ajuda o texto a continuar visível sobre o céu */
+    text-shadow:
+        0 1px 3px rgba(0, 50, 110, 0.45);
+
+    /* Cria reflexo interno e um pequeno brilho externo */
+    box-shadow:
+        inset 0 1px 5px rgba(255, 255, 255, 0.30),
+        0 0 12px rgba(0, 205, 255, 0.15);
+
+    /* Suaviza as mudanças quando passa o mouse */
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease;
+
+    /* Mantém o botão acima dos outros elementos */
+    z-index: 10;
+}
+
+
+/* Define o tamanho da seta */
+.voltar-inicio i {
+
+    font-size: 13px;
+}
+
+
+/* Efeito quando o mouse passa sobre o botão */
+.voltar-inicio:hover {
+
+    /* Faz apenas um pequeno deslocamento para cima */
+    transform: translateY(-2px);
+
+    /* Clareia o vidro */
+    background:
+        linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 0.35),
+            rgba(0, 160, 240, 0.28)
+        );
+
+    /* Aumenta o brilho do botão */
+    box-shadow:
+        inset 0 1px 7px rgba(255, 255, 255, 0.38),
+        0 0 20px rgba(0, 220, 255, 0.25);
+}
+
+
+/* ================================
+   CONTAINER PRINCIPAL
+   ================================ */
+
+/* Área que agrupa o texto e o formulário */
+.contato-container {
+
+    /* Faz o container ocupar pelo menos a altura da tela */
+    min-height: 100vh;
+
+    /* Coloca texto e formulário lado a lado */
+    display: flex;
+
+    /* Centraliza verticalmente */
+    align-items: center;
+
+    /* Centraliza horizontalmente */
+    justify-content: center;
+
+    /* Espaço entre o texto e o formulário */
+    gap: 90px;
+
+    /* Espaçamento interno da página */
+    padding: 130px 8% 60px;
+
+}
+
+
+/* ================================
+   PARTE DE TEXTO
+   ================================ */
+
+/* Controla a área de apresentação da página */
+.contato-texto {
+
+    /* Limita o tamanho da área de texto */
+    max-width: 520px;
+
+    /* Permite posicionar os efeitos decorativos ao redor do texto */
+    position: relative;
+
+    /* Mantém os textos acima dos efeitos */
+    z-index: 2;
+
+    /* Define a cor padrão dos textos */
+    color: white;
+}
+
+
+/* Cria um brilho suave atrás da área de texto */
+.contato-texto::before {
+
+    content: "";
+
+    /* Posiciona o brilho atrás do conteúdo */
+    position: absolute;
+
+    width: 380px;
+    height: 380px;
+
+    /* Centraliza o brilho atrás do título */
+    top: 50%;
+    left: 45%;
+
+    transform: translate(-50%, -50%);
+
+    /* Cria uma iluminação azul transparente */
+    background: radial-gradient(circle,
+            rgba(100, 230, 255, 0.18) 0%,
+            rgba(0, 174, 239, 0.08) 40%,
+            transparent 70%);
+
+    /* Suaviza ainda mais o efeito */
+    filter: blur(15px);
+
+    /* Impede o efeito de atrapalhar cliques */
+    pointer-events: none;
+
+    /* Coloca o brilho atrás do texto */
+    z-index: -1;
+}
+
+
+/* Pequeno texto acima do título */
+.contato-texto span {
+
+    /* Faz o elemento aceitar padding e formato de cápsula */
+    display: inline-block;
+
+    /* Espaçamento interno */
+    padding: 7px 15px;
+
+    /* Cria uma aparência de vidro */
+    background: rgba(255, 255, 255, 0.10);
+
+    /* Borda clara e transparente */
+    border: 1px solid rgba(210, 248, 255, 0.45);
+
+    /* Arredonda completamente */
+    border-radius: 30px;
+
+    /* Cor clara para destacar no céu */
+    color: #e7fbff;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    font-size: 12px;
+
+    /* Desfoca o céu que aparece atrás */
+    backdrop-filter: blur(8px);
+
+    /* Cria um brilho leve */
+    box-shadow:
+        0 0 15px rgba(0, 220, 255, 0.20);
+
+    text-shadow:
+        0 0 8px rgba(0, 220, 255, 0.8);
+}
+
+
+/* Título principal */
+.contato-texto h1 {
+
+    font-size: 55px;
+
+    margin: 18px 0 18px;
+
+    line-height: 1.1;
+
+    /* Pequena sombra para separar o título do céu */
+    text-shadow:
+        0 3px 12px rgba(0, 70, 140, 0.35);
+}
+
+
+/* Palavra "Contato" dentro do título */
+.contato-texto h1 strong {
+
+    /* Cor ciano bem clara para combinar com o céu */
+    color: #bff8ff;
+
+    /* Mantém o mesmo peso visual do restante do título */
+    font-weight: 700;
+
+    /* Cria um brilho suave ao redor da palavra */
+    text-shadow:
+        0 0 6px rgba(255, 255, 255, 0.75),
+        0 0 12px rgba(80, 230, 255, 0.65),
+        0 0 22px rgba(0, 190, 255, 0.35);
+}
+
+
+/* Cria uma linha luminosa abaixo do título */
+.contato-texto h1::after {
+
+    content: "";
+
+    /* Faz a linha ficar em uma linha própria */
+    display: block;
+
+    width: 115px;
+    height: 2px;
+
+    margin-top: 18px;
+
+    /* Linha que desaparece suavemente no final */
+    background: linear-gradient(90deg,
+            #ffffff,
+            #65efff,
+            transparent);
+
+    /* Cria brilho ao redor da linha */
+    box-shadow:
+        0 0 8px rgba(100, 240, 255, 0.9);
+}
+
+
+/* Texto explicativo */
+.contato-texto p {
+
+    font-size: 17px;
+
+    line-height: 1.7;
+
+    color: rgba(255, 255, 255, 0.95);
+
+    /* Sombra melhora a leitura sobre as partes claras do céu */
+    text-shadow:
+        0 2px 5px rgba(0, 70, 130, 0.65);
+}
+
+
+/* ================================
+   FORMULÁRIO DE CONTATO
+   ================================ */
+
+/* Caixa principal do formulário */
+.form-contato {
+
+    /* Define a largura do formulário */
+    width: 430px;
+
+    /* Espaçamento interno */
+    padding: 35px;
+
+    /* Permite colocar efeitos decorativos dentro da caixa */
+    position: relative;
+
+    /* Fundo transparente para deixar o céu aparecer atrás */
+    background: linear-gradient(145deg,
+            rgba(255, 255, 255, 0.16),
+            rgba(0, 120, 200, 0.18));
+
+    /* Arredonda os cantos */
+    border-radius: 28px;
+
+    /* Borda clara para destacar o vidro contra o céu */
+    border: 1px solid rgba(225, 252, 255, 0.75);
+
+    /* Desfoca o fundo que aparece através da caixa */
+    backdrop-filter: blur(15px);
+
+    /* Cria profundidade, brilho externo e reflexo interno no vidro */
+    box-shadow:
+        0 20px 40px rgba(0, 70, 140, 0.22),
+        0 0 30px rgba(100, 235, 255, 0.25),
+        inset 0 1px 0 rgba(255, 255, 255, 0.55),
+        inset 0 0 30px rgba(255, 255, 255, 0.08);
+
+    /* Impede os efeitos internos de sair da caixa */
+    overflow: hidden;
+}
+
+
+/* Cria um reflexo de luz na parte superior do formulário */
+.form-contato::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 220px;
+    height: 220px;
+
+    top: -130px;
+    left: -80px;
+
+    /* Cria um brilho circular parecido com reflexo do céu */
+    background: radial-gradient(circle,
+            rgba(255, 255, 255, 0.35),
+            rgba(90, 230, 255, 0.12),
+            transparent 70%);
+
+    /* Deixa o brilho suave */
+    filter: blur(8px);
+
+    /* Não deixa o efeito atrapalhar os campos */
+    pointer-events: none;
+}
+
+
+/* Cria um pequeno brilho na parte inferior da caixa */
+.form-contato::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 160px;
+    height: 160px;
+
+    right: -90px;
+    bottom: -90px;
+
+    background: radial-gradient(circle,
+            rgba(100, 240, 255, 0.22),
+            transparent 70%);
+
+    pointer-events: none;
+}
+
+
+/* ================================
+   CAMPOS DO FORMULÁRIO
+   ================================ */
+
+/* Agrupa ícone e campo de texto */
+.campo {
+
+    /* Permite posicionar o ícone dentro do campo */
+    position: relative;
+
+    /* Espaçamento entre um campo e outro */
+    margin-bottom: 18px;
+
+}
+
+
+/* Ícones dos campos */
+.campo i {
+
+    /* Posiciona o ícone dentro do input */
+    position: absolute;
+
+    /* Distância da esquerda */
+    left: 18px;
+
+    /* Centraliza verticalmente */
+    top: 50%;
+
+    /* Corrige o centro vertical */
+    transform: translateY(-50%);
+
+    /* Cor azul do ícone */
+    color: #00aeef;
+
+    /* Tamanho do ícone */
+    font-size: 17px;
+
+    /* Mantém o ícone acima do campo */
+    z-index: 2;
+
+}
+
+
+/* Aplica o mesmo estilo nos inputs e na textarea */
+.campo input,
+.campo textarea {
+
+    /* Faz os campos ocuparem toda a largura */
+    width: 100%;
+
+    /* Borda clara e transparente */
+    border: 1px solid rgba(210, 248, 255, 0.28);
+
+    /* Fundo transparente para manter o efeito de vidro */
+    background: rgba(0, 90, 160, 0.18);
+
+    /* Cor do texto digitado */
+    color: white;
+
+    /* Arredonda os campos */
+    border-radius: 15px;
+
+    /* Espaçamento interno */
+    padding: 15px 18px 15px 50px;
+
+    /* Tamanho da fonte */
+    font-size: 15px;
+
+    /* Remove o contorno padrão */
+    outline: none;
+
+    /* Deixa o fundo levemente desfocado */
+    backdrop-filter: blur(8px);
+
+    /* Cria uma sombra interna bem leve */
+    box-shadow:
+        inset 0 0 12px rgba(255, 255, 255, 0.04);
+
+    /* Cria transição suave */
+    transition: 0.3s;
+}
+
+
+/* Define a cor do texto de exemplo dentro dos campos */
+.campo input::placeholder,
+.campo textarea::placeholder {
+
+    color: rgba(255, 255, 255, 0.65);
+
+}
+
+
+/* Efeito quando o usuário clica em algum campo */
+.campo input:focus,
+.campo textarea:focus {
+
+    /* Clareia a borda */
+    border-color: rgba(180, 245, 255, 0.85);
+
+    /* Cria brilho azul ao redor do campo */
+    box-shadow:
+        0 0 12px rgba(70, 225, 255, 0.35),
+        inset 0 0 10px rgba(255, 255, 255, 0.06);
+
+    /* Deixa o fundo um pouco mais claro */
+    background: rgba(0, 120, 190, 0.25);
+}
+
+
+/* ================================
+   CAMPO DE MENSAGEM
+   ================================ */
+
+/* Ajusta especificamente a área de mensagem */
+.campo textarea {
+
+    /* Define uma altura inicial */
+    min-height: 130px;
+
+    /* Permite aumentar ou diminuir apenas verticalmente */
+    resize: vertical;
+
+    /* Ajusta o espaçamento interno superior */
+    padding-top: 18px;
+
+}
+
+
+/* Posiciona melhor o ícone da textarea */
+.campo.mensagem i {
+
+    /* Coloca o ícone mais próximo do topo */
+    top: 22px;
+
+    /* Remove a correção de centralização */
+    transform: none;
+
+}
+
+
+/* ================================
+   BOTÃO ENVIAR
+   ================================ */
+
+/* Estiliza o botão de envio */
+.form-contato button {
+
+    /* Faz o botão ocupar toda a largura */
+    width: 100%;
+
+    /* Remove a borda padrão */
+    border: none;
+
+    /* Fundo azul */
+    background: #00aeef;
+
+    /* Cor do texto */
+    color: white;
+
+    /* Espaçamento interno */
+    padding: 15px;
+
+    /* Bordas arredondadas */
+    border-radius: 30px;
+
+    /* Tamanho da fonte */
+    font-size: 16px;
+
+    /* Deixa o texto em destaque */
+    font-weight: 700;
+
+    /* Mostra a mãozinha ao passar o mouse */
+    cursor: pointer;
+
+    /* Centraliza texto e ícone */
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    /* Espaço entre texto e ícone */
+    gap: 10px;
+
+    /* Cria animação suave */
+    transition: 0.3s;
+
+}
+
+
+/* Efeito ao passar o mouse no botão */
+.form-contato button:hover {
+
+    /* Faz o botão subir um pouco */
+    transform: translateY(-3px);
+
+    /* Adiciona brilho */
+    box-shadow:
+        0 0 20px rgba(0, 174, 239, 0.55);
+
+}
+
+
+/* ================================
+   RESPONSIVIDADE
+   ================================ */
+
+/* Ajustes para tablets e telas menores */
+@media (max-width: 900px) {
+
+    .contato-container {
+
+        /* Coloca o texto acima do formulário */
+        flex-direction: column;
+
+        /* Reduz o espaço entre os elementos */
+        gap: 45px;
+
+        /* Centraliza os textos */
+        text-align: center;
+
+    }
+
+
+    .form-contato {
+
+        /* Permite que o formulário diminua em telas menores */
+        width: 100%;
+
+        /* Limita o tamanho máximo */
+        max-width: 450px;
+
+    }
+
+}
+
+
+/* Ajustes específicos para celulares */
+@media (max-width: 600px) {
+
+    .logo-contato {
+
+        top: 20px;
+        left: 20px;
+
+    }
+
+
+    .logo-contato img {
+
+        width: 80px;
+
+    }
+
+
+    .voltar-inicio {
+
+        top: 28px;
+        right: 20px;
+
+        font-size: 13px;
+
+    }
+
+
+    .contato-container {
+
+        padding:
+            120px 20px 40px;
+
+    }
+
+
+    .contato-texto h1 {
+
+        /* Diminui o título para caber melhor */
+        font-size: 38px;
+
+    }
+
+
+    .contato-texto p {
+
+        font-size: 15px;
+
+    }
+
+
+    .form-contato {
+
+        /* Reduz o espaçamento interno */
+        padding: 25px 20px;
+
+    }
+
+}
+
+/* =========================================
+   MENSAGEM DE ENVIO DO FORMULÁRIO
+   ========================================= */
+
+/* Texto que informa se a mensagem foi enviada */
+#status-form {
+
+    margin-top: 15px;
+
+    text-align: center;
+
+    color: #ffffff;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    text-shadow:
+        0 0 8px rgba(0, 220, 255, 0.8);
+}

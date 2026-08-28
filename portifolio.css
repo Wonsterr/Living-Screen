@@ -26,6 +26,37 @@ body {
     overflow-x: hidden;
 }
 
+/* =========================================
+   BARRA DE ROLAGEM - PORTFÓLIO
+   ========================================= */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #00152e;
+}
+
+::-webkit-scrollbar-thumb {
+    /* Azul luminoso para acompanhar o visual do portfólio */
+    background: linear-gradient(180deg,
+            #53efff,
+            #008cff,
+            #0052cc);
+
+    border-radius: 20px;
+    border: 2px solid #00152e;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg,
+            #bdfaff,
+            #21cfff,
+            #0077ff);
+}
+
+
 
 /* =========================================================
    NAVBAR
@@ -1064,17 +1095,23 @@ header .container {
 ========================================================= */
 
 footer {
-    background:
-        linear-gradient(135deg,
-            #001027,
-            #00354de3);
 
+    /* Fundo de vidro um pouco mais transparente */
+    background: linear-gradient(180deg,
+            rgba(0, 45, 95, 0.65) 0%,
+            rgba(0, 30, 70, 0.76) 50%,
+            rgba(0, 18, 48, 0.87) 100%);
+
+    /* Desfoca o conteúdo que aparece atrás do footer */
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    /* Pequeno brilho interno para reforçar o efeito de vidro */
     box-shadow:
-        0 0 20px rgba(0, 174, 239, 0.15),
-        inset 0 0 40px rgba(0, 174, 239, 0.12);
+        inset 0 1px 0 rgba(255, 255, 255, 0.10);
 
-    border-top:
-        3px solid rgba(0, 174, 239, 0.3);
+    /* Sem linha separando o footer da página */
+    border-top: none;
 
     color: white;
 
