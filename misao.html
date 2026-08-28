@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <style>
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            list-style: none;
+            text-decoration: none;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+        }
+
+        main {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card1 {
+            width: 50%;
+            min-height: 400px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+
+            z-index: 99;
+
+            background-color: blue;
+
+            animation: blobAnimation 30s infinite ease-in-out;
+
+            transition: 0.5s;
+        }
+
+        .card1 ul {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            padding: 30px;
+        }
+
+        .card1 img {
+            max-width: 250px;
+        }
+
+        .card1 h3 {
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+        .card1 hr {
+            margin-bottom: 15px;
+        }
+
+        .card1 p {
+            max-width: 400px;
+            line-height: 1.5;
+        }
+
+        @keyframes blobAnimation {
+
+            0%,
+            100% {
+                border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+            }
+
+            25% {
+                border-radius: 70% 30% 20% 80% / 70% 50% 75% 25%;
+            }
+
+            50% {
+                border-radius: 20% 80% 80% 20% / 40% 20% 80% 60%;
+            }
+
+            75% {
+                border-radius: 50% 50% 70% 30% / 60% 80% 40% 20%;
+            }
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <main>
+
+        <div class="card1">
+
+            <ul>
+
+                <li>
+                    <img src="./img/service.png" alt="Ilustração computador">
+                </li>
+
+                <li>
+
+                    <h3>Criação de Sites</h3>
+
+                    <hr>
+
+                    <p>
+                        Desenvolvimento web personalizado para empresas,
+                        incluindo sites institucionais e landing pages.
+                    </p>
+
+                </li>
+
+            </ul>
+
+        </div>
+
+    </main>
+
+</body>
+
+</html>
