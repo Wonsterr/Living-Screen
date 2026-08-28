@@ -1,0 +1,1675 @@
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   BODY
+========================================================= */
+
+body {
+    font-family: "Orbitron", sans-serif;
+    min-height: 100vh;
+
+    background-image: url("./assets/img/fundo pagina portifolio.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    overflow-x: hidden;
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+
+    display: flex;
+    justify-content: center;
+
+    padding: 30px 0;
+}
+
+header .container {
+    width: 92%;
+    max-width: 1450px;
+}
+
+
+/* =========================================================
+   BARRA DA NAVBAR
+========================================================= */
+
+.navbar {
+    position: relative;
+    z-index: 1;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+
+    width: 100%;
+    height: 100px;
+
+    padding: 0 55px;
+
+    border-radius: 35px;
+    overflow: hidden;
+
+    background:
+        linear-gradient(180deg,
+            rgba(255, 255, 255, .35),
+            rgba(0, 170, 255, .15));
+
+    backdrop-filter: blur(22px);
+    -webkit-backdrop-filter: blur(22px);
+
+    border: 2px solid rgba(255, 255, 255, .45);
+
+    box-shadow:
+        inset 0 2px 12px rgba(255, 255, 255, .35),
+        0 0 25px rgba(0, 225, 255, .25),
+        0 20px 45px rgba(0, 0, 0, .18);
+}
+
+
+/* BRILHO PASSANDO PELA NAVBAR */
+
+.navbar::before {
+    content: "";
+
+    position: absolute;
+
+    top: -180%;
+    left: -40%;
+
+    width: 35%;
+    height: 450%;
+
+    background:
+        linear-gradient(90deg,
+            transparent,
+            rgba(255, 255, 255, .55),
+            transparent);
+
+    transform: rotate(25deg);
+
+    animation: shine 8s linear infinite;
+}
+
+
+/* LINHA INFERIOR */
+
+.navbar::after {
+    content: "";
+
+    position: absolute;
+
+    bottom: 0;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 94%;
+    height: 2px;
+
+    background:
+        linear-gradient(to right,
+            transparent,
+            #9dffff,
+            transparent);
+
+    box-shadow: 0 0 20px cyan;
+}
+
+
+/* =========================================================
+   MENU
+========================================================= */
+
+.menu {
+    display: flex;
+    align-items: center;
+
+    gap: 55px;
+
+    list-style: none;
+}
+
+.menu li {
+    list-style: none;
+}
+
+.esquerda {
+    justify-self: start;
+    transform: translateX(-30px);
+}
+
+.direita {
+    justify-self: end;
+}
+
+.menu a {
+    position: relative;
+    top: 9px;
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 18px;
+    font-weight: 500;
+
+    transition:
+        color .3s ease,
+        transform .3s ease,
+        text-shadow .3s ease;
+}
+
+
+/* LINHA DO LINK */
+
+.menu a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    bottom: -7px;
+
+    width: 0%;
+    height: 3px;
+
+    background:
+        linear-gradient(90deg,
+            transparent,
+            #ffffff,
+            #9fffff,
+            #ffffff,
+            transparent);
+
+    border-radius: 100%;
+
+    opacity: 0;
+
+    transform:
+        translateX(-50%) scaleX(.5);
+
+    transition:
+        width .4s ease,
+        opacity .3s ease,
+        transform .4s ease;
+
+    box-shadow:
+        0 0 6px #ffffff,
+        0 0 15px #65eaff;
+}
+
+
+/* HOVER */
+
+.menu a:hover {
+    color: #ffffff;
+
+    transform: translateY(-3px);
+
+    text-shadow:
+        0 0 5px rgba(255, 255, 255, .9),
+        0 0 12px rgba(120, 240, 255, .9),
+        0 0 22px rgba(0, 200, 255, .6);
+}
+
+.menu a:hover::after {
+    width: 80%;
+
+    opacity: 1;
+
+    transform:
+        translateX(-50%) scaleX(1);
+}
+
+
+/* =========================================================
+   LOGO DA NAVBAR
+========================================================= */
+
+.logo {
+    position: absolute;
+
+    top: 5px;
+    left: 47%;
+
+    transform: translateX(-50%);
+
+    z-index: 10;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img {
+    width: 145px;
+
+    transition:
+        transform .4s ease,
+        filter .4s ease;
+
+    transform:
+        perspective(500px) translateZ(0);
+}
+
+.logo img:hover {
+    transform:
+        perspective(500px) translateZ(60px) scale(1.08);
+
+    filter:
+        drop-shadow(0 0 25px rgba(0, 255, 255, .9));
+}
+
+
+/* =========================================================
+   BOTÕES DA NAVBAR
+========================================================= */
+
+.btn {
+    padding: 14px 28px;
+
+    border-radius: 999px;
+
+    background:
+        linear-gradient(#5de8ff,
+            #1594ff);
+
+    color: white;
+
+    font-weight: bold;
+
+    text-decoration: none;
+
+    box-shadow:
+        inset 0 2px 8px rgba(255, 255, 255, .35),
+        0 0 20px rgba(0, 255, 255, .45);
+
+    transition: .35s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 0 30px cyan,
+        0 10px 25px rgba(0, 180, 255, .45);
+}
+
+
+/* =========================================================
+   LOGIN / CADASTRO
+========================================================= */
+
+.auth-buttons {
+    position: absolute;
+
+    left: calc(50% + 900px);
+    top: 60px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    z-index: 999;
+}
+
+.auth-buttons .btn {
+    height: 46px;
+    min-width: 105px;
+
+    padding: 0 20px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 9px;
+
+    font-family: "Orbitron", sans-serif;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    background:
+        rgba(255, 255, 255, 0.12) !important;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.35) !important;
+
+    border-radius: 999px;
+
+    backdrop-filter: blur(10px);
+
+    box-shadow:
+        inset 0 1px 6px rgba(255, 255, 255, 0.25),
+        0 0 15px rgba(0, 200, 255, 0.25);
+
+    transition: .35s;
+}
+
+.auth-buttons img {
+    width: 32px;
+    height: 32px;
+
+    object-fit: contain;
+}
+
+
+/* =========================================================
+   PORTFÓLIO
+========================================================= */
+
+#portfolio {
+    width: 100%;
+    min-height: 100vh;
+
+    padding: 165px 6% 100px;
+
+    position: relative;
+
+    background:
+        url("../img/fundo pagina portifolio.png") center / cover no-repeat;
+}
+
+
+/* =========================================================
+   CABEÇALHO DO PORTFÓLIO
+========================================================= */
+
+.portfolio-header {
+    width: 100%;
+
+    text-align: center;
+
+    margin-bottom: 40px;
+
+    position: relative;
+    z-index: 2;
+}
+
+
+/* SELO */
+
+.portfolio-header>span {
+    display: inline-block;
+
+    padding: 7px 18px;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(180deg,
+            #ffffff 0%,
+            #e9faff 45%,
+            #c7efff 100%);
+
+    border: 1px solid #ffffff;
+
+    color: #0870bd;
+
+    font-family: "Orbitron", sans-serif;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    box-shadow:
+        0 3px 8px rgba(0, 55, 120, .25),
+        inset 0 2px 3px rgba(255, 255, 255, .95);
+}
+
+
+/* TÍTULO */
+
+.portfolio-header h2 {
+    margin: 15px 0 10px;
+
+    font-family: "Orbitron", sans-serif;
+
+    font-size: clamp(38px, 4vw, 55px);
+
+    font-weight: 800;
+
+    line-height: 1.15;
+
+    color: #ffffff;
+
+    text-shadow:
+        0 2px 3px rgba(0, 50, 120, .65),
+        0 5px 12px rgba(0, 60, 150, .25);
+}
+
+.portfolio-header h2 strong {
+    color: #009bd8;
+
+    text-shadow:
+        0 2px 3px rgba(0, 70, 120, .35);
+}
+
+
+/* LINHA */
+
+.titulo-linha {
+    width: 70px;
+    height: 3px;
+
+    margin: 13px auto 15px;
+
+    border-radius: 10px;
+
+    background:
+        linear-gradient(90deg,
+            transparent,
+            #ffffff,
+            #7ddfff,
+            #ffffff,
+            transparent);
+
+    box-shadow:
+        0 2px 5px rgba(0, 90, 160, .35);
+}
+
+
+/* DESCRIÇÃO */
+
+.portfolio-header p {
+    margin: 0;
+
+    color: #eaf9ff;
+
+    font-size: 15px;
+
+    text-shadow:
+        0 2px 4px rgba(0, 45, 110, .55);
+}
+
+
+/* =========================================================
+   SWIPER
+========================================================= */
+
+.portfolio-swiper {
+    width: 100%;
+    max-width: 1250px;
+
+    margin: 0 auto;
+
+    padding: 5px 5px 55px;
+
+    box-sizing: border-box;
+
+    overflow: hidden;
+
+    position: relative;
+    z-index: 2;
+}
+
+.portfolio-swiper .swiper-wrapper {
+    display: flex;
+    align-items: stretch;
+}
+
+.portfolio-swiper .swiper-slide {
+    height: auto;
+
+    display: flex;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.portfolio-card {
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+
+    border-radius: 24px;
+
+    background:
+        linear-gradient(180deg,
+            rgba(255, 255, 255, .97),
+            rgba(220, 245, 255, .97));
+
+    border:
+        2px solid rgba(255, 255, 255, .95);
+
+    box-shadow:
+        0 15px 35px rgba(0, 45, 120, .30),
+        0 4px 10px rgba(0, 90, 170, .15),
+        inset 0 2px 5px rgba(255, 255, 255, .95);
+
+    position: relative;
+}
+
+
+/* BRILHO DO CARD */
+
+.portfolio-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 8%;
+
+    width: 84%;
+    height: 25px;
+
+    border-radius: 0 0 50% 50%;
+
+    background:
+        linear-gradient(180deg,
+            rgba(255, 255, 255, .95),
+            rgba(255, 255, 255, 0));
+
+    pointer-events: none;
+
+    z-index: 5;
+}
+
+
+/* =========================================================
+   TOPO DA JANELA
+========================================================= */
+
+.portfolio-top {
+    height: 78px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 25px;
+
+    position: relative;
+
+    background:
+        linear-gradient(180deg,
+            #ffffff 0%,
+            #eefbff 45%,
+            #ccefff 100%);
+
+    border-bottom:
+        1px solid rgba(120, 200, 235, .45);
+}
+
+
+/* REFLEXO */
+
+.portfolio-top::before {
+    content: "";
+
+    position: absolute;
+
+    top: 1px;
+    left: 20px;
+    right: 20px;
+
+    height: 18px;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(180deg,
+            rgba(255, 255, 255, .85),
+            rgba(255, 255, 255, 0));
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   INFORMAÇÕES DO TOPO
+========================================================= */
+
+.portfolio-info {
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+}
+
+.portfolio-info h3 {
+    margin: 0;
+
+    color: #164d7c;
+
+    font-family: "Orbitron", sans-serif;
+
+    font-size: 17px;
+    font-weight: 800;
+}
+
+.portfolio-info p {
+    margin: 3px 0 0;
+
+    color: #4b91b7;
+
+    font-family: "Orbitron", sans-serif;
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   BOLINHAS DO TOPO
+========================================================= */
+
+.portfolio-dots {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+}
+
+.portfolio-dots span {
+    width: 14px;
+    height: 14px;
+
+    display: block;
+
+    border-radius: 50%;
+
+    border:
+        1px solid rgba(255, 255, 255, .8);
+
+    box-shadow:
+        inset 0 2px 3px rgba(255, 255, 255, .8),
+        0 2px 4px rgba(0, 60, 130, .20);
+}
+
+
+/* AZUL */
+
+.dot-azul {
+    background:
+        linear-gradient(180deg,
+            #71d8f5,
+            #1599ce);
+}
+
+
+/* ROXO */
+
+.dot-roxo {
+    background:
+        linear-gradient(180deg,
+            #d58bea,
+            #a54ac1);
+}
+
+
+/* ROSA */
+
+.dot-rosa {
+    background:
+        linear-gradient(180deg,
+            #ff9dbb,
+            #ee6288);
+}
+
+
+/* =========================================================
+   CORPO DO PROJETO
+========================================================= */
+
+.portfolio-body {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 2fr) minmax(280px, .8fr);
+
+    min-height: 500px;
+}
+
+
+/* =========================================================
+   PREVIEW
+========================================================= */
+
+.portfolio-preview {
+    width: 100%;
+    height: 500px;
+
+    padding: 10px;
+
+    box-sizing: border-box;
+
+    background:
+        linear-gradient(180deg,
+            #eafaff,
+            #d7f3ff);
+}
+
+
+/* IFRAME */
+
+.portfolio-preview iframe {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    border: none;
+
+    border-radius: 18px;
+
+    background: white;
+
+    box-shadow:
+        0 3px 8px rgba(0, 50, 100, .12),
+        inset 0 1px 4px rgba(0, 50, 100, .12);
+}
+
+
+/* =========================================================
+   DETALHES
+========================================================= */
+
+.portfolio-details {
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    padding: 35px 30px;
+
+    box-sizing: border-box;
+
+    background:
+        linear-gradient(180deg,
+            #effbff 0%,
+            #d8f4ff 50%,
+            #c3eaff 100%);
+
+    border-left:
+        1px solid rgba(255, 255, 255, .85);
+}
+
+
+/* TÍTULO */
+
+.portfolio-details h3 {
+    margin: 0;
+
+    color: #164d7c;
+
+    font-family: "Orbitron", sans-serif;
+
+    font-size: 24px;
+    font-weight: 900;
+
+    line-height: 1.2;
+
+    text-shadow:
+        0 1px 2px rgba(255, 255, 255, .8);
+}
+
+
+/* CATEGORIA */
+
+.details-category {
+    margin-top: 8px;
+
+    color: #1689c0;
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+
+/* DESCRIÇÃO */
+
+.details-description {
+    margin: 20px 0 0;
+
+    color: #285675;
+
+    font-size: 12px;
+
+    line-height: 1.75;
+}
+
+
+/* LINHA */
+
+.details-line {
+    width: 100%;
+    height: 1px;
+
+    margin: 17px 0;
+
+    background:
+        linear-gradient(90deg,
+            rgba(80, 170, 210, .45),
+            transparent);
+}
+
+
+/* LISTA */
+
+.details-list {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+    padding: 0;
+
+    margin: 0 0 22px;
+
+    list-style: none;
+}
+
+.details-list li {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    color: #2475a4;
+
+    font-size: 11px;
+}
+
+.details-list li::before {
+    content: "✓";
+
+    color: #168bd0;
+
+    font-weight: 900;
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   BOTÃO DO PROJETO
+========================================================= */
+
+.btn-projeto {
+    width: fit-content;
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 13px 20px;
+
+    border-radius: 22px;
+
+    color: #ffffff;
+
+    background:
+        linear-gradient(180deg,
+            #49b9e8 0%,
+            #1887ca 48%,
+            #0873b7 100%);
+
+    border:
+        1px solid rgba(255, 255, 255, .85);
+
+    box-shadow:
+        0 5px 10px rgba(0, 70, 130, .25),
+        inset 0 2px 4px rgba(255, 255, 255, .55);
+
+    text-decoration: none;
+
+    font-family: "Orbitron", sans-serif;
+
+    font-size: 9px;
+    font-weight: 800;
+
+    letter-spacing: 1.2px;
+
+    transition: .25s ease;
+}
+
+.btn-projeto:hover {
+    transform: translateY(-2px);
+
+    background:
+        linear-gradient(180deg,
+            #64c9ef,
+            #218fce,
+            #0a79bb);
+
+    box-shadow:
+        0 7px 14px rgba(0, 70, 130, .30),
+        inset 0 2px 4px rgba(255, 255, 255, .6);
+}
+
+.btn-projeto i {
+    font-size: 13px;
+
+    transition: .25s ease;
+}
+
+.btn-projeto:hover i {
+    transform: translateX(4px);
+}
+
+
+/* =========================================================
+   PAGINAÇÃO
+========================================================= */
+
+.portfolio-swiper .swiper-pagination {
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 5px !important;
+
+    width: 100%;
+    height: 28px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 9px;
+}
+
+.portfolio-swiper .swiper-pagination-bullet {
+    width: 9px;
+    height: 9px;
+
+    flex-shrink: 0;
+
+    margin: 0 !important;
+    padding: 0;
+
+    opacity: 1;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(180deg,
+            #ffffff,
+            #b8e8f8);
+
+    border:
+        1px solid rgba(255, 255, 255, .95);
+
+    box-shadow:
+        0 2px 4px rgba(0, 70, 130, .25);
+
+    transition:
+        width .3s ease,
+        border-radius .3s ease,
+        background .3s ease;
+}
+
+
+/* PAGINAÇÃO ATIVA */
+
+.portfolio-swiper .swiper-pagination-bullet-active {
+    width: 28px;
+    height: 9px;
+
+    border-radius: 10px;
+
+    background:
+        linear-gradient(180deg,
+            #72d9f5,
+            #229bce);
+
+    box-shadow:
+        0 2px 5px rgba(0, 100, 160, .30);
+}
+
+
+/* REMOVE SETAS */
+
+.portfolio-swiper .swiper-button-prev,
+.portfolio-swiper .swiper-button-next {
+    display: none !important;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+    background:
+        linear-gradient(135deg,
+            #001027,
+            #00354de3);
+
+    box-shadow:
+        0 0 20px rgba(0, 174, 239, 0.15),
+        inset 0 0 40px rgba(0, 174, 239, 0.12);
+
+    border-top:
+        3px solid rgba(0, 174, 239, 0.3);
+
+    color: white;
+
+    padding: 50px 0;
+
+    font-family: "Montserrat", sans-serif;
+}
+
+
+/* CONTAINER */
+
+footer .container {
+    width: 90%;
+
+    margin: auto;
+
+    display: flex;
+
+    justify-content: space-between;
+    align-items: flex-start;
+
+    gap: 35px;
+}
+
+
+/* =========================================================
+   LOGO DO FOOTER
+========================================================= */
+
+footer .logofooter {
+    width: 300px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+footer .logofooter img {
+    width: 250px;
+}
+
+footer .logofooter p {
+    margin: 0;
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   REDES SOCIAIS
+========================================================= */
+
+footer .redes {
+    display: flex;
+
+    margin-top: 35px;
+
+    gap: 20px;
+}
+
+footer .redes a {
+    width: 55px;
+    height: 55px;
+
+    border:
+        2px solid #00BFFF;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+}
+
+footer .redes i {
+    font-size: 35px;
+}
+
+footer .redes a:hover {
+    transform: scale(1.03);
+
+    opacity: 1;
+
+    text-shadow:
+        0 0 25px #00AEEF;
+}
+
+
+/* =========================================================
+   NAVEGAÇÃO DO FOOTER
+========================================================= */
+
+footer .navegacao {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+}
+
+footer .navegacao a::before {
+    content: "›";
+
+    color: #00AEEF;
+
+    margin-right: 5px;
+
+    font-size: 25px;
+}
+
+
+/* =========================================================
+   SERVIÇOS
+========================================================= */
+
+footer .servicos {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+}
+
+footer .servicos i {
+    color: #00BFFF;
+}
+
+
+/* =========================================================
+   CONTATO
+========================================================= */
+
+footer .contato {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+}
+
+footer .contato i {
+    color: #00BFFF;
+}
+
+footer .contato .endereco {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 7px;
+}
+
+
+/* =========================================================
+   NOVIDADES
+========================================================= */
+
+footer .novidades {
+    width: 240px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 18px;
+}
+
+footer .novidades p {
+    line-height: 1.7;
+
+    margin: 0;
+}
+
+footer .novidades input {
+    height: 40px;
+
+    padding: 0 12px;
+
+    border:
+        1px solid #00AEEF;
+
+    border-radius: 10px;
+
+    background: transparent;
+
+    color: white;
+}
+
+footer .novidades button {
+    height: 45px;
+
+    border:
+        1px solid #00AEEF;
+
+    border-radius: 25px;
+
+    background: #0066ff;
+
+    color: white;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 0 8px #00AEEF;
+}
+
+
+/* =========================================================
+   TÍTULOS DO FOOTER
+========================================================= */
+
+footer h2 {
+    color: #00AEEF;
+}
+
+footer h3 {
+    color: #00AEEF;
+
+    font-weight: 700;
+
+    font-size: 22px;
+
+    margin-bottom: 30px;
+
+    transition: 0.3s;
+}
+
+footer h3:hover {
+    text-shadow:
+        0 0 10px #00AEEF;
+
+    transform: scale(1.03);
+}
+
+
+/* =========================================================
+   LINKS DO FOOTER
+========================================================= */
+
+footer a {
+    color: white;
+
+    text-decoration: none;
+
+    font-weight: 400;
+
+    font-size: 17px;
+
+    line-height: 1.5;
+
+    transition: 0.3s;
+}
+
+footer a:hover {
+    transform: translateX(5px);
+
+    opacity: 0.8;
+
+    text-shadow:
+        0 0 8px #00AEEF;
+}
+
+
+/* COPYRIGHT */
+
+footer .copy {
+    text-align: center;
+
+    margin-top: 30px;
+}
+
+
+/* =========================================================
+   ANIMAÇÃO
+========================================================= */
+
+@keyframes shine {
+
+    from {
+        left: -40%;
+    }
+
+    to {
+        left: 130%;
+    }
+}
+
+
+/* =========================================================
+   SELEÇÃO DE TEXTO
+========================================================= */
+
+::selection {
+    background:
+        rgba(120, 225, 255, 0.40);
+
+    color: #ffffff;
+
+    text-shadow:
+        0 0 4px rgba(255, 255, 255, 1),
+        0 0 8px rgba(100, 230, 255, 0.9),
+        0 0 14px rgba(50, 200, 255, 0.6);
+}
+
+::-moz-selection {
+    background:
+        rgba(120, 225, 255, 0.40);
+
+    color: #ffffff;
+
+    text-shadow:
+        0 0 4px rgba(255, 255, 255, 1),
+        0 0 8px rgba(100, 230, 255, 0.9),
+        0 0 14px rgba(50, 200, 255, 0.6);
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE — TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    /* NAVBAR */
+
+    header {
+        padding: 20px 0;
+    }
+
+    .navbar {
+        height: 85px;
+
+        padding: 0 30px;
+    }
+
+    .menu {
+        gap: 25px;
+    }
+
+    .menu a {
+        font-size: 14px;
+    }
+
+    .logo {
+        left: 50%;
+    }
+
+    .logo img {
+        width: 115px;
+    }
+
+    .auth-buttons {
+        position: static;
+    }
+
+
+    /* PORTFÓLIO */
+
+    #portfolio {
+        padding:
+            145px 4% 90px;
+    }
+
+    .portfolio-swiper {
+        max-width: 100%;
+    }
+
+    .portfolio-body {
+        grid-template-columns: 1fr;
+    }
+
+    .portfolio-preview {
+        height: 500px;
+    }
+
+    .portfolio-details {
+        border-left: none;
+
+        border-top:
+            1px solid rgba(255, 255, 255, .8);
+    }
+
+
+    /* FOOTER */
+
+    footer .container {
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE — CELULAR
+========================================================= */
+
+@media (max-width: 600px) {
+
+    /* NAVBAR */
+
+    header {
+        padding: 15px;
+    }
+
+    header .container {
+        width: 100%;
+    }
+
+    .navbar {
+        height: 70px;
+
+        padding: 0 15px;
+
+        border-radius: 25px;
+    }
+
+    .menu {
+        gap: 12px;
+    }
+
+    .menu a {
+        font-size: 10px;
+    }
+
+    .logo {
+        left: 50%;
+        top: 8px;
+    }
+
+    .logo img {
+        width: 90px;
+    }
+
+    .auth-buttons {
+        display: none;
+    }
+
+
+    /* PORTFÓLIO */
+
+    #portfolio {
+        padding:
+            125px 15px 60px;
+    }
+
+    .portfolio-header {
+        margin-bottom: 25px;
+    }
+
+    .portfolio-header>span {
+        padding: 6px 14px;
+
+        font-size: 9px;
+    }
+
+    .portfolio-header h2 {
+        font-size: 31px;
+    }
+
+    .portfolio-header p {
+        font-size: 12px;
+
+        line-height: 1.6;
+    }
+
+
+    /* SWIPER */
+
+    .portfolio-swiper {
+        padding:
+            5px 5px 50px;
+    }
+
+
+    /* TOPO */
+
+    .portfolio-top {
+        height: 65px;
+
+        padding: 0 15px;
+    }
+
+    .portfolio-info h3 {
+        font-size: 13px;
+    }
+
+    .portfolio-info p {
+        font-size: 9px;
+    }
+
+    .portfolio-dots {
+        gap: 5px;
+    }
+
+    .portfolio-dots span {
+        width: 10px;
+        height: 10px;
+    }
+
+
+    /* PREVIEW */
+
+    .portfolio-preview {
+        height: 400px;
+
+        padding: 8px;
+    }
+
+    .portfolio-preview iframe {
+        border-radius: 14px;
+    }
+
+
+    /* DETALHES */
+
+    .portfolio-details {
+        padding:
+            28px 22px;
+    }
+
+    .portfolio-details h3 {
+        font-size: 20px;
+    }
+
+    .details-description {
+        font-size: 11px;
+    }
+
+    .details-list li {
+        font-size: 10px;
+    }
+
+
+    /* PAGINAÇÃO */
+
+    .portfolio-swiper .swiper-pagination {
+        bottom: 0 !important;
+
+        height: 24px;
+
+        gap: 8px;
+    }
+
+    .portfolio-swiper .swiper-pagination-bullet {
+        width: 8px;
+        height: 8px;
+    }
+
+    .portfolio-swiper .swiper-pagination-bullet-active {
+        width: 25px;
+        height: 8px;
+    }
+
+
+    /* FOOTER */
+
+    footer {
+        padding: 40px 0;
+    }
+
+    footer .container {
+        width: 90%;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        text-align: center;
+    }
+
+    footer .logofooter {
+        width: 100%;
+
+        align-items: center;
+    }
+
+    footer .novidades {
+        width: 100%;
+
+        align-items: center;
+    }
+
+    footer .redes {
+        justify-content: center;
+    }
+
+    footer .contato .endereco {
+        justify-content: center;
+    }
+}
