@@ -206,12 +206,6 @@ header {
 
     /* Cria um elemento visual extra sem precisar adicionar outra tag no HTML. */
     .menu a::after {
-        width: 0%;
-    }
-
-
-    /* Cria um elemento visual extra sem precisar adicionar outra tag no HTML. */
-    .menu a::after {
 
         content: "";
         position: absolute;
@@ -661,42 +655,6 @@ main {
 
 /* Organiza o conteúdo principal de destaque da página, como textos, imagens e botões. */
 .hero-services {
-
-    width: 100%;
-
-    padding: 25px 30px;
-
-    border-radius: 30px;
-
-    background:
-        linear-gradient(145deg,
-            rgba(255, 255, 255, .28),
-            rgba(0, 150, 255, .18));
-
-    border: 1px solid rgba(255, 255, 255, .5);
-
-    backdrop-filter: blur(20px);
-
-    -webkit-backdrop-filter: blur(20px);
-
-    box-shadow:
-
-        inset 0 2px 15px rgba(255, 255, 255, .35),
-
-        inset 0 -5px 20px rgba(0, 100, 200, .15),
-
-        0 0 30px rgba(0, 220, 255, .3),
-
-        0 20px 50px rgba(0, 50, 120, .3);
-
-    position: relative;
-
-    transform: translateX(-540px);
-}
-
-
-/* Organiza o conteúdo principal de destaque da página, como textos, imagens e botões. */
-.hero-services {
     position: absolute;
 
     left: 50%;
@@ -831,6 +789,8 @@ main {
         gap: 40px;
 
         padding-top: 50px;
+
+        transform: none;
     }
 
 
@@ -840,6 +800,8 @@ main {
         text-align: center;
 
         margin: auto;
+
+        transform: none;
     }
 
 
@@ -880,6 +842,17 @@ main {
         max-width: 500px;
 
         margin: auto;
+
+        flex-wrap: wrap;
+
+        gap: 12px;
+    }
+
+    .logo-flutuante-inicio {
+
+        right: 4%;
+
+        width: min(58vw, 520px);
     }
 }
 
@@ -899,6 +872,15 @@ main {
     .hero-container {
 
         width: 88%;
+    }
+
+    .logo-flutuante-inicio {
+
+        right: -8%;
+
+        width: 420px;
+
+        opacity: .7;
     }
 
 
@@ -936,6 +918,25 @@ main {
     .hero-services {
 
         padding: 15px 20px;
+
+        width: 88%;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 8px;
+    }
+
+    .service-item {
+
+        padding: 5px 0;
+    }
+
+    .service-item + .service-item {
+
+        border-top: 1px solid rgba(255, 255, 255, .3);
+        border-left: none;
     }
 
 }
