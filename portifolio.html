@@ -44,6 +44,21 @@
 
 <body>
 
+    <!-- =====================================================
+     PRE-LOADER
+====================================================== -->
+
+    <div id="preloader">
+
+        <div class="loader-bolhas">
+            <div class="bubble-1"></div>
+            <div class="bubble-2"></div>
+        </div>
+
+        <p>Carregando...</p>
+
+    </div>
+
 
     <!-- LOGO
      Também funciona como botão para voltar ao início -->
@@ -805,6 +820,22 @@
 
     <!-- FIM -->
 
+<script>
+
+    // Espera a página terminar de carregar
+    window.addEventListener("load", function () {
+
+        const preloader = document.getElementById("preloader");
+
+        // Esconde a tela de carregamento
+        preloader.classList.add("preloader-escondido");
+
+    });
+
+</script>
+
 </body>
+
+
 
 </html>
