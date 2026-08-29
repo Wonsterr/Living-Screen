@@ -4,7 +4,7 @@ const canvas = document.getElementById('liquid-canvas');
 
 const app = LiquidBackground(canvas);
 
-app.loadImage('./assets/img/img2-fundo-site.png');
+app.loadImage('./assets/img/FUNDOLOGIN.png');
 
 app.liquidPlane.material.metalness = 0.45;
 app.liquidPlane.material.roughness = 0.3;
