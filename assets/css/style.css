@@ -3059,4 +3059,23 @@ footer {
     }
 }
 
+/* =========================================================
+   EFEITO DE ÁGUA
+========================================================= */
+
+#liquid-effect {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+}
+
+#liquid-canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
 /*end region*/
