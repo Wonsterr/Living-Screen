@@ -62,286 +62,85 @@ body {
    NAVBAR
 ========================================================= */
 
-header {
-    position: fixed;
-    width: 100%;
-    z-index: 9999;
-
-    display: flex;
-    justify-content: center;
-
-    padding: 30px 0;
-}
-
-header .container {
-    width: 92%;
-    max-width: 1450px;
-}
-
-
 /* =========================================================
-   BARRA DA NAVBAR
+   LOGO DO PORTFÓLIO
 ========================================================= */
 
-.navbar {
-    position: relative;
-    z-index: 1;
-
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-
-    width: 100%;
-    height: 100px;
-
-    padding: 0 55px;
-
-    border-radius: 35px;
-    overflow: hidden;
-
-    background:
-        linear-gradient(180deg,
-            rgba(255, 255, 255, .35),
-            rgba(0, 170, 255, .15));
-
-    backdrop-filter: blur(22px);
-    -webkit-backdrop-filter: blur(22px);
-
-    border: 2px solid rgba(255, 255, 255, .45);
-
-    box-shadow:
-        inset 0 2px 12px rgba(255, 255, 255, .35),
-        0 0 25px rgba(0, 225, 255, .25),
-        0 20px 45px rgba(0, 0, 0, .18);
-}
-
-
-/* BRILHO PASSANDO PELA NAVBAR */
-
-.navbar::before {
-    content: "";
-
+.logo-portfolio {
     position: absolute;
-
-    top: -180%;
-    left: -40%;
-
-    width: 35%;
-    height: 450%;
-
-    background:
-        linear-gradient(90deg,
-            transparent,
-            rgba(255, 255, 255, .55),
-            transparent);
-
-    transform: rotate(25deg);
-
-    animation: shine 8s linear infinite;
+    top: 25px;
+    left: 35px;
+    z-index: 100;
 }
 
+.logo-portfolio img {
+    width: 105px;
+    height: auto;
 
-/* LINHA INFERIOR */
-
-.navbar::after {
-    content: "";
-
-    position: absolute;
-
-    bottom: 0;
-    left: 50%;
-
-    transform: translateX(-50%);
-
-    width: 94%;
-    height: 2px;
-
-    background:
-        linear-gradient(to right,
-            transparent,
-            #9dffff,
-            transparent);
-
-    box-shadow: 0 0 20px cyan;
+    transition: 0.3s ease;
 }
 
-
-/* =========================================================
-   MENU
-========================================================= */
-
-.menu {
-    display: flex;
-    align-items: center;
-
-    gap: 55px;
-
-    list-style: none;
-}
-
-.menu li {
-    list-style: none;
-}
-
-.esquerda {
-    justify-self: start;
-    transform: translateX(-30px);
-}
-
-.direita {
-    justify-self: end;
-}
-
-.menu a {
-    position: relative;
-    top: 9px;
-    color: white;
-
-    text-decoration: none;
-
-    font-size: 18px;
-    font-weight: 500;
-
-    transition:
-        color .3s ease,
-        transform .3s ease,
-        text-shadow .3s ease;
-}
-
-
-/* LINHA DO LINK */
-
-.menu a::after {
-    content: "";
-
-    position: absolute;
-
-    left: 50%;
-    bottom: -7px;
-
-    width: 0%;
-    height: 3px;
-
-    background:
-        linear-gradient(90deg,
-            transparent,
-            #ffffff,
-            #9fffff,
-            #ffffff,
-            transparent);
-
-    border-radius: 100%;
-
-    opacity: 0;
-
-    transform:
-        translateX(-50%) scaleX(.5);
-
-    transition:
-        width .4s ease,
-        opacity .3s ease,
-        transform .4s ease;
-
-    box-shadow:
-        0 0 6px #ffffff,
-        0 0 15px #65eaff;
-}
-
-
-/* HOVER */
-
-.menu a:hover {
-    color: #ffffff;
-
-    transform: translateY(-3px);
-
-    text-shadow:
-        0 0 5px rgba(255, 255, 255, .9),
-        0 0 12px rgba(120, 240, 255, .9),
-        0 0 22px rgba(0, 200, 255, .6);
-}
-
-.menu a:hover::after {
-    width: 80%;
-
-    opacity: 1;
-
-    transform:
-        translateX(-50%) scaleX(1);
-}
-
-
-/* =========================================================
-   LOGO DA NAVBAR
-========================================================= */
-
-.logo {
-    position: absolute;
-
-    top: 5px;
-    left: 47%;
-
-    transform: translateX(-50%);
-
-    z-index: 10;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.logo img {
-    width: 145px;
-
-    transition:
-        transform .4s ease,
-        filter .4s ease;
-
-    transform:
-        perspective(500px) translateZ(0);
-}
-
-.logo img:hover {
-    transform:
-        perspective(500px) translateZ(60px) scale(1.08);
+.logo-portfolio img:hover {
+    transform: scale(1.07);
 
     filter:
-        drop-shadow(0 0 25px rgba(0, 255, 255, .9));
+        drop-shadow(0 0 12px rgba(0, 220, 255, 0.55));
 }
 
 
 /* =========================================================
-   BOTÕES DA NAVBAR
+   BOTÃO VOLTAR AO INÍCIO
 ========================================================= */
 
-.btn {
-    padding: 14px 28px;
+.voltar-inicio {
+    position: absolute;
+    top: 35px;
+    right: 40px;
+    z-index: 100;
 
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    padding: 11px 18px;
+
+    border: 1px solid rgba(255, 255, 255, 0.5);
     border-radius: 999px;
 
-    background:
-        linear-gradient(#5de8ff,
-            #1594ff);
+    /* Efeito de vidro */
+    background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.20),
+        rgba(0, 120, 210, 0.18)
+    );
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
 
     color: white;
-
-    font-weight: bold;
-
+    font-size: 14px;
+    font-weight: 600;
     text-decoration: none;
 
     box-shadow:
-        inset 0 2px 8px rgba(255, 255, 255, .35),
-        0 0 20px rgba(0, 255, 255, .45);
+        inset 0 1px 4px rgba(255, 255, 255, 0.25),
+        0 4px 15px rgba(0, 70, 150, 0.18);
 
-    transition: .35s;
+    transition: 0.3s ease;
 }
 
-.btn:hover {
+.voltar-inicio:hover {
     transform: translateY(-2px);
 
+    background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.30),
+        rgba(0, 180, 255, 0.25)
+    );
+
     box-shadow:
-        0 0 30px cyan,
-        0 10px 25px rgba(0, 180, 255, .45);
+        0 0 18px rgba(0, 220, 255, 0.35);
 }
 
 
