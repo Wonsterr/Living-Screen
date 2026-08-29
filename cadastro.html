@@ -6,34 +6,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- FAVICON -->
-    <link
-        rel="icon"
-        type="image/png"
-        href="./assets/img/logo-png-sem-o-nome.png"
-    >
+    <link rel="icon" type="image/png" href="./assets/img/logo-png-sem-o-nome.png">
 
     <!-- FONT AWESOME -->
-    <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
-    >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
 
     <!-- GOOGLE FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap"
-        rel="stylesheet"
-    >
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
 
     <!-- CSS DO CADASTRO -->
     <link rel="stylesheet" href="./cadastro.css">
 
     <title>Cadastrar | Living Screen</title>
+
+    <!-- pre-loader -->
+    <link rel="stylesheet" href="./assets/css/preLoader.css">
+
 </head>
 
 <body>
+
+    <!-- =====================================================
+     PRE-LOADER
+====================================================== -->
+
+    <div id="preloader">
+
+        <div class="loader-bolhas">
+            <div class="bubble-1"></div>
+            <div class="bubble-2"></div>
+        </div>
+
+        <p>Carregando...</p>
+
+    </div>
 
     <main class="cadastro">
 
@@ -46,10 +56,7 @@
             <!-- LOGO -->
             <a href="./index.html" class="logo">
 
-                <img
-                    src="./assets/img/logo-png-sem-o-nome.png"
-                    alt="Living Screen"
-                >
+                <img src="./assets/img/logo-png-sem-o-nome.png" alt="Living Screen">
 
                 <span class="logo-text">
                     LIVING
@@ -193,14 +200,8 @@
 
                             <i class="fa-regular fa-user"></i>
 
-                            <input
-                                type="text"
-                                id="nome"
-                                name="nome"
-                                placeholder="Digite seu nome completo"
-                                autocomplete="name"
-                                required
-                            >
+                            <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo"
+                                autocomplete="name" required>
 
                         </div>
 
@@ -220,14 +221,8 @@
 
                             <i class="fa-regular fa-envelope"></i>
 
-                            <input
-                                type="email"
-                                id="email"
-                                name="email"
-                                placeholder="Digite seu e-mail"
-                                autocomplete="email"
-                                required
-                            >
+                            <input type="email" id="email" name="email" placeholder="Digite seu e-mail"
+                                autocomplete="email" required>
 
                         </div>
 
@@ -247,15 +242,8 @@
 
                             <i class="fa-solid fa-lock"></i>
 
-                            <input
-                                type="password"
-                                id="senha"
-                                name="senha"
-                                placeholder="Crie uma senha"
-                                minlength="6"
-                                autocomplete="new-password"
-                                required
-                            >
+                            <input type="password" id="senha" name="senha" placeholder="Crie uma senha" minlength="6"
+                                autocomplete="new-password" required>
 
                         </div>
 
@@ -275,15 +263,9 @@
 
                             <i class="fa-solid fa-lock"></i>
 
-                            <input
-                                type="password"
-                                id="confirmar-senha"
-                                name="confirmar-senha"
-                                placeholder="Digite sua senha novamente"
-                                minlength="6"
-                                autocomplete="new-password"
-                                required
-                            >
+                            <input type="password" id="confirmar-senha" name="confirmar-senha"
+                                placeholder="Digite sua senha novamente" minlength="6" autocomplete="new-password"
+                                required>
 
                         </div>
 
@@ -296,12 +278,7 @@
 
                         <label for="termos">
 
-                            <input
-                                type="checkbox"
-                                id="termos"
-                                name="termos"
-                                required
-                            >
+                            <input type="checkbox" id="termos" name="termos" required>
 
                             <span>
                                 Li e concordo com os
@@ -321,10 +298,7 @@
 
                     <!-- BOTÃO -->
 
-                    <button
-                        type="submit"
-                        class="btn-cadastrar"
-                    >
+                    <button type="submit" class="btn-cadastrar">
 
                         <span>
                             Criar minha conta
@@ -360,15 +334,12 @@
              PLANTA DECORATIVA
         ====================================================== -->
 
-        <img
-            class="planta"
-            src="./assets/img/planta.png"
-            alt=""
-            aria-hidden="true"
-        >
+        <img class="planta" src="./assets/img/planta.png" alt="" aria-hidden="true">
 
     </main>
 
+    <script src="./assets/js/preLoader.js"></script>
+    
 </body>
 
 </html>

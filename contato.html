@@ -27,10 +27,29 @@
     <!-- Conecta esta página ao arquivo CSS responsável pelo visual do contato -->
     <link rel="stylesheet" href="./contato.css">
 
+    <!-- pre-loader -->
+    <link rel="stylesheet" href="./assets/css/preLoader.css">
+
 </head>
 
 
 <body>
+
+    <!-- =====================================================
+     PRE-LOADER
+====================================================== -->
+
+    <div id="preloader">
+
+        <div class="loader-bolhas">
+            <div class="bubble-1"></div>
+            <div class="bubble-2"></div>
+        </div>
+
+        <p>Carregando...</p>
+
+    </div>
+
 
 
     <!-- LOGO
@@ -181,53 +200,55 @@
     </main>
 
     <!-- Faz o formulário enviar sem sair da página -->
-<script>
+    <script>
 
-    const formulario = document.querySelector(".form-contato");
-    const statusForm = document.getElementById("status-form");
+        const formulario = document.querySelector(".form-contato");
+        const statusForm = document.getElementById("status-form");
 
-    formulario.addEventListener("submit", async function (event) {
+        formulario.addEventListener("submit", async function (event) {
 
-        /* Impede que o navegador abra a página padrão do Web3Forms */
-        event.preventDefault();
+            /* Impede que o navegador abra a página padrão do Web3Forms */
+            event.preventDefault();
 
-        /* Mostra que o envio está acontecendo */
-        statusForm.textContent = "Enviando mensagem...";
+            /* Mostra que o envio está acontecendo */
+            statusForm.textContent = "Enviando mensagem...";
 
-        const dados = new FormData(formulario);
+            const dados = new FormData(formulario);
 
-        try {
+            try {
 
-            const resposta = await fetch(formulario.action, {
-                method: "POST",
-                body: dados
-            });
+                const resposta = await fetch(formulario.action, {
+                    method: "POST",
+                    body: dados
+                });
 
-            const resultado = await resposta.json();
+                const resultado = await resposta.json();
 
-            if (resultado.success) {
+                if (resultado.success) {
 
-                /* Mensagem mostrada quando o envio funcionar */
-                statusForm.textContent = "✓ Mensagem enviada com sucesso!";
+                    /* Mensagem mostrada quando o envio funcionar */
+                    statusForm.textContent = "✓ Mensagem enviada com sucesso!";
 
-                /* Limpa os campos depois do envio */
-                formulario.reset();
+                    /* Limpa os campos depois do envio */
+                    formulario.reset();
 
-            } else {
+                } else {
 
-                statusForm.textContent = "Não foi possível enviar a mensagem.";
+                    statusForm.textContent = "Não foi possível enviar a mensagem.";
+
+                }
+
+            } catch (erro) {
+
+                statusForm.textContent = "Erro ao enviar. Tente novamente.";
 
             }
 
-        } catch (erro) {
+        });
 
-            statusForm.textContent = "Erro ao enviar. Tente novamente.";
+    </script>
 
-        }
-
-    });
-
-</script>
+    <script src="./assets/js/preLoader.js"></script>
 
 </body>
 
