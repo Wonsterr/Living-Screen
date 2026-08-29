@@ -44,70 +44,39 @@
 
 <body>
 
-
     <!-- =====================================================
-         NAVBAR
-    ====================================================== -->
+     PRE-LOADER
+====================================================== -->
 
-    <header>
+    <div id="preloader">
 
-        <a href="./index.html" class="logo">
-
-            <img class="logo img" src="./assets/img/logo-png-sem-o-nome.png" alt="Living Screen">
-
-        </a>
-
-
-        <div class="container">
-
-            <nav class="navbar">
-
-
-                <!-- MENU ESQUERDO -->
-
-                <ul class="menu esquerda">
-
-                    <li>
-                        <a href="./index.html#inicio">
-                            Início
-                        </a>
-                    </li>
-
-
-                    <li>
-                        <a href="./index.html#sobrenos">
-                            Sobre Nós
-                        </a>
-                    </li>
-
-                </ul>
-
-
-
-                <!-- MENU DIREITO -->
-
-                <ul class="menu direita">
-
-                    <li>
-                        <a href="#portfolio">
-                            Portfólio
-                        </a>
-                    </li>
-
-
-                    <li>
-                        <a href="./index.html#contato">
-                            Contato
-                        </a>
-                    </li>
-
-                </ul>
-
-            </nav>
-
+        <div class="loader-bolhas">
+            <div class="bubble-1"></div>
+            <div class="bubble-2"></div>
         </div>
 
-    </header>
+        <p>Carregando...</p>
+
+    </div>
+
+
+    <!-- LOGO
+     Também funciona como botão para voltar ao início -->
+    <a href="./index.html" class="logo-portfolio">
+
+        <img src="./assets/img/logo-png-sem-o-nome.png" alt="Living Screen">
+
+    </a>
+
+
+    <!-- BOTÃO VOLTAR AO INÍCIO -->
+    <a href="./index.html" class="voltar-inicio">
+
+        <i class="fa-solid fa-arrow-left"></i>
+
+        Voltar ao início
+
+    </a>
 
 
 
@@ -851,6 +820,22 @@
 
     <!-- FIM -->
 
+<script>
+
+    // Espera a página terminar de carregar
+    window.addEventListener("load", function () {
+
+        const preloader = document.getElementById("preloader");
+
+        // Esconde a tela de carregamento
+        preloader.classList.add("preloader-escondido");
+
+    });
+
+</script>
+
 </body>
+
+
 
 </html>
