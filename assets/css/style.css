@@ -1736,6 +1736,562 @@ main {
         0 14px 35px rgba(0, 50, 130, 0.30),
         0 0 28px rgba(60, 220, 255, 0.20);
 }
+/* =========================================================
+   NOSSO TIME — VISUAL FIXO / FRUTIGER AERO
+========================================================= */
+
+.nosso-time {
+    position: relative;
+    width: 100%;
+    padding: 110px 5% 150px;
+    overflow: hidden;
+    isolation: isolate;
+
+    background:
+        radial-gradient(
+            ellipse at 50% 0%,
+            rgba(0, 220, 255, 0.16),
+            transparent 50%
+        ),
+        linear-gradient(
+            180deg,
+            rgba(1, 37, 106, 0),
+            rgba(1, 37, 106, 0.18)
+        );
+        background-image: url("../img/FUNDO-NOSSO-TIME.png");
+}
+
+
+/* =========================================================
+   BRILHO AMBIENTAL
+========================================================= */
+
+.nosso-time::before {
+    content: "";
+
+    position: absolute;
+
+    width: 700px;
+    height: 500px;
+
+    left: 50%;
+    top: 45%;
+
+    transform: translate(-50%, -50%);
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            ellipse,
+            rgba(0, 220, 255, 0.10),
+            transparent 70%
+        );
+
+    filter: blur(20px);
+
+    pointer-events: none;
+
+    z-index: -1;
+}
+
+
+/* =========================================================
+   TÍTULO
+========================================================= */
+
+.time-titulo {
+    position: relative;
+    z-index: 5;
+
+    text-align: center;
+
+    margin-bottom: 65px;
+}
+
+.time-titulo span {
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: #62ffe1;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 6px;
+
+    text-shadow:
+        0 0 12px rgba(70, 255, 225, 0.45);
+}
+
+.time-titulo h2 {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: 44px;
+    font-weight: 800;
+
+    letter-spacing: 4px;
+
+    text-shadow:
+        0 0 12px rgba(75, 255, 230, 0.40),
+        0 0 30px rgba(0, 180, 255, 0.25);
+}
+
+.time-titulo p {
+    margin-top: 12px;
+
+    color: rgba(225, 255, 255, 0.70);
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.time-container {
+    position: relative;
+
+    width: 100%;
+    max-width: 1450px;
+
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   MEMBROS
+========================================================= */
+
+.membros {
+    position: relative;
+    z-index: 3;
+
+    display: flex;
+
+    align-items: stretch;
+    justify-content: center;
+
+    gap: 28px;
+}
+
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.membro-card {
+    position: relative;
+
+    width: 270px;
+    min-height: 410px;
+
+    padding: 12px;
+
+    overflow: hidden;
+
+    border-radius: 30px;
+
+    border: 1px solid rgba(135, 255, 239, 0.50);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(80, 255, 228, 0.22),
+            rgba(0, 166, 218, 0.20),
+            rgba(0, 58, 135, 0.40)
+        );
+
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+
+    box-shadow:
+        0 20px 45px rgba(0, 30, 100, 0.30),
+        0 0 20px rgba(0, 200, 255, 0.08),
+        inset 0 2px 4px rgba(255, 255, 255, 0.45),
+        inset 0 -15px 30px rgba(0, 80, 180, 0.15);
+}
+
+
+/* =========================================================
+   BRILHO FIXO DO CARD
+========================================================= */
+
+.membro-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: -75px;
+    left: -35px;
+
+    width: 330px;
+    height: 150px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            ellipse,
+            rgba(255, 255, 255, 0.28),
+            rgba(120, 255, 240, 0.08) 40%,
+            transparent 70%
+        );
+
+    filter: blur(8px);
+
+    pointer-events: none;
+
+    z-index: 2;
+}
+
+
+/* =========================================================
+   REFLEXO FIXO
+========================================================= */
+
+.membro-card::after {
+    content: "";
+
+    position: absolute;
+
+    width: 160px;
+    height: 480px;
+
+    top: -100px;
+    right: -110px;
+
+    transform: rotate(28deg);
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255, 255, 255, 0.06),
+            transparent
+        );
+
+    pointer-events: none;
+
+    z-index: 4;
+}
+
+
+/* =========================================================
+   MOLDURA DA FOTO
+========================================================= */
+
+.membro-moldura {
+    position: relative;
+    z-index: 6;
+
+    padding: 5px;
+
+    border-radius: 23px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(175, 255, 247, 0.55),
+            rgba(0, 190, 225, 0.25),
+            rgba(0, 70, 150, 0.45)
+        );
+
+    border: 1px solid rgba(255, 255, 255, 0.28);
+
+    box-shadow:
+        inset 0 2px 4px rgba(255, 255, 255, 0.45),
+        inset 0 -5px 10px rgba(0, 70, 160, 0.20),
+        0 5px 12px rgba(0, 60, 130, 0.18);
+}
+
+
+/* =========================================================
+   FOTO
+========================================================= */
+
+.membro-foto {
+    position: relative;
+
+    width: 100%;
+    height: 235px;
+
+    overflow: hidden;
+
+    border-radius: 18px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #13afd5,
+            #075aa8
+        );
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+
+    box-shadow:
+        inset 0 0 20px rgba(0, 60, 130, 0.25);
+}
+
+.membro-foto img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    filter:
+        saturate(1.05)
+        brightness(1.02)
+        contrast(0.98);
+}
+
+
+/* =========================================================
+   REFLEXO DA ÁGUA NA FOTO
+========================================================= */
+
+.membro-foto::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 5;
+
+    pointer-events: none;
+
+    background:
+        linear-gradient(
+            115deg,
+            transparent 15%,
+            rgba(255, 255, 255, 0.13) 42%,
+            transparent 58%
+        );
+}
+
+
+/* =========================================================
+   SOMBRA AZUL NA PARTE INFERIOR DA FOTO
+========================================================= */
+
+.membro-foto::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    height: 55px;
+
+    z-index: 5;
+
+    pointer-events: none;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(0, 75, 165, 0.30),
+            transparent
+        );
+}
+
+
+/* =========================================================
+   INFORMAÇÕES
+========================================================= */
+
+.membro-info {
+    position: relative;
+
+    z-index: 10;
+
+    padding: 18px 7px 8px;
+}
+
+
+/* =========================================================
+   NÚMERO
+========================================================= */
+
+.membro-numero {
+    display: inline-block;
+
+    margin-bottom: 7px;
+
+    padding: 3px 8px;
+
+    border-radius: 20px;
+
+    color: #00688e;
+
+    background:
+        rgba(125, 255, 235, 0.75);
+
+    border: 1px solid rgba(255, 255, 255, 0.40);
+
+    box-shadow:
+        inset 0 1px 2px rgba(255, 255, 255, 0.70);
+
+    font-size: 9px;
+    font-weight: 800;
+
+    letter-spacing: 3px;
+}
+
+
+/* =========================================================
+   NOME
+========================================================= */
+
+.membro-info h3 {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: 19px;
+    font-weight: 700;
+
+    text-shadow:
+        0 1px 5px rgba(0, 45, 120, 0.45);
+}
+
+
+/* =========================================================
+   FUNÇÃO
+========================================================= */
+
+.membro-info p {
+    margin: 6px 0 0;
+
+    color: rgba(225, 255, 255, 0.75);
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   DETALHE AQUÁTICO
+========================================================= */
+
+.membro-info::after {
+    content: "";
+
+    display: block;
+
+    width: 50px;
+    height: 3px;
+
+    margin-top: 15px;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #5fffdc,
+            #29cfff,
+            transparent
+        );
+
+    box-shadow:
+        0 0 8px rgba(66, 255, 225, 0.30);
+}
+
+
+/* =========================================================
+   PEQUENAS BOLHAS — FIXAS
+========================================================= */
+
+.membros::before {
+    content: "";
+
+    position: absolute;
+
+    width: 7px;
+    height: 7px;
+
+    left: 3%;
+    top: 30%;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(190, 255, 255, 0.55);
+
+    background: rgba(150, 255, 255, 0.10);
+
+    box-shadow:
+        35px 90px 0 -2px rgba(180, 255, 255, 0.40),
+        90px -35px 0 -1px rgba(180, 255, 255, 0.30),
+        1080px 45px 0 -2px rgba(180, 255, 255, 0.35),
+        1140px 130px 0 -1px rgba(180, 255, 255, 0.30);
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE
+========================================================= */
+
+@media (max-width: 1250px) {
+
+    .membros {
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    .membro-card {
+        width: 270px;
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    .nosso-time {
+        padding: 80px 20px 100px;
+    }
+
+    .time-titulo {
+        margin-bottom: 45px;
+    }
+
+    .time-titulo h2 {
+        font-size: 31px;
+        letter-spacing: 2px;
+    }
+
+    .time-titulo span {
+        font-size: 10px;
+        letter-spacing: 4px;
+    }
+
+    .time-titulo p {
+        font-size: 13px;
+    }
+
+    .membros {
+        flex-direction: column;
+        align-items: center;
+        gap: 35px;
+    }
+
+    .membro-card {
+        width: 100%;
+        max-width: 330px;
+    }
+
+    .membro-foto {
+        height: 250px;
+    }
+}
 
 
 /* =========================================================
@@ -2405,6 +2961,44 @@ footer {
 
 .valores-bolha {
     animation-delay: -20s;
+}
+
+/* =========================================================
+   EFEITO DE ÁGUA DO SITE
+========================================================= */
+
+.nosso-time #liquid-effect {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    z-index: 1;
+
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.nosso-time #liquid-canvas {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    display: block;
+}
+
+
+/* =========================================================
+   CONTEÚDO NA FRENTE DO EFEITO
+========================================================= */
+
+.nosso-time .time-titulo,
+.nosso-time .time-container {
+    position: relative;
+    z-index: 5;
 }
 
 /*end region*/
