@@ -386,7 +386,7 @@ header {
     .auth-buttons {
     position: absolute;
 
-    right: 30px;
+    right: -30px;
     top: 60px;
 
     display: flex;
