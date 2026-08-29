@@ -384,18 +384,17 @@ header {
 
     /* BOTÕES FORA DA NAVBAR */
     .auth-buttons {
-        position: absolute;
+    position: absolute;
 
-        /* fica exatamente do lado direito da navbar */
-        left: calc(50% + 900px);
-        top: 60px;
+    right: 30px;
+    top: 60px;
 
-        display: flex;
-        align-items: center;
-        gap: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 
-        z-index: 999;
-    }
+    z-index: 999;
+}
 
     .auth-buttons .btn {
         height: 46px;
