@@ -183,6 +183,18 @@ if (passwordToggle && loginSenha) {
     });
 }
 
+const loginInputs = document.querySelectorAll('.login-input');
+
+loginInputs.forEach((input) => {
+    const updateInputGlowState = () => {
+        input.classList.toggle('has-value', input.value.trim().length > 0);
+    };
+
+    updateInputGlowState();
+    input.addEventListener('input', updateInputGlowState);
+    input.addEventListener('blur', updateInputGlowState);
+});
+
 const getStoredUsers = () => {
     try {
         const storedUsers = JSON.parse(localStorage.getItem('livingScreenUsers') || '[]');
