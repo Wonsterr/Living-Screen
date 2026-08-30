@@ -14,7 +14,6 @@ html {
     min-height: 100vh;
 
     background-image: url("../img/img-fundo-do-site.png");
-    border-radius: 45px;
 
     background-size: cover;
 
@@ -2345,24 +2344,15 @@ main {
 /* Define a aparência e a organização do rodapé da página. */
 footer {
 
-    /* Faz o footer começar na mesma cor da seção acima
-   e ficar mais escuro conforme desce, dando sensação de profundidade */
+    /* Faz o footer começar em um azul-marinho muito escuro
+   e ficar progressivamente mais profundo em direção ao fundo */
     background: linear-gradient(to bottom,
 
-            /* Mesma cor do final da seção acima */
-            #01266c 0%,
-
-            /* Mantém a transição suave no começo */
-            #012460 20%,
-
-            /* Começa a aprofundar */
-            #011e52 45%,
-
-            /* Região mais profunda */
-            #011642 70%,
-
-            /* Fundo mais escuro */
-            #000d2b 100%);
+            #050F2D 0%,
+            #020C22 24%,
+            #010A17 52%,
+            #00050D 78%,
+            #000000 100%);
 
     /* Não cria nenhuma linha entre as duas partes */
     border-top: none;
