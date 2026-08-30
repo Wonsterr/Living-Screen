@@ -289,41 +289,54 @@ select {
 }
 
 @media (max-width: 768px) {
+    header {
+        padding: 12px 0;
+    }
+
+    header .container {
+        width: calc(100% - 18px);
+    }
+
     .logo {
         position: absolute;
-        top: 12px;
-        left: 50%;
-        transform: translateX(-50%);
-        z-index: 12;
+        top: 16px;
+        left: 12px;
+        transform: none;
+        z-index: 15;
     }
 
     .logo img {
-        width: 72px;
+        width: 52px;
     }
 
     .navbar {
         display: flex !important;
-        flex-direction: column;
-        justify-content: center;
         align-items: center;
-        min-height: 90px;
-        padding: 38px 8px 10px;
-        border-radius: 18px;
-        gap: 6px;
+        justify-content: flex-end;
         width: 100%;
+        min-height: 72px;
+        padding: 0 10px 0 72px;
+        border-radius: 14px;
+        gap: 8px;
     }
 
     .menu {
         display: flex;
-        flex-wrap: wrap;
+        align-items: center;
         justify-content: center;
-        width: 100%;
-        gap: 4px 8px;
+        gap: 8px;
+        flex-wrap: nowrap;
+        min-width: 0;
+    }
+
+    .menu.esquerda li:first-child {
+        display: none;
     }
 
     .menu a {
-        font-size: 9.5px;
-        letter-spacing: 0.08px;
+        font-size: 9px;
+        letter-spacing: 0.08em;
+        white-space: nowrap;
     }
 
     .auth-buttons {
@@ -332,29 +345,24 @@ select {
     }
 
     .auth-menu-toggle {
-        width: 32px;
-        height: 32px;
+        width: 30px;
+        height: 30px;
     }
 
     .auth-menu {
-        min-width: 120px;
-    }
-
-    .planta-inicio {
-        left: -30px;
-        top: 390px;
-        width: 180px;
-        z-index: 1;
-        opacity: 0.55;
+        min-width: 110px;
     }
 
     .logo-flutuante-inicio {
-        position: absolute;
-        right: 2%;
-        top: 25%;
-        width: clamp(110px, 30vw, 190px);
-        opacity: 0.5;
-        z-index: 1;
+        display: none !important;
+    }
+
+    .planta-inicio {
+        left: -18px;
+        top: 420px;
+        width: 150px;
+        z-index: 0;
+        opacity: 0.38;
     }
 
     .mvv-container {
@@ -368,37 +376,36 @@ select {
     .missao,
     .visao,
     .valores-bolha {
-        width: min(100%, 260px) !important;
+        width: min(100%, 230px) !important;
         max-width: 100% !important;
         margin: 0 !important;
         left: 0 !important;
-        right: 0 !important;
         transform: none !important;
-        padding: 16px 18px;
-        border-radius: 26px;
+        padding: 14px 16px;
+        border-radius: 22px;
     }
 
     .visao {
-        left: 0 !important;
+        width: min(100%, 220px) !important;
         margin-left: 0 !important;
         margin-right: 0 !important;
     }
 
     .mvv-icon {
-        width: 44px;
-        height: 44px;
+        width: 38px;
+        height: 38px;
     }
 
     .mvv-icon i {
-        font-size: 18px;
+        font-size: 16px;
     }
 
     .mvv-conteudo h3 {
-        font-size: 18px;
+        font-size: 17px;
     }
 
     .mvv-conteudo p {
-        font-size: 12px;
+        font-size: 11px;
         line-height: 1.45;
     }
 
@@ -417,394 +424,98 @@ select {
     }
 
     footer h3 {
-        font-size: 18px;
-        margin-bottom: 12px;
+        font-size: 16px;
+        margin-bottom: 10px;
     }
 
     footer a,
     footer p,
     footer li {
-        font-size: 12px;
+        font-size: 11px;
     }
 
     footer .logofooter img {
-        width: 160px;
+        width: 140px;
     }
 
     footer .redes {
-        margin-top: 14px;
-        gap: 10px;
+        margin-top: 12px;
+        gap: 8px;
     }
 
     footer .redes a {
-        width: 38px;
-        height: 38px;
+        width: 34px;
+        height: 34px;
     }
 }
 
 @media (max-width: 480px) {
     .logo img {
-        width: 68px;
+        width: 46px;
     }
 
     .navbar {
-        min-height: 84px;
-        padding: 34px 6px 10px;
-        border-radius: 16px;
+        min-height: 66px;
+        padding: 0 8px 0 64px;
+        border-radius: 12px;
     }
 
     .menu {
-        width: 100%;
-        justify-content: center;
-        gap: 4px 8px;
-    }
-
-    .menu a {
-        font-size: 8.8px;
-    }
-
-    .auth-menu-toggle {
-        width: 30px;
-        height: 30px;
-    }
-
-    .auth-menu {
-        min-width: 110px;
-    }
-
-    .planta-inicio {
-        left: -22px;
-        top: 360px;
-        width: 150px;
-    }
-
-    .logo-flutuante-inicio {
-        width: clamp(90px, 27vw, 150px);
-        top: 26%;
-        right: 2%;
-    }
-
-    .mvv-bolha,
-    .missao,
-    .visao,
-    .valores-bolha {
-        width: min(100%, 220px) !important;
-    }
-
-    footer h3 {
-        font-size: 16px;
-    }
-
-    footer a,
-    footer p,
-    footer li {
-        font-size: 11.5px;
-    }
-}
-
-@media (max-width: 390px) {
-    .logo img {
-        width: 64px;
-    }
-
-    .navbar {
-        min-height: 82px;
-        padding: 32px 6px 10px;
-        border-radius: 15px;
-    }
-
-    .menu {
-        gap: 4px;
+        gap: 6px;
     }
 
     .menu a {
         font-size: 8.2px;
     }
 
-    .auth-buttons {
-        right: 7px;
-        top: 10px;
-    }
-
-    .auth-menu-toggle {
-        width: 28px;
-        height: 28px;
-    }
-
-    .auth-menu {
-        min-width: 108px;
-    }
-
     .planta-inicio {
-        left: -18px;
-        top: 350px;
-        width: 140px;
+        left: -14px;
+        top: 440px;
+        width: 130px;
     }
 
-    .logo-flutuante-inicio {
-        width: clamp(80px, 24vw, 120px);
-        right: 2%;
-        top: 28%;
-    }
-
-    .mvv-bolha,
-    .missao,
-    .visao,
-    .valores-bolha {
-        width: min(100%, 210px) !important;
-    }
-
-    footer .logofooter img {
-        width: 140px;
-    }
-}
-
-@media (max-width: 600px) {
-    .time-titulo {
-        margin-bottom: 40px;
-    }
-
-    .time-titulo span {
-        font-size: 10px;
-        letter-spacing: 4px;
-    }
-
-    .time-titulo h2 {
-        font-size: 28px;
-        letter-spacing: 2px;
-    }
-
-    .time-titulo p {
-        font-size: 12px;
-    }
-
-    .nosso-time {
-        padding-top: 80px;
-        padding-bottom: 100px;
-    }
-
-    .portfolio-header h2,
-    #portfolio h2,
-    .portfolio-details h3 {
-        word-break: break-word;
-    }
-}
-
-@media (max-width: 480px) {
-    .logo img {
-        width: 74px;
-    }
-
-    .navbar {
-        padding-top: 42px;
-        padding-left: 10px;
-        padding-right: 10px;
-        padding-bottom: 12px;
-        border-radius: 18px;
-    }
-
-    .menu {
-        justify-content: space-between;
-        gap: 6px 8px;
-    }
-
-    .menu a {
-        font-size: 10px;
-    }
-
-    .auth-menu-toggle {
-        width: 36px;
-        height: 36px;
-    }
-
-    .auth-menu {
-        min-width: 132px;
-    }
-
-    .hero-tag {
-        font-size: 9px;
-        padding: 7px 10px;
-    }
-
-    .hero-text h1 {
-        font-size: clamp(27px, 9vw, 36px);
-    }
-
-    .hero-text > p {
-        font-size: 13px;
-    }
-
-    .hero-btn {
-        font-size: 13px;
-        padding: 12px 16px;
-    }
-
-    .service-item h3,
-    .service-item p {
-        font-size: 11px;
-    }
-
-    .logo-flutuante-inicio {
-        width: 62vw;
-    }
-
-    .sobre-info h2 {
-        font-size: 26px;
-    }
-
-    .lista-valores {
-        grid-template-columns: 1fr;
-    }
-
-    .membro-card {
-        width: min(100%, 310px);
-    }
-
-    .membro-foto {
-        height: 220px;
-    }
-
-    .membro-portfolio {
-        width: 100%;
-        max-width: 180px;
-    }
-
-    footer .container {
-        gap: 18px;
+    .visao {
+        width: min(100%, 200px) !important;
     }
 
     footer h3 {
-        font-size: 18px;
-        margin-bottom: 16px;
+        font-size: 14px;
     }
 
     footer a,
     footer p,
     footer li {
-        font-size: 14px;
+        font-size: 10.5px;
     }
 }
 
 @media (max-width: 390px) {
-    header .container {
-        width: calc(100% - 10px);
-    }
-
-    .logo {
-        top: 10px;
-    }
-
     .logo img {
-        width: 68px;
+        width: 42px;
     }
 
     .navbar {
-        min-height: 112px;
-        padding-top: 40px;
-        padding-left: 8px;
-        padding-right: 8px;
-        padding-bottom: 10px;
-    }
-
-    .menu {
-        justify-content: space-between;
-        gap: 6px;
+        min-height: 62px;
+        padding: 0 8px 0 58px;
+        border-radius: 12px;
     }
 
     .menu a {
-        font-size: 9.5px;
+        font-size: 7.8px;
     }
 
-    .auth-buttons {
-        right: 8px;
-        top: 12px;
+    .planta-inicio {
+        left: -12px;
+        top: 430px;
+        width: 120px;
     }
 
-    .auth-menu-toggle {
-        width: 34px;
-        height: 34px;
-    }
-
-    .auth-menu {
-        min-width: 128px;
-        right: -2px;
-    }
-
-    #inicio {
-        padding-top: 145px;
-    }
-
-    .hero-container {
-        width: 92%;
-        gap: 20px;
-    }
-
-    .hero-tag {
-        font-size: 8.8px;
-        letter-spacing: 0.1px;
-        padding: 7px 10px;
-    }
-
-    .hero-text h1 {
-        font-size: 27px;
-        line-height: 1.12;
-    }
-
-    .hero-text > p {
-        font-size: 12.5px;
-        line-height: 1.55;
-    }
-
-    .hero-btn {
-        gap: 10px;
-        font-size: 12.5px;
-        padding: 11px 14px;
-    }
-
-    .hero-services {
-        width: 93%;
-        padding: 12px 14px;
-    }
-
-    .service-item {
-        font-size: 10.5px;
-    }
-
-    .logo-flutuante-inicio {
-        width: 62vw;
-        right: auto;
+    .visao {
+        width: min(100%, 190px) !important;
     }
 
     footer .logofooter img {
-        width: 150px;
-    }
-}
-
-@media (max-width: 320px) {
-    .navbar {
-        padding-top: 36px;
-        padding-left: 6px;
-        padding-right: 6px;
-    }
-
-    .menu {
-        gap: 4px;
-    }
-
-    .menu a {
-        font-size: 8.7px;
-    }
-
-    .hero-text h1 {
-        font-size: 24px;
-    }
-
-    .hero-btn {
-        padding: 10px 12px;
-    }
-
-    .membro-card {
-        width: min(100%, 280px);
+        width: 120px;
     }
 }
 
