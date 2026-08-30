@@ -84,3 +84,66 @@ interactiveElements.forEach((element) => {
     element.addEventListener('mouseup', () => document.body.classList.remove('cursor-active'));
 });
 
+const showToast = (message) => {
+    let toast = document.querySelector('.site-toast');
+
+    if (!toast) {
+        toast = document.createElement('div');
+        toast.className = 'site-toast';
+        document.body.appendChild(toast);
+    }
+
+    toast.textContent = message;
+    toast.classList.add('show');
+
+    clearTimeout(showToast.timeoutId);
+    showToast.timeoutId = setTimeout(() => {
+        toast.classList.remove('show');
+    }, 2200);
+};
+
+const placeholderLinks = document.querySelectorAll('a[href="#"], .membro-portfolio, a[href="Link do instagram"], a[href="Link do linkedin"], a[href="Link do zap"], a[href="Link do Facebook"], a[href="LINK_DO_GOOGLE_MAPS"]');
+
+placeholderLinks.forEach((link) => {
+    link.addEventListener('click', (event) => {
+        const href = link.getAttribute('href');
+
+        if (href === '#') {
+            event.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            showToast('Seção em breve');
+            return;
+        }
+
+        if (link.classList.contains('membro-portfolio')) {
+            event.preventDefault();
+            showToast('Portfólio em breve');
+            return;
+        }
+
+        event.preventDefault();
+        showToast('Link em atualização');
+    });
+});
+
+const newsletterButton = document.querySelector('.novidades button');
+
+if (newsletterButton) {
+    newsletterButton.addEventListener('click', () => {
+        const emailInput = document.querySelector('.novidades input');
+        const emailValue = emailInput ? emailInput.value.trim() : '';
+
+        if (!emailValue) {
+            showToast('Digite seu Gmail para continuar.');
+            emailInput?.focus();
+            return;
+        }
+
+        if (emailInput) {
+            emailInput.value = '';
+        }
+
+        showToast('E-mail cadastrado com sucesso!');
+    });
+}
+
