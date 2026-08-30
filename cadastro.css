@@ -825,8 +825,15 @@ label,
     font-family: Arial, Helvetica, sans-serif;
 
     font-size: 13px;
-
     font-weight: 600;
+    text-shadow: none;
+}
+
+.input-container input.has-value {
+    text-shadow:
+        0 0 6px rgba(174, 240, 255, 0.95),
+        0 0 12px rgba(121, 214, 255, 0.7),
+        0 0 18px rgba(255, 255, 255, 0.28);
 }
 
 

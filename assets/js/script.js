@@ -183,9 +183,9 @@ if (passwordToggle && loginSenha) {
     });
 }
 
-const loginInputs = document.querySelectorAll('.login-input');
+const typedInputs = document.querySelectorAll('input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="button"]):not([type="reset"]):not([type="hidden"]), textarea');
 
-loginInputs.forEach((input) => {
+typedInputs.forEach((input) => {
     const updateInputGlowState = () => {
         input.classList.toggle('has-value', input.value.trim().length > 0);
     };

@@ -249,6 +249,20 @@ summary,
     }
 }
 
+input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="button"]):not([type="reset"]):not([type="hidden"]),
+textarea {
+    text-shadow: none;
+    transition: text-shadow 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+input.has-value:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="button"]):not([type="reset"]):not([type="hidden"]),
+textarea.has-value {
+    text-shadow:
+        0 0 6px rgba(174, 240, 255, 0.95),
+        0 0 12px rgba(121, 214, 255, 0.7),
+        0 0 18px rgba(255, 255, 255, 0.28);
+}
+
 /* =========================================
    BARRA DE ROLAGEM - HOME
    ========================================= */
