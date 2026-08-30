@@ -299,23 +299,23 @@ select {
 
     .logo {
         position: absolute;
-        top: 50%;
-        left: 14px;
-        transform: translateY(-50%);
+        top: 5px;
+        left: 50%;
+        transform: translateX(-50%);
         z-index: 15;
-        display: flex;
+        display: flex !important;
         align-items: center;
         justify-content: center;
-        opacity: 1;
-        visibility: visible;
+        opacity: 1 !important;
+        visibility: visible !important;
         pointer-events: auto;
     }
 
     .logo img {
-        width: 42px;
-        display: block;
-        opacity: 1;
-        visibility: visible;
+        width: 52px;
+        display: block !important;
+        opacity: 1 !important;
+        visibility: visible !important;
         max-width: none;
     }
 
