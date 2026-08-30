@@ -1377,3 +1377,23 @@ body {
     position: relative;
     z-index: 2;
 }
+
+::selection {
+    background: rgba(120, 225, 255, 0.40);
+    color: #ffffff;
+
+    text-shadow:
+        0 0 4px rgba(255, 255, 255, 1),
+        0 0 8px rgba(100, 230, 255, 0.9),
+        0 0 14px rgba(50, 200, 255, 0.6);
+}
+
+::-moz-selection {
+    background: rgba(120, 225, 255, 0.40);
+    color: #ffffff;
+
+    text-shadow:
+        0 0 4px rgba(255, 255, 255, 1),
+        0 0 8px rgba(100, 230, 255, 0.9),
+        0 0 14px rgba(50, 200, 255, 0.6);
+}
