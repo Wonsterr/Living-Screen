@@ -59,3 +59,28 @@ if (typingWord) {
     typingWord.textContent = '';
     updateWord();
 }
+
+const cursorRing = document.createElement('div');
+cursorRing.className = 'cursor-ring';
+document.body.appendChild(cursorRing);
+
+const cursorDot = document.createElement('div');
+cursorDot.className = 'cursor-dot';
+document.body.appendChild(cursorDot);
+
+window.addEventListener('pointermove', (event) => {
+    cursorRing.style.left = `${event.clientX}px`;
+    cursorRing.style.top = `${event.clientY}px`;
+    cursorDot.style.left = `${event.clientX}px`;
+    cursorDot.style.top = `${event.clientY}px`;
+});
+
+const interactiveElements = document.querySelectorAll('a, button, input, select, textarea, summary, .hero-btn, .menu a, .auth-buttons a, .portfolio-card, .membro-card, .service-item, .sobre-bottom a, .navegacao a, .swiper-slide, .swiper-pagination-bullet, [role="button"]');
+
+interactiveElements.forEach((element) => {
+    element.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
+    element.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
+    element.addEventListener('mousedown', () => document.body.classList.add('cursor-active'));
+    element.addEventListener('mouseup', () => document.body.classList.remove('cursor-active'));
+});
+
