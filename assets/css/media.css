@@ -158,21 +158,50 @@
         padding-top: 14px;
     }
 
+    header .container {
+        width: calc(100% - 18px);
+    }
+
+    .logo {
+        position: absolute;
+        top: 18px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 12;
+    }
+
     .logo img {
-        width: 110px;
+        width: 90px;
     }
 
     .navbar {
-        padding: 16px 18px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        min-height: 116px;
+        padding: 58px 16px 16px;
         border-radius: 24px;
     }
 
     .menu {
-        gap: 12px 18px;
+        width: 100%;
+        justify-content: center;
+        gap: 10px 16px;
+        flex-wrap: wrap;
     }
 
     .menu a {
-        font-size: 13px;
+        font-size: 12px;
+    }
+
+    .auth-buttons {
+        position: absolute;
+        right: 14px;
+        top: 20px;
+        transform: none;
     }
 
     .auth-menu-toggle {
@@ -182,6 +211,7 @@
 
     .auth-menu {
         min-width: 150px;
+        top: calc(100% + 10px);
     }
 
     #inicio {
@@ -507,20 +537,35 @@
 }
 
 @media (max-width: 480px) {
+    header {
+        padding-top: 12px;
+    }
+
+    .logo {
+        top: 14px;
+    }
+
     .logo img {
-        width: 96px;
+        width: 82px;
     }
 
     .navbar {
-        padding: 12px 14px;
+        min-height: 106px;
+        padding: 52px 12px 14px;
+        border-radius: 20px;
     }
 
     .menu {
-        gap: 10px 14px;
+        gap: 8px 12px;
     }
 
     .menu a {
-        font-size: 12px;
+        font-size: 11px;
+    }
+
+    .auth-buttons {
+        right: 12px;
+        top: 18px;
     }
 
     .auth-menu-toggle {
@@ -530,6 +575,7 @@
 
     .auth-menu {
         min-width: 140px;
+        top: calc(100% + 8px);
     }
 
     .hero-text h1 {
