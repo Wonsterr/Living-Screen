@@ -229,6 +229,24 @@
     .membro-foto {
         height: 250px;
     }
+
+    .membro-actions {
+        gap: 10px;
+    }
+
+    .membro-portfolio {
+        width: 100%;
+        max-width: 180px;
+    }
+
+    .membro-socials {
+        gap: 8px;
+    }
+
+    .membro-socials a {
+        width: 28px;
+        height: 28px;
+    }
 }
 
 
