@@ -1,48 +1,88 @@
 /* =========================================================
-   RESPONSIVO GLOBAL
-   SITE: HOME + SOBRE + PORTFÓLIO + FOOTER
+   RESPONSIVIDADE REAL - FRUTIGER AERO / AQUA
+   Preserva identidade visual e reduz problemas de overflow.
 ========================================================= */
 
-@media (max-width: 1400px) {
-    header .container {
-        width: 96%;
-    }
+html {
+    scroll-behavior: smooth;
+}
 
-    .navbar {
-        padding: 0 36px;
-    }
+body,
+html {
+    width: 100%;
+    overflow-x: clip;
+}
 
-    .menu {
-        gap: 30px;
-    }
+img,
+svg,
+iframe,
+video,
+canvas,
+picture {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a,
+li,
+button,
+input,
+textarea,
+select {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+
+@media (max-width: 1920px) {
     .hero-container {
-        max-width: 1320px;
-        gap: 28px;
-        transform: translateX(-18px);
+        max-width: 1460px;
+        gap: 26px;
+        transform: translateX(-30px);
     }
 
     .hero-services {
-        width: 78%;
+        width: min(76%, 1180px);
     }
 }
 
-@media (max-width: 1200px) {
-    header {
-        padding: 24px 0;
-    }
-
-    .logo {
-        left: 49%;
+@media (max-width: 1440px) {
+    header .container {
+        width: 94%;
     }
 
     .navbar {
-        height: 88px;
-        padding: 0 26px;
+        padding-left: 42px;
+        padding-right: 42px;
     }
 
     .menu {
-        gap: 24px;
+        gap: 34px;
+    }
+
+    .hero-container {
+        width: 92%;
+        transform: translateX(-18px);
+    }
+}
+
+@media (max-width: 1280px) {
+    .navbar {
+        height: 88px;
+        padding-left: 28px;
+        padding-right: 28px;
+    }
+
+    .menu {
+        gap: 26px;
     }
 
     .menu a {
@@ -51,9 +91,9 @@
 
     .hero-container {
         grid-template-columns: 1fr;
-        gap: 50px;
+        width: min(90%, 840px);
+        gap: 40px;
         transform: none;
-        width: 90%;
         text-align: center;
     }
 
@@ -75,152 +115,111 @@
     }
 
     .hero-services {
-        position: static;
+        position: relative;
+        left: auto;
+        bottom: auto;
         transform: none;
         width: min(100%, 760px);
         margin: 0 auto;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 16px;
-        padding: 18px 20px;
+        gap: 14px;
+        padding: 18px 22px;
     }
 
     .service-item {
         flex: 1 1 220px;
         max-width: 260px;
+        padding-left: 14px;
+        padding-right: 14px;
     }
 
-    .planta-inicio {
-        width: 300px;
-        top: calc(100vh - 170px);
-    }
-}
-
-@media (max-width: 980px) {
-    header {
-        flex-wrap: wrap;
-        gap: 12px;
-        padding: 18px 0 12px;
+    .service-item + .service-item {
+        border-left: none;
+        border-top: 1px solid rgba(255, 255, 255, 0.3);
     }
 
-    .logo {
-        position: static;
-        left: auto;
-        transform: none;
-        order: 1;
-        width: 100%;
-        margin: 0 auto 8px;
-    }
-
-    .container {
-        order: 2;
-        width: calc(100% - 32px);
-        max-width: 760px;
-    }
-
-    .navbar {
-        height: auto;
-        min-height: 82px;
-        padding: 16px 20px;
+    .sobre-layout {
         grid-template-columns: 1fr;
-        gap: 18px;
+        gap: 28px;
     }
 
-    .menu {
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 16px 22px;
-    }
-
-    .esquerda,
-    .direita {
-        justify-self: center;
-    }
-
-    .auth-buttons {
-        position: static;
+    .sobre-info {
         transform: none;
-        order: 3;
-        margin: 0 auto;
+        min-height: auto;
     }
 
-    #inicio {
-        padding-top: 190px;
+    .mvv-bolha,
+    .missao,
+    .visao,
+    .valores-bolha {
+        width: 100%;
+        margin: 0;
     }
 
-    .hero-text h1 {
-        font-size: clamp(42px, 7vw, 62px);
+    .membros {
+        flex-wrap: wrap;
+        gap: 28px;
     }
 }
 
-@media (max-width: 760px) {
+@media (max-width: 1024px) {
     header {
-        padding-top: 14px;
+        padding-top: 18px;
+        padding-bottom: 12px;
     }
 
     header .container {
-        width: calc(100% - 18px);
+        width: calc(100% - 24px);
     }
 
     .logo {
         position: absolute;
-        top: 18px;
+        top: 14px;
         left: 50%;
         transform: translateX(-50%);
         z-index: 12;
     }
 
     .logo img {
-        width: 90px;
+        width: 110px;
     }
 
     .navbar {
-        position: relative;
         display: flex;
-        flex-direction: column;
+        flex-wrap: wrap;
         justify-content: center;
         align-items: center;
-        gap: 10px;
-        min-height: 116px;
-        padding: 58px 16px 16px;
-        border-radius: 24px;
+        min-height: 112px;
+        gap: 10px 18px;
+        padding: 54px 18px 16px;
+        border-radius: 26px;
     }
 
     .menu {
         width: 100%;
         justify-content: center;
-        gap: 10px 16px;
+        gap: 12px 18px;
         flex-wrap: wrap;
     }
 
     .menu a {
-        font-size: 12px;
+        font-size: 13px;
     }
 
     .auth-buttons {
         position: absolute;
         right: 14px;
-        top: 20px;
+        top: 18px;
         transform: none;
-    }
-
-    .auth-menu-toggle {
-        width: 42px;
-        height: 42px;
     }
 
     .auth-menu {
         min-width: 150px;
-        top: calc(100% + 10px);
     }
 
     #inicio {
-        padding: 170px 0 70px;
-    }
-
-    .hero-container {
-        width: 88%;
-        gap: 34px;
+        padding-top: 175px;
     }
 
     .hero-tag {
@@ -229,11 +228,11 @@
     }
 
     .hero-text h1 {
-        letter-spacing: -1px;
+        font-size: clamp(38px, 7vw, 62px);
     }
 
     .hero-text > p {
-        font-size: 16px;
+        font-size: clamp(15px, 2.2vw, 18px);
     }
 
     .hero-buttons {
@@ -243,306 +242,59 @@
 
     .hero-btn {
         width: 100%;
-    }
-
-    .hero-services {
-        width: 88%;
-        padding: 16px 18px;
-        gap: 10px;
-        border-radius: 20px;
-    }
-
-    .service-item {
-        flex-basis: 100%;
-        max-width: 100%;
-        padding: 8px 0;
-        border-left: none;
-    }
-
-    .service-item + .service-item {
-        border-top: 1px solid rgba(255, 255, 255, 0.25);
-    }
-
-    .planta-inicio {
-        width: 240px;
-        top: calc(100vh - 120px);
-        opacity: 0.8;
-    }
-
-    .logo-flutuante-inicio {
-        width: min(68vw, 420px);
-        right: 2%;
-        opacity: 0.7;
-    }
-}
-
-@media (max-width: 640px) {
-    #sobrenos {
-        padding: 95px 14px 30px;
-    }
-
-    .sobre-layout {
-        width: 100%;
-    }
-
-    .sobre-info {
-        padding: 28px 20px;
-        border-radius: 26px;
-    }
-
-    .sobre-info h2 {
-        font-size: 34px;
-    }
-
-    .sobre-info > p {
-        font-size: 13px;
+        max-width: 340px;
     }
 
     .mvv-bolha,
     .missao,
     .visao,
     .valores-bolha {
-        width: 100%;
-        margin: 0;
-        padding: 20px 18px;
-        border-radius: 40px;
+        min-height: auto;
+        padding: 20px 22px;
     }
 
     .mvv-icon {
-        width: 52px;
-        height: 52px;
+        width: 58px;
+        height: 58px;
     }
 
     .mvv-icon i {
-        font-size: 20px;
+        font-size: 22px;
     }
 
     .mvv-conteudo h3 {
-        font-size: 18px;
-    }
-
-    .lista-valores {
-        grid-template-columns: 1fr;
-        gap: 8px;
-    }
-
-    .sobre-bottom {
-        width: 100%;
-        flex-direction: column;
-        padding: 20px 18px;
-        text-align: center;
-    }
-
-    .sobre-bottom p {
-        font-size: 13px;
-    }
-
-    .sobre-bottom a {
-        width: 100%;
-        min-width: 0;
-    }
-}
-
-@media (max-width: 1250px) {
-    .membros {
-        flex-wrap: wrap;
-        gap: 28px;
-    }
-
-    .membro-card {
-        width: 270px;
-    }
-}
-
-@media (max-width: 700px) {
-    .nosso-time {
-        padding: 80px 20px 100px;
-    }
-
-    .time-titulo {
-        margin-bottom: 45px;
-    }
-
-    .time-titulo h2 {
-        font-size: 31px;
-        letter-spacing: 2px;
-    }
-
-    .time-titulo span {
-        font-size: 10px;
-        letter-spacing: 4px;
-    }
-
-    .time-titulo p {
-        font-size: 13px;
-    }
-
-    .membros {
-        flex-direction: column;
-        align-items: center;
-        gap: 30px;
-    }
-
-    .membro-card {
-        width: 100%;
-        max-width: 340px;
-    }
-
-    .membro-foto {
-        height: 240px;
-    }
-
-    .membro-actions {
-        gap: 10px;
-    }
-
-    .membro-portfolio {
-        width: 100%;
-        max-width: 180px;
-    }
-
-    .membro-socials {
-        gap: 8px;
-    }
-
-    .membro-socials a {
-        width: 28px;
-        height: 28px;
-    }
-}
-
-@media (max-width: 1000px) {
-    #portfolio {
-        padding: 145px 4% 90px;
-    }
-
-    .portfolio-swiper {
-        max-width: 100%;
-    }
-
-    .portfolio-body {
-        grid-template-columns: 1fr;
-    }
-
-    .portfolio-preview {
-        height: 500px;
-    }
-
-    .portfolio-details {
-        border-left: none;
-        border-top: 1px solid rgba(255, 255, 255, 0.8);
-    }
-}
-
-@media (max-width: 600px) {
-    .scroll-top-btn {
-        right: 18px;
-        bottom: 18px;
-        width: 52px;
-        height: 52px;
-    }
-
-    .scroll-top-icon {
-        font-size: 24px;
-    }
-
-    #portfolio {
-        padding: 125px 15px 60px;
-    }
-
-    .portfolio-header {
-        margin-bottom: 25px;
-    }
-
-    .portfolio-header > span {
-        padding: 6px 14px;
-        font-size: 9px;
-    }
-
-    .portfolio-header h2 {
-        font-size: 31px;
-    }
-
-    .portfolio-header p {
-        font-size: 12px;
-        line-height: 1.6;
-    }
-
-    .portfolio-swiper {
-        padding: 5px 5px 50px 5px;
-    }
-
-    .portfolio-top {
-        height: 65px;
-        padding: 0 15px;
-    }
-
-    .portfolio-info h3 {
-        font-size: 13px;
-    }
-
-    .portfolio-info p {
-        font-size: 9px;
-    }
-
-    .portfolio-dots {
-        gap: 5px;
-    }
-
-    .portfolio-dots span {
-        width: 10px;
-        height: 10px;
-    }
-
-    .portfolio-preview {
-        height: 400px;
-        padding: 8px;
-    }
-
-    .portfolio-preview iframe {
-        border-radius: 14px;
-    }
-
-    .portfolio-details {
-        padding: 28px 22px;
-    }
-
-    .portfolio-details h3 {
         font-size: 20px;
     }
 
-    .details-description {
-        font-size: 11px;
+    .mvv-conteudo p {
+        font-size: 12px;
     }
 
-    .details-list li {
-        font-size: 10px;
+    .membros {
+        gap: 24px;
     }
 
-    .portfolio-swiper .swiper-pagination {
-        bottom: 0 !important;
-        height: 24px;
-        gap: 8px;
+    .membro-card {
+        width: min(100%, 290px);
     }
 
-    .portfolio-swiper .swiper-pagination-bullet {
-        width: 8px;
-        height: 8px;
+    .nosso-time {
+        padding-left: 20px;
+        padding-right: 20px;
     }
 
-    .portfolio-swiper .swiper-pagination-bullet-active {
-        width: 25px;
-        height: 8px;
+    .time-titulo h2 {
+        font-size: clamp(32px, 5vw, 44px);
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
     header {
         padding-top: 12px;
     }
 
-    .logo {
-        top: 14px;
+    header .container {
+        width: calc(100% - 16px);
     }
 
     .logo img {
@@ -550,22 +302,23 @@
     }
 
     .navbar {
-        min-height: 106px;
-        padding: 52px 12px 14px;
-        border-radius: 20px;
+        min-height: 108px;
+        padding: 46px 12px 14px;
+        border-radius: 22px;
     }
 
     .menu {
-        gap: 8px 12px;
+        gap: 8px 14px;
     }
 
     .menu a {
         font-size: 11px;
+        letter-spacing: 0.15px;
     }
 
     .auth-buttons {
-        right: 12px;
-        top: 18px;
+        right: 10px;
+        top: 14px;
     }
 
     .auth-menu-toggle {
@@ -575,102 +328,6 @@
 
     .auth-menu {
         min-width: 140px;
-        top: calc(100% + 8px);
-    }
-
-    .hero-text h1 {
-        font-size: 36px;
-    }
-
-    .hero-text > p {
-        font-size: 14px;
-    }
-
-    .hero-btn {
-        min-width: 0;
-        font-size: 15px;
-        padding: 14px 18px;
-    }
-
-    .membro-card {
-        max-width: 300px;
-    }
-
-    .membro-foto {
-        height: 220px;
-    }
-
-    .sobre-bottom a {
-        font-size: 14px;
-    }
-}
-
-@media (max-width: 390px) {
-    header {
-        padding-top: 10px;
-    }
-
-    header .container {
-        width: calc(100% - 8px);
-    }
-
-    .logo {
-        position: absolute;
-        top: 12px;
-        left: 50%;
-        width: 72px;
-        transform: translateX(-50%);
-        z-index: 12;
-    }
-
-    .logo img {
-        width: 72px;
-        display: block;
-    }
-
-    .navbar {
-        display: flex !important;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        min-height: 118px;
-        padding: 48px 8px 12px;
-        border-radius: 18px;
-        grid-template-columns: none;
-    }
-
-    .menu {
-        display: flex;
-        width: 100%;
-        justify-content: space-between;
-        align-items: center;
-        gap: 6px 8px;
-        padding: 0 2px;
-        flex-wrap: wrap;
-    }
-
-    .menu a {
-        font-size: 10px;
-        letter-spacing: 0.2px;
-    }
-
-    .auth-buttons {
-        position: absolute;
-        right: 10px;
-        top: 16px;
-        transform: none;
-    }
-
-    .auth-menu-toggle {
-        width: 36px;
-        height: 36px;
-    }
-
-    .auth-menu {
-        min-width: 132px;
-        right: -2px;
-        top: calc(100% + 8px);
     }
 
     #inicio {
@@ -683,23 +340,159 @@
     }
 
     .hero-tag {
-        font-size: 9.5px;
-        line-height: 1.5;
+        font-size: 10px;
         padding: 8px 12px;
     }
 
     .hero-text h1 {
-        font-size: 31px;
-        line-height: 1.15;
+        font-size: clamp(30px, 9vw, 46px);
+        letter-spacing: -1px;
+    }
+
+    .hero-text > p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .hero-btn {
+        font-size: 14px;
+        padding: 12px 18px;
+    }
+
+    .hero-services {
+        width: 92%;
+        padding: 14px 16px;
+        gap: 10px;
+        border-radius: 18px;
+    }
+
+    .service-item {
+        flex-basis: 100%;
+        max-width: 100%;
+        justify-content: center;
+        text-align: center;
+        padding: 8px 0;
+    }
+
+    .service-item + .service-item {
+        border-top: 1px solid rgba(255, 255, 255, 0.22);
+    }
+
+    .logo-flutuante-inicio {
+        width: min(72vw, 420px);
+        right: 0;
+        opacity: 0.6;
+    }
+
+    .sobre-info {
+        padding: 28px 20px;
+        border-radius: 26px;
+    }
+
+    .sobre-info h2 {
+        font-size: clamp(28px, 7vw, 40px);
+    }
+
+    .origem-projeto {
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .sobre-bottom {
+        width: 100%;
+        flex-direction: column;
+        gap: 16px;
+        padding: 20px 18px;
+    }
+
+    .sobre-bottom a {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .membros {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .membro-card {
+        width: min(100%, 360px);
+    }
+}
+
+@media (max-width: 600px) {
+    .time-titulo {
+        margin-bottom: 40px;
+    }
+
+    .time-titulo span {
+        font-size: 10px;
+        letter-spacing: 4px;
+    }
+
+    .time-titulo h2 {
+        font-size: 28px;
+        letter-spacing: 2px;
+    }
+
+    .time-titulo p {
+        font-size: 12px;
+    }
+
+    .nosso-time {
+        padding-top: 80px;
+        padding-bottom: 100px;
+    }
+
+    .portfolio-header h2,
+    #portfolio h2,
+    .portfolio-details h3 {
+        word-break: break-word;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo img {
+        width: 74px;
+    }
+
+    .navbar {
+        padding-top: 42px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 12px;
+        border-radius: 18px;
+    }
+
+    .menu {
+        justify-content: space-between;
+        gap: 6px 8px;
+    }
+
+    .menu a {
+        font-size: 10px;
+    }
+
+    .auth-menu-toggle {
+        width: 36px;
+        height: 36px;
+    }
+
+    .auth-menu {
+        min-width: 132px;
+    }
+
+    .hero-tag {
+        font-size: 9px;
+        padding: 7px 10px;
+    }
+
+    .hero-text h1 {
+        font-size: clamp(27px, 9vw, 36px);
     }
 
     .hero-text > p {
         font-size: 13px;
-        line-height: 1.7;
-    }
-
-    .hero-buttons {
-        gap: 12px;
     }
 
     .hero-btn {
@@ -707,25 +500,149 @@
         padding: 12px 16px;
     }
 
-    .hero-services {
+    .service-item h3,
+    .service-item p {
+        font-size: 11px;
+    }
+
+    .sobre-info h2 {
+        font-size: 26px;
+    }
+
+    .lista-valores {
+        grid-template-columns: 1fr;
+    }
+
+    .membro-card {
+        width: min(100%, 310px);
+    }
+
+    .membro-foto {
+        height: 220px;
+    }
+
+    .membro-portfolio {
+        width: 100%;
+        max-width: 180px;
+    }
+}
+
+@media (max-width: 390px) {
+    header .container {
+        width: calc(100% - 10px);
+    }
+
+    .logo {
+        top: 10px;
+    }
+
+    .logo img {
+        width: 68px;
+    }
+
+    .navbar {
+        min-height: 112px;
+        padding-top: 40px;
+        padding-left: 8px;
+        padding-right: 8px;
+        padding-bottom: 10px;
+    }
+
+    .menu {
+        justify-content: space-between;
+        gap: 6px;
+    }
+
+    .menu a {
+        font-size: 9.5px;
+    }
+
+    .auth-buttons {
+        right: 8px;
+        top: 12px;
+    }
+
+    .auth-menu-toggle {
+        width: 34px;
+        height: 34px;
+    }
+
+    .auth-menu {
+        min-width: 128px;
+        right: -2px;
+    }
+
+    #inicio {
+        padding-top: 145px;
+    }
+
+    .hero-container {
         width: 92%;
-        gap: 8px;
+        gap: 20px;
+    }
+
+    .hero-tag {
+        font-size: 8.8px;
+        letter-spacing: 0.1px;
+        padding: 7px 10px;
+    }
+
+    .hero-text h1 {
+        font-size: 27px;
+        line-height: 1.12;
+    }
+
+    .hero-text > p {
+        font-size: 12.5px;
+        line-height: 1.55;
+    }
+
+    .hero-btn {
+        gap: 10px;
+        font-size: 12.5px;
+        padding: 11px 14px;
+    }
+
+    .hero-services {
+        width: 93%;
         padding: 12px 14px;
     }
 
     .service-item {
-        font-size: 11px;
-        padding: 6px 0;
-    }
-
-    .service-item i {
-        font-size: 12px;
+        font-size: 10.5px;
     }
 
     .logo-flutuante-inicio {
-        width: 70vw;
+        width: 72vw;
         right: 0;
-        opacity: 0.6;
+    }
+}
+
+@media (max-width: 320px) {
+    .navbar {
+        padding-top: 36px;
+        padding-left: 6px;
+        padding-right: 6px;
+    }
+
+    .menu {
+        gap: 4px;
+    }
+
+    .menu a {
+        font-size: 8.7px;
+    }
+
+    .hero-text h1 {
+        font-size: 24px;
+    }
+
+    .hero-btn {
+        padding: 10px 12px;
+    }
+
+    .membro-card {
+        width: min(100%, 280px);
     }
 }
 
