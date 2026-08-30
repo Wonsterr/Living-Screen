@@ -2206,11 +2206,17 @@ main {
     margin-top: -8%;
 
     object-fit: cover;
+    object-position: center;
 
     filter:
         saturate(1.05)
         brightness(1.02)
         contrast(0.98);
+}
+
+.membro-card:nth-of-type(4) .membro-foto img {
+    object-position: 100% center;
+    transform: translateX(18px);
 }
 
 
