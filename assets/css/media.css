@@ -299,14 +299,24 @@ select {
 
     .logo {
         position: absolute;
-        top: 16px;
-        left: 12px;
-        transform: none;
+        top: 50%;
+        left: 14px;
+        transform: translateY(-50%);
         z-index: 15;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
     }
 
     .logo img {
-        width: 52px;
+        width: 42px;
+        display: block;
+        opacity: 1;
+        visibility: visible;
+        max-width: none;
     }
 
     .navbar {
@@ -315,7 +325,7 @@ select {
         justify-content: flex-end;
         width: 100%;
         min-height: 72px;
-        padding: 0 10px 0 72px;
+        padding: 0 10px 0 64px;
         border-radius: 14px;
         gap: 8px;
     }
@@ -361,7 +371,7 @@ select {
         left: -18px;
         top: 420px;
         width: 150px;
-        z-index: 0;
+        z-index: 1;
         opacity: 0.38;
     }
 
@@ -372,23 +382,14 @@ select {
         gap: 14px;
     }
 
-    .mvv-bolha,
-    .missao,
-    .visao,
-    .valores-bolha {
-        width: min(100%, 230px) !important;
+    .visao {
+        width: min(100%, 220px) !important;
         max-width: 100% !important;
-        margin: 0 !important;
+        margin: 0 auto !important;
         left: 0 !important;
         transform: none !important;
         padding: 14px 16px;
         border-radius: 22px;
-    }
-
-    .visao {
-        width: min(100%, 220px) !important;
-        margin-left: 0 !important;
-        margin-right: 0 !important;
     }
 
     .mvv-icon {
@@ -409,6 +410,73 @@ select {
         line-height: 1.45;
     }
 
+    .nosso-time {
+        padding: 90px 16px 100px;
+    }
+
+    .time-titulo {
+        margin-bottom: 30px;
+    }
+
+    .time-titulo span {
+        letter-spacing: 3px;
+        font-size: 11px;
+    }
+
+    .time-titulo h2 {
+        font-size: clamp(26px, 7vw, 38px);
+        letter-spacing: 2px;
+    }
+
+    .time-titulo p {
+        font-size: 12px;
+    }
+
+    .membros {
+        flex-wrap: wrap;
+        gap: 18px;
+    }
+
+    .membro-card {
+        width: min(100%, 240px);
+        min-height: auto;
+        padding: 10px;
+    }
+
+    .membro-foto {
+        height: 190px;
+    }
+
+    .membro-info {
+        padding: 14px 6px 6px;
+    }
+
+    .membro-info h3 {
+        font-size: 17px;
+    }
+
+    .membro-info p {
+        font-size: 11px;
+    }
+
+    .membro-actions {
+        gap: 10px;
+    }
+
+    .membro-portfolio {
+        min-width: 130px;
+        padding: 9px 14px;
+    }
+
+    .membro-socials {
+        gap: 8px;
+    }
+
+    .membro-socials a {
+        width: 28px;
+        height: 28px;
+    }
+
     footer .container {
         flex-direction: column;
         align-items: stretch;
@@ -424,18 +492,18 @@ select {
     }
 
     footer h3 {
-        font-size: 16px;
+        font-size: 14px;
         margin-bottom: 10px;
     }
 
     footer a,
     footer p,
     footer li {
-        font-size: 11px;
+        font-size: 10.8px;
     }
 
     footer .logofooter img {
-        width: 140px;
+        width: 120px;
     }
 
     footer .redes {
@@ -444,14 +512,22 @@ select {
     }
 
     footer .redes a {
-        width: 34px;
-        height: 34px;
+        width: 30px;
+        height: 30px;
+    }
+
+    footer .novidades input {
+        height: 38px;
+    }
+
+    footer .novidades button {
+        height: 40px;
     }
 }
 
 @media (max-width: 480px) {
     .logo img {
-        width: 46px;
+        width: 40px;
     }
 
     .navbar {
