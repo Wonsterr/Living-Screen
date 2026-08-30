@@ -1748,17 +1748,17 @@ main {
     isolation: isolate;
 
     background:
-        radial-gradient(
-            ellipse at 50% 0%,
-            rgba(0, 220, 255, 0.16),
-            transparent 50%
-        ),
         linear-gradient(
             180deg,
-            rgba(1, 37, 106, 0),
-            rgba(1, 37, 106, 0.18)
+            #011C57 0%,
+            #011746 35%,
+            #010F32 70%,
+            #00091F 100%
         );
-        background-image: url("../img/FUNDO-NOSSO-TIME.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 
@@ -2970,23 +2970,19 @@ footer {
 .nosso-time #liquid-effect {
     position: absolute;
     inset: 0;
-
     width: 100%;
     height: 100%;
-
-    z-index: 1;
-
+    z-index: 2;
     pointer-events: none;
     overflow: hidden;
+    opacity: 0.35;
 }
 
 .nosso-time #liquid-canvas {
     position: absolute;
     inset: 0;
-
     width: 100%;
     height: 100%;
-
     display: block;
 }
 
