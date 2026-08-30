@@ -24,7 +24,21 @@ body {
     background-attachment: fixed;
 
     overflow-x: hidden;
+    cursor: default;
 
+}
+
+/* Cursor de mão para links e botões clicáveis */
+a,
+button,
+.hero-btn,
+.menu a,
+.auth-buttons a,
+.portfolio-card,
+.membro-card,
+.service-item,
+.sobre-bottom a {
+    cursor: pointer;
 }
 
 /* =========================================
