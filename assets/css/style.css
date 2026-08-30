@@ -2202,8 +2202,10 @@ main {
 .membro-foto img {
     display: block;
 
-    width: 100%;
-    height: 100%;
+    width: 116%;
+    height: 116%;
+    margin-left: -8%;
+    margin-top: -8%;
 
     object-fit: cover;
 
