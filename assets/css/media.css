@@ -297,18 +297,35 @@ select {
         width: calc(100% - 16px);
     }
 
+    .logo {
+        position: absolute;
+        top: 12px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 12;
+    }
+
     .logo img {
         width: 82px;
     }
 
     .navbar {
+        display: flex !important;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         min-height: 108px;
-        padding: 46px 12px 14px;
+        padding: 44px 12px 12px;
         border-radius: 22px;
+        gap: 8px;
     }
 
     .menu {
+        display: flex;
+        width: 100%;
+        justify-content: center;
         gap: 8px 14px;
+        flex-wrap: wrap;
     }
 
     .menu a {
@@ -332,6 +349,7 @@ select {
 
     #inicio {
         padding-top: 150px;
+        overflow: hidden;
     }
 
     .hero-container {
@@ -360,6 +378,11 @@ select {
     }
 
     .hero-services {
+        position: relative;
+        left: auto;
+        bottom: auto;
+        transform: none;
+        z-index: 4;
         width: 92%;
         padding: 14px 16px;
         gap: 10px;
@@ -376,12 +399,29 @@ select {
 
     .service-item + .service-item {
         border-top: 1px solid rgba(255, 255, 255, 0.22);
+        border-left: none;
+    }
+
+    .planta-inicio {
+        left: -18px;
+        top: 380px;
+        width: 210px;
+        z-index: 1;
+        opacity: 0.7;
     }
 
     .logo-flutuante-inicio {
-        width: min(72vw, 420px);
+        position: absolute;
         right: 0;
+        top: 18%;
+        width: min(64vw, 280px);
+        margin: 0;
         opacity: 0.6;
+        z-index: 1;
+    }
+
+    .sobre-layout {
+        width: 100%;
     }
 
     .sobre-info {
@@ -396,6 +436,39 @@ select {
     .origem-projeto {
         align-items: flex-start;
         gap: 12px;
+    }
+
+    .mvv-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .mvv-bolha,
+    .missao,
+    .visao,
+    .valores-bolha {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        left: 0 !important;
+        transform: none !important;
+        padding: 18px 18px;
+        border-radius: 35px;
+    }
+
+    .visao {
+        left: 0 !important;
+    }
+
+    .mvv-icon {
+        width: 52px;
+        height: 52px;
+    }
+
+    .mvv-icon i {
+        font-size: 20px;
     }
 
     .sobre-bottom {
@@ -417,6 +490,239 @@ select {
 
     .membro-card {
         width: min(100%, 360px);
+    }
+
+    footer .container {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 24px;
+    }
+
+    footer .logofooter,
+    footer .navegacao,
+    footer .servicos,
+    footer .contato,
+    footer .novidades {
+        width: 100%;
+    }
+
+    footer .logofooter img {
+        width: 180px;
+    }
+
+    footer .redes {
+        margin-top: 18px;
+        gap: 12px;
+    }
+
+    footer .redes a {
+        width: 42px;
+        height: 42px;
+    }
+
+    footer .navegacao,
+    footer .servicos,
+    footer .contato,
+    footer .novidades {
+        gap: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo img {
+        width: 74px;
+    }
+
+    .navbar {
+        padding-top: 42px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 12px;
+        border-radius: 18px;
+    }
+
+    .menu {
+        justify-content: space-between;
+        gap: 6px 8px;
+    }
+
+    .menu a {
+        font-size: 10px;
+    }
+
+    .auth-menu-toggle {
+        width: 36px;
+        height: 36px;
+    }
+
+    .auth-menu {
+        min-width: 132px;
+    }
+
+    .hero-tag {
+        font-size: 9px;
+        padding: 7px 10px;
+    }
+
+    .hero-text h1 {
+        font-size: clamp(27px, 9vw, 36px);
+    }
+
+    .hero-text > p {
+        font-size: 13px;
+    }
+
+    .hero-btn {
+        font-size: 13px;
+        padding: 12px 16px;
+    }
+
+    .service-item h3,
+    .service-item p {
+        font-size: 11px;
+    }
+
+    .logo-flutuante-inicio {
+        width: 62vw;
+        top: 16%;
+    }
+
+    .sobre-info h2 {
+        font-size: 26px;
+    }
+
+    .lista-valores {
+        grid-template-columns: 1fr;
+    }
+
+    .membro-card {
+        width: min(100%, 310px);
+    }
+
+    .membro-foto {
+        height: 220px;
+    }
+
+    .membro-portfolio {
+        width: 100%;
+        max-width: 180px;
+    }
+
+    footer .container {
+        gap: 18px;
+    }
+
+    footer h3 {
+        font-size: 18px;
+        margin-bottom: 16px;
+    }
+
+    footer a,
+    footer p,
+    footer li {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 390px) {
+    header .container {
+        width: calc(100% - 10px);
+    }
+
+    .logo {
+        top: 10px;
+    }
+
+    .logo img {
+        width: 68px;
+    }
+
+    .navbar {
+        min-height: 112px;
+        padding-top: 40px;
+        padding-left: 8px;
+        padding-right: 8px;
+        padding-bottom: 10px;
+    }
+
+    .menu {
+        justify-content: space-between;
+        gap: 6px;
+    }
+
+    .menu a {
+        font-size: 9.5px;
+    }
+
+    .auth-buttons {
+        right: 8px;
+        top: 12px;
+    }
+
+    .auth-menu-toggle {
+        width: 34px;
+        height: 34px;
+    }
+
+    .auth-menu {
+        min-width: 128px;
+        right: -2px;
+    }
+
+    #inicio {
+        padding-top: 145px;
+    }
+
+    .hero-container {
+        width: 92%;
+        gap: 20px;
+    }
+
+    .hero-tag {
+        font-size: 8.8px;
+        letter-spacing: 0.1px;
+        padding: 7px 10px;
+    }
+
+    .hero-text h1 {
+        font-size: 27px;
+        line-height: 1.12;
+    }
+
+    .hero-text > p {
+        font-size: 12.5px;
+        line-height: 1.55;
+    }
+
+    .hero-btn {
+        gap: 10px;
+        font-size: 12.5px;
+        padding: 11px 14px;
+    }
+
+    .hero-services {
+        width: 93%;
+        padding: 12px 14px;
+    }
+
+    .service-item {
+        font-size: 10.5px;
+    }
+
+    .planta-inicio {
+        width: 180px;
+        left: -12px;
+        top: 360px;
+    }
+
+    .logo-flutuante-inicio {
+        width: 58vw;
+        right: 0;
+        top: 18%;
+    }
+
+    footer .logofooter img {
+        width: 150px;
     }
 }
 
@@ -505,6 +811,10 @@ select {
         font-size: 11px;
     }
 
+    .logo-flutuante-inicio {
+        width: 62vw;
+    }
+
     .sobre-info h2 {
         font-size: 26px;
     }
@@ -524,6 +834,21 @@ select {
     .membro-portfolio {
         width: 100%;
         max-width: 180px;
+    }
+
+    footer .container {
+        gap: 18px;
+    }
+
+    footer h3 {
+        font-size: 18px;
+        margin-bottom: 16px;
+    }
+
+    footer a,
+    footer p,
+    footer li {
+        font-size: 14px;
     }
 }
 
@@ -613,8 +938,12 @@ select {
     }
 
     .logo-flutuante-inicio {
-        width: 72vw;
-        right: 0;
+        width: 62vw;
+        right: auto;
+    }
+
+    footer .logofooter img {
+        width: 150px;
     }
 }
 
