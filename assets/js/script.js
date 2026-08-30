@@ -147,3 +147,32 @@ if (newsletterButton) {
     });
 }
 
+const scrollTopButton = document.querySelector('.scroll-top-btn');
+
+if (scrollTopButton) {
+    const toggleScrollTopButton = () => {
+        const timeSection = document.getElementById('nosso-time');
+        const isAtTop = window.scrollY < 30;
+
+        if (!timeSection) {
+            scrollTopButton.classList.remove('visible');
+            return;
+        }
+
+        const sectionTop = timeSection.offsetTop;
+        const showButton = !isAtTop && window.scrollY >= sectionTop;
+
+        scrollTopButton.classList.toggle('visible', showButton);
+    };
+
+    toggleScrollTopButton();
+    window.addEventListener('scroll', toggleScrollTopButton, { passive: true });
+
+    scrollTopButton.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+}
+

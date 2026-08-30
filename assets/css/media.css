@@ -397,6 +397,17 @@
 /* CELULAR*/
 @media (max-width: 600px) {
 
+    .scroll-top-btn {
+        right: 18px;
+        bottom: 18px;
+        width: 52px;
+        height: 52px;
+    }
+
+    .scroll-top-icon {
+        font-size: 24px;
+    }
+
     #portfolio {
 
         padding:
