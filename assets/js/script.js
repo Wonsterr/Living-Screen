@@ -155,6 +155,101 @@ if (newsletterButton) {
     });
 }
 
+const loginForm = document.querySelector('.login-form');
+const loginMessage = document.querySelector('#login-message');
+const loginUsuario = document.querySelector('#login-usuario');
+const loginSenha = document.querySelector('#login-senha');
+const passwordToggle = document.querySelector('.password-toggle');
+
+if (passwordToggle && loginSenha) {
+    const syncPasswordToggle = () => {
+        const isPasswordHidden = loginSenha.type === 'password';
+
+        passwordToggle.setAttribute('aria-label', isPasswordHidden ? 'Mostrar senha' : 'Ocultar senha');
+        passwordToggle.setAttribute('aria-pressed', String(!isPasswordHidden));
+
+        const icon = passwordToggle.querySelector('i');
+        if (icon) {
+            icon.classList.toggle('fa-eye-slash', isPasswordHidden);
+            icon.classList.toggle('fa-eye', !isPasswordHidden);
+        }
+    };
+
+    syncPasswordToggle();
+
+    passwordToggle.addEventListener('click', () => {
+        loginSenha.type = loginSenha.type === 'password' ? 'text' : 'password';
+        syncPasswordToggle();
+    });
+}
+
+const getStoredUsers = () => {
+    try {
+        const storedUsers = JSON.parse(localStorage.getItem('livingScreenUsers') || '[]');
+        return Array.isArray(storedUsers) ? storedUsers : [];
+    } catch (error) {
+        return [];
+    }
+};
+
+const showLoginMessage = (type, messageText, linkHtml = '') => {
+    if (!loginMessage) {
+        return;
+    }
+
+    loginMessage.hidden = false;
+    loginMessage.classList.remove('error');
+    loginMessage.classList.toggle('error', type === 'error');
+
+    loginMessage.innerHTML = linkHtml
+        ? `<strong>${messageText}</strong><span>${linkHtml}</span>`
+        : `<strong>${messageText}</strong>`;
+};
+
+if (loginForm && loginUsuario && loginSenha) {
+    loginForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+
+        const usuarioDigitado = loginUsuario.value.trim();
+        const senhaDigitada = loginSenha.value.trim();
+
+        if (!usuarioDigitado || !senhaDigitada) {
+            showLoginMessage('error', 'Preencha todos os campos para entrar.');
+            return;
+        }
+
+        const usuarios = getStoredUsers();
+        const usuarioEncontrado = usuarios.find((usuario) => {
+            const valores = [
+                usuario?.nome,
+                usuario?.email,
+                usuario?.username,
+                usuario?.usuario
+            ].filter(Boolean).map((valor) => String(valor).trim().toLowerCase());
+
+            return valores.includes(usuarioDigitado.toLowerCase());
+        });
+
+        if (!usuarioEncontrado) {
+            showLoginMessage(
+                'error',
+                'Usuário não encontrado.',
+                'Ainda não possui uma conta? <a href="./cadastro.html">Cadastre-se aqui.</a>'
+            );
+            return;
+        }
+
+        if (String(usuarioEncontrado.senha ?? '') !== senhaDigitada) {
+            showLoginMessage('error', 'Senha incorreta. Tente novamente.');
+            return;
+        }
+
+        loginMessage.hidden = true;
+        loginMessage.classList.remove('error');
+        window.location.href = './index.html';
+    });
+}
+
 const authMenuToggle = document.querySelector('.auth-menu-toggle');
 const authMenu = document.querySelector('.auth-menu');
 
