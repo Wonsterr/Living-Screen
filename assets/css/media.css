@@ -432,6 +432,23 @@ select {
         font-size: 12px;
     }
 
+    #sobrenos::before {
+        left: -12%;
+        right: -12%;
+        bottom: -28px;
+        height: 90px;
+        filter: blur(8px) saturate(1.2);
+        opacity: 0.9;
+    }
+
+    #sobrenos::after {
+        left: 12%;
+        right: 12%;
+        bottom: -6px;
+        height: 46px;
+        filter: blur(2px);
+    }
+
     .membros {
         flex-wrap: wrap;
         gap: 18px;
