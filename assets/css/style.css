@@ -1125,6 +1125,37 @@ main {
     background-repeat: no-repeat;
 }
 
+/* =========================================================
+   EFEITO DE ÁGUA — SOMENTE SOBRE NÓS
+========================================================= */
+
+#sobrenos #liquid-effect {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+    overflow: hidden;
+    opacity: 0.38;
+}
+
+#sobrenos #liquid-canvas {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    pointer-events: none;
+}
+
+#sobrenos .sobre-layout,
+#sobrenos .sobre-bottom {
+    position: relative;
+    z-index: 2;
+}
+
+
 
 /* =========================================================
    LAYOUT PRINCIPAL

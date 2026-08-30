@@ -1,6 +1,6 @@
 import LiquidBackground from 'https://cdn.jsdelivr.net/npm/threejs-components@0.0.27/build/backgrounds/liquid1.min.js';
 
-const canvases = document.querySelectorAll('.liquid-canvas');
+const canvases = document.querySelectorAll('#liquid-canvas, .liquid-canvas');
 
 canvases.forEach((canvas) => {
 
