@@ -974,7 +974,7 @@ main {
 
     .logo-flutuante-inicio {
 
-        right: 4%;
+        right: 6%;
 
         width: min(58vw, 520px);
     }
@@ -1000,7 +1000,7 @@ main {
 
     .logo-flutuante-inicio {
 
-        right: -8%;
+        right: 2%;
 
         width: 420px;
 
@@ -1070,7 +1070,7 @@ main {
 .logo-flutuante-inicio {
     position: absolute;
 
-    right: 300px;
+    right: clamp(30px, 7vw, 180px);
 
     top: 46%;
 
@@ -1108,20 +1108,6 @@ main {
 }
 
 
-/* Define a organização e a aparência dos elementos deste bloco. */
-#sobrenos {
-    position: relative;
-    min-height: 100vh;
-    padding: 100px 5% 40px;
-    overflow: hidden;
-
-    background-image: url("../img/img2-fundo-site.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-
 /* =========================================================
    SOBRE NÓS — QUEM SOMOS + MISSÃO / VISÃO / VALORES
 ========================================================= */
@@ -1131,6 +1117,7 @@ main {
     min-height: 100vh;
     padding: 100px 5% 40px;
     overflow: hidden;
+    isolation: isolate;
 
     background-image: url("../img/img2-fundo-site.png");
     background-size: cover;
@@ -2912,30 +2899,46 @@ footer {
    EFEITO DE ÁGUA
 ========================================================= */
 
-#liquid-effect {
+#liquid-effect,
+.liquid-effect {
     position: absolute;
     inset: 0;
-
     width: 100%;
     height: 100%;
-
-    z-index: 1;
-
     pointer-events: none;
     overflow: hidden;
-
-    opacity: 0.35;
+    opacity: 0.38;
+    z-index: 0;
 }
 
-#liquid-canvas {
+#liquid-canvas,
+.liquid-canvas {
+    position: absolute;
+    inset: 0;
     width: 100%;
     height: 100%;
     display: block;
+    pointer-events: none;
 }
 
-#sobrenos > *:not(#liquid-effect) {
+
+/* =========================================================
+   CONTEÚDO DO SOBRE NÓS NA FRENTE DA ÁGUA
+========================================================= */
+
+#sobrenos > *:not(#liquid-effect):not(.liquid-effect) {
     position: relative;
     z-index: 2;
+}
+
+
+/* =========================================================
+   CONTEÚDO DO NOSSO TIME NA FRENTE DA ÁGUA
+========================================================= */
+
+.nosso-time > *:not(#liquid-effect):not(.liquid-effect) {
+    position: relative;
+    z-index: 5;
 }
 
 .missao,
@@ -2967,7 +2970,8 @@ footer {
    EFEITO DE ÁGUA DO SITE
 ========================================================= */
 
-.nosso-time #liquid-effect {
+.nosso-time #liquid-effect,
+.nosso-time .liquid-effect {
     position: absolute;
     inset: 0;
     width: 100%;
@@ -2978,7 +2982,8 @@ footer {
     opacity: 0.35;
 }
 
-.nosso-time #liquid-canvas {
+.nosso-time #liquid-canvas,
+.nosso-time .liquid-canvas {
     position: absolute;
     inset: 0;
     width: 100%;
