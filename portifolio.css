@@ -267,7 +267,7 @@ label,
     width: 100%;
     min-height: 100vh;
 
-    padding: 120px 6% 100px;
+    padding: 95px 6% 100px;
 
     position: relative;
 
@@ -1442,7 +1442,7 @@ footer .copy {
 
     #portfolio {
         padding:
-            110px 4% 90px;
+            85px 4% 90px;
     }
 
     .portfolio-swiper {
@@ -1525,7 +1525,7 @@ footer .copy {
 
     #portfolio {
         padding:
-            95px 15px 60px;
+            75px 15px 60px;
     }
 
     .portfolio-header {

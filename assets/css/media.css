@@ -6,6 +6,16 @@
         width: 300px;
         top: calc(100vh - 150px);
     }
+
+    .auth-buttons {
+        right: 18px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .auth-menu {
+        min-width: 150px;
+    }
 }
 
 

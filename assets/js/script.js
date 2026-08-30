@@ -102,6 +102,12 @@ const showToast = (message) => {
     }, 2200);
 };
 
+const invalidMessages = ['Oxi', 'Boa Noite! Que triste.', 'oh negah💔'];
+const showRandomInvalidToast = () => {
+    const randomMessage = invalidMessages[Math.floor(Math.random() * invalidMessages.length)];
+    showToast(randomMessage);
+};
+
 const placeholderLinks = document.querySelectorAll('a[href="#"], .membro-portfolio, a[href="Link do instagram"], a[href="Link do linkedin"], a[href="Link do zap"], a[href="Link do Facebook"], a[href="LINK_DO_GOOGLE_MAPS"]');
 
 placeholderLinks.forEach((link) => {
@@ -111,18 +117,18 @@ placeholderLinks.forEach((link) => {
         if (href === '#') {
             event.preventDefault();
             window.scrollTo({ top: 0, behavior: 'smooth' });
-            showToast('Seção em breve');
+            showRandomInvalidToast();
             return;
         }
 
         if (link.classList.contains('membro-portfolio')) {
             event.preventDefault();
-            showToast('Portfólio em breve');
+            showRandomInvalidToast();
             return;
         }
 
         event.preventDefault();
-        showToast('Link em atualização');
+        showRandomInvalidToast();
     });
 });
 
@@ -133,8 +139,10 @@ if (newsletterButton) {
         const emailInput = document.querySelector('.novidades input');
         const emailValue = emailInput ? emailInput.value.trim() : '';
 
-        if (!emailValue) {
-            showToast('Digite seu Gmail para continuar.');
+        const isValidEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailValue);
+
+        if (!emailValue || !isValidEmail) {
+            showRandomInvalidToast();
             emailInput?.focus();
             return;
         }
@@ -144,6 +152,54 @@ if (newsletterButton) {
         }
 
         showToast('E-mail cadastrado com sucesso!');
+    });
+}
+
+const authMenuToggle = document.querySelector('.auth-menu-toggle');
+const authMenu = document.querySelector('.auth-menu');
+
+if (authMenuToggle && authMenu) {
+    let isAuthMenuOpen = false;
+
+    const closeAuthMenu = () => {
+        isAuthMenuOpen = false;
+        authMenu.classList.remove('is-open');
+        authMenuToggle.classList.remove('is-open');
+        authMenuToggle.setAttribute('aria-expanded', 'false');
+    };
+
+    const openAuthMenu = () => {
+        isAuthMenuOpen = true;
+        authMenu.classList.add('is-open');
+        authMenuToggle.classList.add('is-open');
+        authMenuToggle.setAttribute('aria-expanded', 'true');
+    };
+
+    authMenuToggle.addEventListener('click', (event) => {
+        event.stopPropagation();
+
+        if (isAuthMenuOpen) {
+            closeAuthMenu();
+            return;
+        }
+
+        openAuthMenu();
+    });
+
+    document.addEventListener('click', (event) => {
+        if (!authMenu.contains(event.target) && !authMenuToggle.contains(event.target)) {
+            closeAuthMenu();
+        }
+    });
+
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+            closeAuthMenu();
+        }
+    });
+
+    authMenu.querySelectorAll('a').forEach((link) => {
+        link.addEventListener('click', closeAuthMenu);
     });
 }
 
