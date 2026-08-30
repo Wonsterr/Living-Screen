@@ -1,198 +1,322 @@
-/* Adapta o layout para esse tamanho de tela, melhorando a visualização em dispositivos menores. */
-@media (max-width: 700px) {
+/* =========================================================
+   RESPONSIVO GLOBAL
+   SITE: HOME + SOBRE + PORTFÓLIO + FOOTER
+========================================================= */
 
-    /* Define a organização e a aparência dos elementos deste bloco. */
+@media (max-width: 1400px) {
+    header .container {
+        width: 96%;
+    }
+
+    .navbar {
+        padding: 0 36px;
+    }
+
+    .menu {
+        gap: 30px;
+    }
+
+    .hero-container {
+        max-width: 1320px;
+        gap: 28px;
+        transform: translateX(-18px);
+    }
+
+    .hero-services {
+        width: 78%;
+    }
+}
+
+@media (max-width: 1200px) {
+    header {
+        padding: 24px 0;
+    }
+
+    .logo {
+        left: 49%;
+    }
+
+    .navbar {
+        height: 88px;
+        padding: 0 26px;
+    }
+
+    .menu {
+        gap: 24px;
+    }
+
+    .menu a {
+        font-size: 15px;
+    }
+
+    .hero-container {
+        grid-template-columns: 1fr;
+        gap: 50px;
+        transform: none;
+        width: 90%;
+        text-align: center;
+    }
+
+    .hero-text {
+        max-width: 700px;
+        margin: 0 auto;
+        transform: none;
+    }
+
+    .hero-text > p,
+    .hero-buttons {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .hero-services {
+        position: static;
+        transform: none;
+        width: min(100%, 760px);
+        margin: 0 auto;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px;
+        padding: 18px 20px;
+    }
+
+    .service-item {
+        flex: 1 1 220px;
+        max-width: 260px;
+    }
+
     .planta-inicio {
         width: 300px;
-        top: calc(100vh - 150px);
+        top: calc(100vh - 170px);
+    }
+}
+
+@media (max-width: 980px) {
+    header {
+        flex-wrap: wrap;
+        gap: 12px;
+        padding: 18px 0 12px;
+    }
+
+    .logo {
+        position: static;
+        left: auto;
+        transform: none;
+        order: 1;
+        width: 100%;
+        margin: 0 auto 8px;
+    }
+
+    .container {
+        order: 2;
+        width: calc(100% - 32px);
+        max-width: 760px;
+    }
+
+    .navbar {
+        height: auto;
+        min-height: 82px;
+        padding: 16px 20px;
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .menu {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 16px 22px;
+    }
+
+    .esquerda,
+    .direita {
+        justify-self: center;
     }
 
     .auth-buttons {
-        right: 18px;
-        top: 50%;
-        transform: translateY(-50%);
+        position: static;
+        transform: none;
+        order: 3;
+        margin: 0 auto;
+    }
+
+    #inicio {
+        padding-top: 190px;
+    }
+
+    .hero-text h1 {
+        font-size: clamp(42px, 7vw, 62px);
+    }
+}
+
+@media (max-width: 760px) {
+    header {
+        padding-top: 14px;
+    }
+
+    .logo img {
+        width: 110px;
+    }
+
+    .navbar {
+        padding: 16px 18px;
+        border-radius: 24px;
+    }
+
+    .menu {
+        gap: 12px 18px;
+    }
+
+    .menu a {
+        font-size: 13px;
+    }
+
+    .auth-menu-toggle {
+        width: 42px;
+        height: 42px;
     }
 
     .auth-menu {
         min-width: 150px;
     }
-}
 
-
-/* Adapta o layout para esse tamanho de tela, melhorando a visualização em dispositivos menores. */
-@media (max-width: 900px) {
-
-
-    /* Organiza o conteúdo principal de destaque da página, como textos, imagens e botões. */
-    .hero-container {
-
-        grid-template-columns: 1fr;
-
-        gap: 40px;
-
-        padding-top: 50px;
-
-        transform: none;
-    }
-
-
-    /* Organiza o conteúdo principal de destaque da página, como textos, imagens e botões. */
-    .hero-text {
-
-        text-align: center;
-
-        margin: auto;
-
-        transform: none;
-    }
-
-
-    /* Organiza o conteúdo principal de destaque da página, como textos, imagens e botões. */
-    .hero-tag {
-
-        font-size: 11px;
-    }
-
-
-    /* Organiza o conteúdo principal de destaque da página, como textos, imagens e botões. */
-    .hero-text h1 {
-
-        font-size: 48px;
-    }
-
-
-    /* Organiza o conteúdo principal de destaque da página, como textos, imagens e botões. */
-    .hero-text>p {
-
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-
-    /* Define a aparência e o comportamento visual dos botões. */
-    .hero-buttons {
-
-        justify-content: center;
-
-        flex-wrap: wrap;
-    }
-
-
-    /* Organiza o conteúdo principal de destaque da página, como textos, imagens e botões. */
-    .hero-services {
-
-        max-width: 500px;
-
-        margin: auto;
-
-        flex-wrap: wrap;
-
-        gap: 12px;
-    }
-
-    .logo-flutuante-inicio {
-
-        right: 6%;
-
-        width: min(58vw, 520px);
-    }
-}
-
-
-/* Adapta o layout para esse tamanho de tela, melhorando a visualização em dispositivos menores. */
-@media (max-width: 550px) {
-
-
-    /* Define a organização e a aparência dos elementos deste bloco. */
     #inicio {
-
-        padding-top: 130px;
+        padding: 170px 0 70px;
     }
 
-
-    /* Organiza o conteúdo principal de destaque da página, como textos, imagens e botões. */
     .hero-container {
-
         width: 88%;
+        gap: 34px;
     }
 
-    .logo-flutuante-inicio {
-
-        right: 2%;
-
-        width: 420px;
-
-        opacity: .7;
+    .hero-tag {
+        font-size: 11px;
+        padding: 9px 14px;
     }
 
-
-    /* Organiza o conteúdo principal de destaque da página, como textos, imagens e botões. */
     .hero-text h1 {
-
-        font-size: 38px;
-
         letter-spacing: -1px;
     }
 
-
-    /* Organiza o conteúdo principal de destaque da página, como textos, imagens e botões. */
-    .hero-text>p {
-
-        font-size: 15px;
+    .hero-text > p {
+        font-size: 16px;
     }
 
-
-    /* Define a aparência e o comportamento visual dos botões. */
     .hero-buttons {
-
         flex-direction: column;
-    }
-
-
-    /* Organiza o conteúdo principal de destaque da página, como textos, imagens e botões. */
-    .hero-btn {
-
         width: 100%;
     }
 
+    .hero-btn {
+        width: 100%;
+    }
 
-    /* Organiza o conteúdo principal de destaque da página, como textos, imagens e botões. */
     .hero-services {
-
-        padding: 15px 20px;
-
         width: 88%;
-
-        flex-direction: column;
-
-        align-items: stretch;
-
-        gap: 8px;
+        padding: 16px 18px;
+        gap: 10px;
+        border-radius: 20px;
     }
 
     .service-item {
-
-        padding: 5px 0;
-    }
-
-    .service-item+.service-item {
-
-        border-top: 1px solid rgba(255, 255, 255, .3);
+        flex-basis: 100%;
+        max-width: 100%;
+        padding: 8px 0;
         border-left: none;
     }
 
+    .service-item + .service-item {
+        border-top: 1px solid rgba(255, 255, 255, 0.25);
+    }
+
+    .planta-inicio {
+        width: 240px;
+        top: calc(100vh - 120px);
+        opacity: 0.8;
+    }
+
+    .logo-flutuante-inicio {
+        width: min(68vw, 420px);
+        right: 2%;
+        opacity: 0.7;
+    }
 }
 
+@media (max-width: 640px) {
+    #sobrenos {
+        padding: 95px 14px 30px;
+    }
 
-/* =========================================================
-   RESPONSIVIDADE
-========================================================= */
+    .sobre-layout {
+        width: 100%;
+    }
+
+    .sobre-info {
+        padding: 28px 20px;
+        border-radius: 26px;
+    }
+
+    .sobre-info h2 {
+        font-size: 34px;
+    }
+
+    .sobre-info > p {
+        font-size: 13px;
+    }
+
+    .mvv-bolha,
+    .missao,
+    .visao,
+    .valores-bolha {
+        width: 100%;
+        margin: 0;
+        padding: 20px 18px;
+        border-radius: 40px;
+    }
+
+    .mvv-icon {
+        width: 52px;
+        height: 52px;
+    }
+
+    .mvv-icon i {
+        font-size: 20px;
+    }
+
+    .mvv-conteudo h3 {
+        font-size: 18px;
+    }
+
+    .lista-valores {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .sobre-bottom {
+        width: 100%;
+        flex-direction: column;
+        padding: 20px 18px;
+        text-align: center;
+    }
+
+    .sobre-bottom p {
+        font-size: 13px;
+    }
+
+    .sobre-bottom a {
+        width: 100%;
+        min-width: 0;
+    }
+}
 
 @media (max-width: 1250px) {
-
     .membros {
         flex-wrap: wrap;
-        gap: 30px;
+        gap: 28px;
     }
 
     .membro-card {
@@ -200,9 +324,7 @@
     }
 }
 
-
 @media (max-width: 700px) {
-
     .nosso-time {
         padding: 80px 20px 100px;
     }
@@ -228,16 +350,16 @@
     .membros {
         flex-direction: column;
         align-items: center;
-        gap: 35px;
+        gap: 30px;
     }
 
     .membro-card {
         width: 100%;
-        max-width: 330px;
+        max-width: 340px;
     }
 
     .membro-foto {
-        height: 250px;
+        height: 240px;
     }
 
     .membro-actions {
@@ -259,154 +381,30 @@
     }
 }
 
-
-/* =========================================================
-   RESPONSIVO
-========================================================= */
-
-@media (max-width: 1100px) {
-
-    .sobre-layout {
-        grid-template-columns: 1fr;
-        gap: 28px;
-    }
-
-    .sobre-info {
-        min-height: auto;
-    }
-
-    .mvv-bolha,
-    .missao,
-    .visao,
-    .valores-bolha {
-        width: 92%;
-    }
-
-    .sobre-info h2 {
-        text-align: left;
-    }
-}
-
-
-@media (max-width: 700px) {
-
-    #sobrenos {
-        padding: 100px 15px 30px;
-    }
-
-    .sobre-layout {
-        width: 100%;
-    }
-
-    .sobre-info {
-        padding: 32px 24px;
-        border-radius: 28px;
-    }
-
-    .sobre-info h2 {
-        font-size: 40px;
-    }
-
-    .sobre-info>p {
-        font-size: 14px;
-    }
-
-    .origem-projeto {
-        align-items: flex-start;
-    }
-
-    .mvv-bolha,
-    .missao,
-    .visao,
-    .valores-bolha {
-        width: 100%;
-        margin: 0;
-        padding: 22px 24px;
-        border-radius: 55px;
-        transform: none;
-    }
-
-    .mvv-icon {
-        width: 58px;
-        height: 58px;
-    }
-
-    .mvv-icon i {
-        font-size: 23px;
-    }
-
-    .mvv-conteudo h3 {
-        font-size: 20px;
-    }
-
-    .mvv-conteudo p {
-        font-size: 12px;
-    }
-
-    .lista-valores {
-        grid-template-columns: 1fr;
-        gap: 7px;
-    }
-
-    .sobre-bottom {
-        width: 100%;
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .sobre-bottom a {
-        width: 100%;
-    }
-}
-
-
-/* RESPONSIVIDADE */
 @media (max-width: 1000px) {
-
     #portfolio {
-
-        padding:
-            145px 4% 90px;
-
+        padding: 145px 4% 90px;
     }
-
 
     .portfolio-swiper {
-
         max-width: 100%;
-
     }
-
 
     .portfolio-body {
-
         grid-template-columns: 1fr;
-
     }
-
 
     .portfolio-preview {
-
         height: 500px;
-
     }
-
 
     .portfolio-details {
-
         border-left: none;
-
-        border-top:
-            1px solid rgba(255, 255, 255, .8);
-
+        border-top: 1px solid rgba(255, 255, 255, 0.8);
     }
-
 }
 
-
-/* CELULAR*/
 @media (max-width: 600px) {
-
     .scroll-top-btn {
         right: 18px;
         bottom: 18px;
@@ -419,175 +417,154 @@
     }
 
     #portfolio {
-
-        padding:
-            125px 15px 60px;
-
+        padding: 125px 15px 60px;
     }
-
 
     .portfolio-header {
-
         margin-bottom: 25px;
-
     }
 
-
-    .portfolio-header>span {
-
-        padding:
-            6px 14px;
-
+    .portfolio-header > span {
+        padding: 6px 14px;
         font-size: 9px;
-
     }
-
 
     .portfolio-header h2 {
-
         font-size: 31px;
-
     }
-
 
     .portfolio-header p {
-
         font-size: 12px;
-
         line-height: 1.6;
-
     }
-
-
-    /* SWIPER */
 
     .portfolio-swiper {
-
-        padding:
-            5px 5px 50px 5px;
-
+        padding: 5px 5px 50px 5px;
     }
-
-
-    /* TOPO */
 
     .portfolio-top {
-
         height: 65px;
-
-        padding:
-            0 15px;
-
+        padding: 0 15px;
     }
-
 
     .portfolio-info h3 {
-
         font-size: 13px;
-
     }
-
 
     .portfolio-info p {
-
         font-size: 9px;
-
     }
-
 
     .portfolio-dots {
-
         gap: 5px;
-
     }
-
 
     .portfolio-dots span {
-
         width: 10px;
-
         height: 10px;
-
     }
-
-
-    /* PREVIEW */
 
     .portfolio-preview {
-
         height: 400px;
-
         padding: 8px;
-
     }
-
 
     .portfolio-preview iframe {
-
         border-radius: 14px;
-
     }
-
-
-    /* DETALHES */
 
     .portfolio-details {
-
-        padding:
-            28px 22px;
-
+        padding: 28px 22px;
     }
-
 
     .portfolio-details h3 {
-
         font-size: 20px;
-
     }
-
 
     .details-description {
-
         font-size: 11px;
-
     }
-
 
     .details-list li {
-
         font-size: 10px;
-
     }
-
-
-    /* PAGINAÇÃO */
 
     .portfolio-swiper .swiper-pagination {
-
         bottom: 0 !important;
-
         height: 24px;
-
         gap: 8px;
-
     }
-
 
     .portfolio-swiper .swiper-pagination-bullet {
-
         width: 8px;
-
         height: 8px;
-
     }
-
 
     .portfolio-swiper .swiper-pagination-bullet-active {
-
         width: 25px;
-
         height: 8px;
+    }
+}
 
+@media (max-width: 480px) {
+    .logo img {
+        width: 96px;
     }
 
+    .navbar {
+        padding: 12px 14px;
+    }
+
+    .menu {
+        gap: 10px 14px;
+    }
+
+    .menu a {
+        font-size: 12px;
+    }
+
+    .auth-menu-toggle {
+        width: 38px;
+        height: 38px;
+    }
+
+    .auth-menu {
+        min-width: 140px;
+    }
+
+    .hero-text h1 {
+        font-size: 36px;
+    }
+
+    .hero-text > p {
+        font-size: 14px;
+    }
+
+    .hero-btn {
+        min-width: 0;
+        font-size: 15px;
+        padding: 14px 18px;
+    }
+
+    .membro-card {
+        max-width: 300px;
+    }
+
+    .membro-foto {
+        height: 220px;
+    }
+
+    .sobre-bottom a {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 1600px) {
+    .hero-container {
+        max-width: 1500px;
+    }
+
+    .hero-services {
+        width: 68%;
+    }
 }
