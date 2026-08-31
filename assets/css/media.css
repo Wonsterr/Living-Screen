@@ -437,6 +437,51 @@ select {
     font-size: 11px;
 }
 
+/* FRASE "NOSSO PROPÓSITO" - TABLET E CELULAR */
+.sobre-bottom {
+    width: 100%;
+    max-width: 100%;
+    min-height: auto;
+
+    padding: 20px 16px;
+    margin: 20px auto 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 15px;
+}
+
+.sobre-bottom .aspas {
+    width: 50px;
+    height: 50px;
+
+    font-size: 45px;
+    flex-shrink: 0;
+}
+
+.sobre-bottom p {
+    width: 100%;
+    flex: none;
+
+    font-size: 13px;
+    line-height: 1.5;
+
+    text-align: center;
+
+    word-break: normal;
+    overflow-wrap: normal;
+}
+
+.sobre-bottom a {
+    width: 100%;
+    min-width: 0;
+
+    justify-content: center;
+    text-align: center;
+}
+
     .nosso-time {
         padding: 90px 16px 100px;
     }
