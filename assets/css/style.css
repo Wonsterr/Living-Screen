@@ -741,6 +741,10 @@ header {
     box-shadow: 0 0 18px rgba(99, 222, 255, 0.18);
 }
 
+.mobile-menu-link {
+    display: none !important;
+}
+
 
 /* Define a organização e a aparência dos elementos deste bloco. */
 #inicio {

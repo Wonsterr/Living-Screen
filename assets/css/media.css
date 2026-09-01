@@ -103,7 +103,7 @@ select {
         transform: none;
     }
 
-    .hero-text > p,
+    .hero-text>p,
     .hero-buttons {
         margin-left: auto;
         margin-right: auto;
@@ -134,7 +134,7 @@ select {
         padding-right: 14px;
     }
 
-    .service-item + .service-item {
+    .service-item+.service-item {
         border-left: none;
         border-top: 1px solid rgba(255, 255, 255, 0.3);
     }
@@ -231,7 +231,7 @@ select {
         font-size: clamp(38px, 7vw, 62px);
     }
 
-    .hero-text > p {
+    .hero-text>p {
         font-size: clamp(15px, 2.2vw, 18px);
     }
 
@@ -376,111 +376,111 @@ select {
     }
 
     .mvv-container {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-}
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
 
-.mvv-bolha,
-.missao,
-.visao,
-.valores-bolha {
-    width: 100% !important;
-    max-width: 100% !important;
-    min-height: auto;
+    .mvv-bolha,
+    .missao,
+    .visao,
+    .valores-bolha {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-height: auto;
 
-    margin: 0 !important;
-    padding: 18px 16px;
+        margin: 0 !important;
+        padding: 18px 16px;
 
-    left: 0 !important;
-    transform: none !important;
+        left: 0 !important;
+        transform: none !important;
 
-    border-radius: 24px;
-}
+        border-radius: 24px;
+    }
 
-.mvv-icon {
-    width: 42px;
-    height: 42px;
-    flex-shrink: 0;
-}
+    .mvv-icon {
+        width: 42px;
+        height: 42px;
+        flex-shrink: 0;
+    }
 
-.mvv-icon i {
-    font-size: 17px;
-}
+    .mvv-icon i {
+        font-size: 17px;
+    }
 
-.mvv-conteudo {
-    width: 100%;
-    min-width: 0;
-}
+    .mvv-conteudo {
+        width: 100%;
+        min-width: 0;
+    }
 
-.mvv-conteudo h3 {
-    font-size: 17px;
-}
+    .mvv-conteudo h3 {
+        font-size: 17px;
+    }
 
-.mvv-conteudo p {
-    width: 100%;
-    font-size: 11px;
-    line-height: 1.5;
+    .mvv-conteudo p {
+        width: 100%;
+        font-size: 11px;
+        line-height: 1.5;
 
-    word-break: normal;
-    overflow-wrap: break-word;
-}
+        word-break: normal;
+        overflow-wrap: break-word;
+    }
 
-.lista-valores {
-    width: 100%;
-    grid-template-columns: 1fr;
-    gap: 8px;
-}
+    .lista-valores {
+        width: 100%;
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
 
-.lista-valores span {
-    font-size: 11px;
-}
+    .lista-valores span {
+        font-size: 11px;
+    }
 
-/* FRASE "NOSSO PROPÓSITO" - TABLET E CELULAR */
-.sobre-bottom {
-    width: 100%;
-    max-width: 100%;
-    min-height: auto;
+    /* FRASE "NOSSO PROPÓSITO" - TABLET E CELULAR */
+    .sobre-bottom {
+        width: 100%;
+        max-width: 100%;
+        min-height: auto;
 
-    padding: 20px 16px;
-    margin: 20px auto 0;
+        padding: 20px 16px;
+        margin: 20px auto 0;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
-    gap: 15px;
-}
+        gap: 15px;
+    }
 
-.sobre-bottom .aspas {
-    width: 50px;
-    height: 50px;
+    .sobre-bottom .aspas {
+        width: 50px;
+        height: 50px;
 
-    font-size: 45px;
-    flex-shrink: 0;
-}
+        font-size: 45px;
+        flex-shrink: 0;
+    }
 
-.sobre-bottom p {
-    width: 100%;
-    flex: none;
+    .sobre-bottom p {
+        width: 100%;
+        flex: none;
 
-    font-size: 13px;
-    line-height: 1.5;
+        font-size: 13px;
+        line-height: 1.5;
 
-    text-align: center;
+        text-align: center;
 
-    word-break: normal;
-    overflow-wrap: normal;
-}
+        word-break: normal;
+        overflow-wrap: normal;
+    }
 
-.sobre-bottom a {
-    width: 100%;
-    min-width: 0;
+    .sobre-bottom a {
+        width: 100%;
+        min-width: 0;
 
-    justify-content: center;
-    text-align: center;
-}
+        justify-content: center;
+        text-align: center;
+    }
 
     .nosso-time {
         padding: 90px 16px 100px;
@@ -650,18 +650,56 @@ select {
 }
 
 @media (max-width: 390px) {
+
+    #inicio {
+        padding-top: 100px !important;
+    }
+
     .logo img {
-        width: 42px;
+        width: 75px !important;
+        height: auto !important;
+    }
+
+    header {
+        padding: 8px 0 !important;
     }
 
     .navbar {
-        min-height: 62px;
+        height: 55px !important;
+        min-height: 55px !important;
         padding: 0 8px 0 58px;
         border-radius: 12px;
     }
 
     .menu a {
         font-size: 7.8px;
+    }
+
+    /* MENU SOMENTE NO CELULAR */
+    .navbar .menu {
+        display: none !important;
+    }
+
+    .auth-menu .mobile-menu-link {
+        display: flex !important;
+    }
+
+    .auth-menu {
+        min-width: 190px !important;
+        padding: 10px !important;
+        gap: 6px;
+    }
+
+    .auth-menu a {
+        width: 100%;
+        min-height: 36px;
+        padding: 8px 12px;
+        font-size: 10px;
+    }
+
+    .auth-buttons {
+        right: 10px !important;
+        top: 20px !important;
     }
 
     .planta-inicio {
@@ -683,5 +721,64 @@ select {
 
     .hero-services {
         width: 68%;
+    }
+}
+
+@media (max-width: 768px) {
+
+    #sobrenos .sobre-bottom {
+        width: calc(100% - 24px) !important;
+        max-width: none !important;
+        min-width: 0 !important;
+        min-height: auto !important;
+
+        margin: 20px auto 0 !important;
+        padding: 20px 16px !important;
+
+        box-sizing: border-box !important;
+
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+
+        gap: 15px !important;
+    }
+
+    #sobrenos .sobre-bottom .aspas {
+        width: 50px !important;
+        height: 50px !important;
+        flex: 0 0 auto !important;
+    }
+
+    #sobrenos .sobre-bottom p {
+        display: block !important;
+
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+
+        flex: 0 0 auto !important;
+
+        margin: 0 !important;
+
+        font-size: 13px !important;
+        line-height: 1.6 !important;
+        text-align: center !important;
+
+        word-break: normal !important;
+        overflow-wrap: normal !important;
+        white-space: normal !important;
+    }
+
+    #sobrenos .sobre-bottom a {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+
+        box-sizing: border-box !important;
+
+        justify-content: center !important;
+        text-align: center !important;
     }
 }
