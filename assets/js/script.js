@@ -155,6 +155,90 @@ if (newsletterButton) {
     });
 }
 
+const chatbotToggle = document.querySelector('.chatbot-toggle');
+const chatbotPanel = document.querySelector('#chatbot-panel');
+const chatbotClose = document.querySelector('.chatbot-close');
+const chatbotForm = document.querySelector('#chatbot-form');
+const chatbotInput = document.querySelector('#chatbot-input');
+const chatbotMessages = document.querySelector('#chatbot-messages');
+
+const addChatMessage = (text, sender = 'bot') => {
+    if (!chatbotMessages) {
+        return;
+    }
+
+    const message = document.createElement('div');
+    message.className = `message ${sender}`;
+    message.textContent = text;
+    chatbotMessages.appendChild(message);
+    chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+};
+
+const chatbotReply = (message) => {
+    const text = message.toLowerCase();
+
+    if (text.includes('serviço') || text.includes('servico') || text.includes('site') || text.includes('web')) {
+        return 'A Living Screen desenvolve sites, soluções digitais e suporte técnico para negócios e projetos online.';
+    }
+
+    if (text.includes('contato') || text.includes('telefone') || text.includes('whatsapp') || text.includes('falar')) {
+        return 'Você pode falar com a Living Screen pelo contato da página ou pelo WhatsApp disponível no site.';
+    }
+
+    if (text.includes('sobre') || text.includes('empresa') || text.includes('quem')) {
+        return 'A Living Screen é uma empresa de tecnologia focada em inovação, suporte técnico e desenvolvimento digital.';
+    }
+
+    if (text.includes('portfolio') || text.includes('projeto') || text.includes('trabalho')) {
+        return 'Confira a seção de portfólio do site para ver projetos e soluções desenvolvidas pela Living Screen.';
+    }
+
+    if (text.includes('oi') || text.includes('olá') || text.includes('ola') || text.includes('hello')) {
+        return 'Olá! Como posso ajudar você hoje?';
+    }
+
+    return 'Posso te orientar sobre serviços, projetos, contato e soluções digitais da Living Screen.';
+};
+
+if (chatbotToggle && chatbotPanel && chatbotForm && chatbotInput && chatbotMessages) {
+    chatbotToggle.addEventListener('click', () => {
+        const isHidden = chatbotPanel.hasAttribute('hidden');
+
+        if (isHidden) {
+            chatbotPanel.removeAttribute('hidden');
+            chatbotToggle.setAttribute('aria-expanded', 'true');
+            setTimeout(() => chatbotInput.focus(), 100);
+            return;
+        }
+
+        chatbotPanel.setAttribute('hidden', 'hidden');
+        chatbotToggle.setAttribute('aria-expanded', 'false');
+    });
+
+    chatbotClose.addEventListener('click', () => {
+        chatbotPanel.setAttribute('hidden', 'hidden');
+        chatbotToggle.setAttribute('aria-expanded', 'false');
+    });
+
+    chatbotForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+
+        const value = chatbotInput.value.trim();
+
+        if (!value) {
+            chatbotInput.focus();
+            return;
+        }
+
+        addChatMessage(value, 'user');
+        chatbotInput.value = '';
+
+        setTimeout(() => {
+            addChatMessage(chatbotReply(value), 'bot');
+        }, 350);
+    });
+}
+
 const loginForm = document.querySelector('.login-form');
 const loginMessage = document.querySelector('#login-message');
 const loginUsuario = document.querySelector('#login-usuario');
