@@ -155,12 +155,16 @@ if (newsletterButton) {
     });
 }
 
+const chatbotWidget = document.querySelector('.chatbot-widget');
 const chatbotToggle = document.querySelector('.chatbot-toggle');
 const chatbotPanel = document.querySelector('#chatbot-panel');
 const chatbotClose = document.querySelector('.chatbot-close');
 const chatbotForm = document.querySelector('#chatbot-form');
 const chatbotInput = document.querySelector('#chatbot-input');
 const chatbotMessages = document.querySelector('#chatbot-messages');
+const chatbotHeader = document.querySelector('.chatbot-header');
+
+const clampValue = (value, min, max) => Math.min(Math.max(value, min), max);
 
 const addChatMessage = (text, sender = 'bot') => {
     if (!chatbotMessages) {
@@ -200,7 +204,64 @@ const chatbotReply = (message) => {
     return 'Posso te orientar sobre serviços, projetos, contato e soluções digitais da Living Screen.';
 };
 
-if (chatbotToggle && chatbotPanel && chatbotForm && chatbotInput && chatbotMessages) {
+if (chatbotWidget && chatbotToggle && chatbotPanel && chatbotForm && chatbotInput && chatbotMessages) {
+    const updateWidgetPosition = () => {
+        if (!chatbotWidget.style.left && !chatbotWidget.style.top) {
+            return;
+        }
+
+        const left = parseFloat(chatbotWidget.style.left) || 0;
+        const top = parseFloat(chatbotWidget.style.top) || 0;
+
+        chatbotWidget.style.left = `${clampValue(left, 12, window.innerWidth - chatbotWidget.offsetWidth - 12)}px`;
+        chatbotWidget.style.top = `${clampValue(top, 12, window.innerHeight - chatbotWidget.offsetHeight - 12)}px`;
+        chatbotWidget.style.right = 'auto';
+        chatbotWidget.style.bottom = 'auto';
+    };
+
+    const startDrag = (event) => {
+        if (!chatbotWidget || (!event.target.closest('.chatbot-toggle') && !event.target.closest('.chatbot-header'))) {
+            return;
+        }
+
+        if (event.target.closest('.chatbot-close') || event.target.closest('input') || event.target.closest('button') && !event.target.closest('.chatbot-toggle') && !event.target.closest('.chatbot-header')) {
+            return;
+        }
+
+        const startX = event.clientX;
+        const startY = event.clientY;
+        const rect = chatbotWidget.getBoundingClientRect();
+
+        chatbotWidget.classList.add('is-dragging');
+
+        const move = (moveEvent) => {
+            const nextLeft = rect.left + (moveEvent.clientX - startX);
+            const nextTop = rect.top + (moveEvent.clientY - startY);
+
+            chatbotWidget.style.left = `${clampValue(nextLeft, 12, window.innerWidth - chatbotWidget.offsetWidth - 12)}px`;
+            chatbotWidget.style.top = `${clampValue(nextTop, 12, window.innerHeight - chatbotWidget.offsetHeight - 12)}px`;
+            chatbotWidget.style.right = 'auto';
+            chatbotWidget.style.bottom = 'auto';
+        };
+
+        const stop = () => {
+            chatbotWidget.classList.remove('is-dragging');
+            window.removeEventListener('pointermove', move);
+            window.removeEventListener('pointerup', stop);
+            window.removeEventListener('pointercancel', stop);
+        };
+
+        window.addEventListener('pointermove', move);
+        window.addEventListener('pointerup', stop);
+        window.addEventListener('pointercancel', stop);
+    };
+
+    if (chatbotHeader) {
+        chatbotHeader.addEventListener('pointerdown', startDrag);
+    }
+
+    chatbotToggle.addEventListener('pointerdown', startDrag);
+
     chatbotToggle.addEventListener('click', () => {
         const isHidden = chatbotPanel.hasAttribute('hidden');
 
@@ -237,6 +298,8 @@ if (chatbotToggle && chatbotPanel && chatbotForm && chatbotInput && chatbotMessa
             addChatMessage(chatbotReply(value), 'bot');
         }, 350);
     });
+
+    window.addEventListener('resize', updateWidgetPosition);
 }
 
 const loginForm = document.querySelector('.login-form');

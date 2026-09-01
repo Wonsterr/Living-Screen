@@ -115,6 +115,12 @@ body.cursor-active .cursor-ring {
     flex-direction: column;
     align-items: flex-end;
     gap: 12px;
+    user-select: none;
+    touch-action: none;
+}
+
+.chatbot-widget.is-dragging {
+    transition: none;
 }
 
 .chatbot-panel {
@@ -142,6 +148,11 @@ body.cursor-active .cursor-ring {
     padding: 14px 16px;
     background: linear-gradient(180deg, rgba(60, 175, 240, 0.28), rgba(12, 36, 62, 0.9));
     border-bottom: 1px solid rgba(164, 228, 255, 0.22);
+    cursor: grab;
+}
+
+.chatbot-header:active {
+    cursor: grabbing;
 }
 
 .chatbot-header-title {
@@ -282,7 +293,11 @@ body.cursor-active .cursor-ring {
     font-weight: 800;
     letter-spacing: 1px;
     text-transform: uppercase;
-    cursor: none;
+    cursor: grab;
+}
+
+.chatbot-toggle:active {
+    cursor: grabbing;
 }
 
 .chatbot-toggle-icon {
