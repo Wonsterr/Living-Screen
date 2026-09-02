@@ -444,8 +444,7 @@ themeToggles.forEach((themeToggle) => {
     });
 
     const savedTheme = localStorage.getItem('livingScreenTheme');
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    setTheme(savedTheme ? savedTheme === 'dark' : prefersDark);
+    setTheme(savedTheme ? savedTheme === 'dark' : false);
 });
 
 const loginForm = document.querySelector('.login-form');

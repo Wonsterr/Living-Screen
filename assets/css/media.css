@@ -818,6 +818,90 @@ select {
     }
 }
 
+@media (max-width: 360px) {
+    #inicio {
+        padding-top: 92px !important;
+        padding-bottom: 48px !important;
+    }
+
+    .logo img {
+        width: 66px !important;
+    }
+
+    .navbar {
+        height: 52px !important;
+        min-height: 52px !important;
+        padding: 0 6px 0 52px;
+    }
+
+    .auth-menu-toggle {
+        width: 32px !important;
+        height: 32px !important;
+        border-radius: 10px !important;
+    }
+
+    .auth-menu {
+        min-width: 176px !important;
+        padding: 8px !important;
+    }
+
+    .auth-menu a {
+        min-height: 32px;
+        font-size: 9px;
+    }
+
+    .hero-tag {
+        padding: 8px 10px;
+        font-size: 8px;
+        letter-spacing: 0.08em;
+    }
+
+    .hero-text h1 {
+        font-size: clamp(27px, 8vw, 38px);
+    }
+
+    .hero-text>p {
+        font-size: 12px;
+    }
+
+    .hero-btn {
+        min-height: 42px;
+        padding: 11px 14px;
+        font-size: 11px;
+    }
+
+    .hero-services {
+        gap: 8px;
+        padding: 10px 12px;
+    }
+
+    .service-item {
+        padding: 9px 10px;
+    }
+
+    .service-item h3 {
+        font-size: 12px;
+    }
+
+    .service-item p {
+        font-size: 9.5px;
+    }
+
+    .planta-inicio {
+        display: none !important;
+    }
+
+    .chatbot-panel {
+        width: min(90vw, 280px);
+    }
+
+    .chatbot-toggle {
+        padding: 9px 12px;
+        font-size: 8px;
+        letter-spacing: 0.6px;
+    }
+}
+
 /* Ajustes para telas extra largas. */
 @media (min-width: 1600px) {
     .hero-container {
