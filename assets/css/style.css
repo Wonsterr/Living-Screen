@@ -2997,7 +2997,7 @@ footer {
 
 
     .navegacao a::before {
-        content: "â€º";
+        content: "›";
         color: #00AEEF;
         margin-right: 5px;
         font-size: 25px;
