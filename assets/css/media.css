@@ -288,6 +288,104 @@ select {
     }
 }
 
+@media (max-width: 480px) {
+    header {
+        padding: 10px 0;
+    }
+
+    header .container {
+        width: calc(100% - 18px);
+    }
+
+    .logo img {
+        width: 78px;
+    }
+
+    .navbar {
+        min-height: 58px;
+        padding: 0 8px 0 56px;
+        border-radius: 12px;
+    }
+
+    .auth-buttons {
+        right: 10px;
+        top: 18px;
+    }
+
+    .auth-menu {
+        min-width: 190px;
+        right: 0;
+    }
+
+    .auth-menu a {
+        min-height: 34px;
+        font-size: 10px;
+    }
+
+    #inicio {
+        padding-top: 110px !important;
+    }
+
+    .hero-tag {
+        font-size: 9px;
+        padding: 9px 12px;
+    }
+
+    .hero-text h1 {
+        font-size: clamp(30px, 9vw, 44px);
+        line-height: 1.04;
+    }
+
+    .hero-text>p {
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+    .hero-buttons {
+        width: 100%;
+        gap: 10px;
+    }
+
+    .hero-btn {
+        width: 100%;
+        max-width: 300px;
+        padding: 12px 16px;
+        font-size: 12px;
+    }
+
+    .hero-services {
+        gap: 10px;
+        padding: 12px 14px;
+    }
+
+    .service-item {
+        flex: 1 1 100%;
+        padding: 10px 12px;
+    }
+
+    .service-item h3 {
+        font-size: 13px;
+    }
+
+    .service-item p {
+        font-size: 10.5px;
+    }
+
+    .chatbot-widget {
+        right: 12px;
+        bottom: 18px;
+    }
+
+    .chatbot-panel {
+        width: min(92vw, 310px);
+    }
+
+    .chatbot-toggle {
+        padding: 10px 14px;
+        font-size: 9px;
+    }
+}
+
 @media (max-width: 768px) {
     header {
         padding: 12px 0;
@@ -622,6 +720,11 @@ select {
         min-height: 66px;
         padding: 0 8px 0 64px;
         border-radius: 12px;
+    }
+
+    .hero-services {
+        width: 100%;
+        max-width: 100%;
     }
 
     .menu {
