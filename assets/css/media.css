@@ -1,7 +1,4 @@
-/* =========================================================
-   RESPONSIVIDADE REAL - FRUTIGER AERO / AQUA
-   Preserva identidade visual e reduz problemas de overflow.
-========================================================= */
+﻿/* RESPONSIVIDADE REAL - FRUTIGER AERO / AQUA */
 
 html {
     scroll-behavior: smooth;
@@ -437,7 +434,7 @@ select {
         font-size: 11px;
     }
 
-    /* FRASE "NOSSO PROPÓSITO" - TABLET E CELULAR */
+    /* FRASE "NOSSO PROPÃ“SITO" - TABLET E CELULAR */
     .sobre-bottom {
         width: 100%;
         max-width: 100%;

@@ -10,14 +10,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Nome que aparece na aba do navegador -->
-    <meta name="description" content="Entre em contato com a Living Screen para falar sobre tecnologia, desenvolvimento web, suporte técnico e soluções digitais para o seu negócio.">
-    <meta name="keywords" content="contato Living Screen, suporte técnico, tecnologia, desenvolvimento web, soluções digitais, fale conosco">
+    <meta name="description"
+        content="Entre em contato com a Living Screen para falar sobre tecnologia, desenvolvimento web, suporte técnico e soluções digitais para o seu negócio.">
+    <meta name="keywords"
+        content="contato Living Screen, suporte técnico, tecnologia, desenvolvimento web, soluções digitais, fale conosco">
     <meta name="robots" content="index, follow">
     <meta name="author" content="Living Screen">
     <meta name="theme-color" content="#0d1117">
 
     <meta property="og:title" content="Contato | Living Screen">
-    <meta property="og:description" content="Fale com a Living Screen e descubra como nossas soluções tecnológicas podem transformar seu negócio.">
+    <meta property="og:description"
+        content="Fale com a Living Screen e descubra como nossas soluções tecnológicas podem transformar seu negócio.">
     <meta property="og:type" content="website">
     <meta property="og:image" content="./assets/img/livingScreenLogoPng.png">
 
@@ -48,9 +51,7 @@
 
 <body>
 
-    <!-- =====================================================
-     PRE-LOADER
-====================================================== -->
+    <!-- PRE-LOADER -->
 
     <div id="preloader">
 
@@ -211,6 +212,38 @@
 
 
     </main>
+
+    <div class="chatbot-widget" aria-live="polite">
+        <div class="chatbot-panel" id="chatbot-panel" hidden>
+            <div class="chatbot-header">
+                <div class="chatbot-header-title">
+                    <span class="chatbot-dot"></span>
+                    Assistente Living Screen
+                </div>
+
+                <button class="chatbot-close" type="button" aria-label="Fechar chat">×</button>
+            </div>
+
+            <div class="chatbot-messages" id="chatbot-messages">
+                <div class="message bot">
+                    Olá! Como posso ajudar?
+                </div>
+            </div>
+
+            <form class="chatbot-form" id="chatbot-form">
+                <input id="chatbot-input" type="text" placeholder="Pergunte aqui..." aria-label="Digite sua mensagem">
+                <button type="submit" aria-label="Enviar mensagem">
+                    <i class="fa-solid fa-paper-plane"></i>
+                </button>
+            </form>
+        </div>
+
+        <button class="chatbot-toggle" type="button" aria-expanded="false" aria-controls="chatbot-panel"
+            aria-label="Abrir assistente virtual">
+            <span class="chatbot-toggle-icon"><i class="fa-solid fa-comment-dots"></i></span>
+            <span class="chatbot-toggle-label">Chat</span>
+        </button>
+    </div>
 
     <script src="./assets/js/preLoader.js"></script>
     <script type="module" src="./assets/js/script.js"></script>

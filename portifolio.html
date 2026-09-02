@@ -23,16 +23,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
 
 
-    <!-- =====================================================
-         SWIPER CSS
-    ====================================================== -->
+    <!-- SWIPER CSS -->
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 
 
-    <!-- =====================================================
-         CSS DO SITE
-    ====================================================== -->
+    <!-- CSS DO SITE -->
 
     <link rel="stylesheet" href="./portifolio.css">
 
@@ -59,9 +55,7 @@
 
 <body>
 
-    <!-- =====================================================
-     PRE-LOADER
-====================================================== -->
+    <!-- PRE-LOADER -->
 
     <div id="preloader">
 
@@ -95,18 +89,14 @@
 
 
 
-    <!-- =====================================================
-         PORTFÓLIO
-    ====================================================== -->
+    <!-- PORTFÓLIO -->
 
     <main>
 
         <section id="portfolio">
 
 
-            <!-- =================================================
-                 CABEÇALHO
-            ================================================== -->
+            <!-- CABEÇALHO -->
 
             <div class="portfolio-header">
 
@@ -133,23 +123,17 @@
 
 
 
-            <!-- =================================================
-                 SWIPER
-            ================================================== -->
+            <!-- SWIPER -->
 
             <div class="swiper portfolio-swiper">
 
 
-                <!-- =================================================
-                     WRAPPER
-                ================================================== -->
+                <!-- WRAPPER -->
 
                 <div class="swiper-wrapper">
 
 
-                    <!-- =================================================
-                         PROJETO 01
-                    ================================================== -->
+                    <!-- PROJETO 01 -->
 
                     <div class="swiper-slide">
 
@@ -283,9 +267,7 @@
 
 
 
-                    <!-- =================================================
-                         PROJETO 02
-                    ================================================== -->
+                    <!-- PROJETO 02 -->
 
                     <div class="swiper-slide">
 
@@ -421,9 +403,7 @@
 
 
 
-                    <!-- =================================================
-                         PROJETO 03
-                    ================================================== -->
+                    <!-- PROJETO 03 -->
 
                     <div class="swiper-slide">
 
@@ -556,9 +536,7 @@
 
 
 
-                <!-- =================================================
-                     PAGINAÇÃO DO SWIPER
-                ================================================== -->
+                <!-- PAGINAÇÃO DO SWIPER -->
 
                 <div class="swiper-pagination"></div>
 
@@ -583,9 +561,7 @@
 
 
 
-    <!-- =====================================================
-         FOOTER
-    ====================================================== -->
+    <!-- FOOTER -->
 
     <footer>
 
@@ -776,17 +752,13 @@
 
 
 
-    <!-- =====================================================
-         SWIPER JS
-    ====================================================== -->
+    <!-- SWIPER JS -->
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 
 
-    <!-- =====================================================
-         CONFIGURAÇÃO DO SWIPER
-    ====================================================== -->
+    <!-- CONFIGURAÇÃO DO SWIPER -->
 
     <script>
 
@@ -813,9 +785,7 @@
             /* Pausa ao hover */
             pauseOnMouseEnter: true,
 
-            /* =================================================
-               PAGINAÇÃO
-            ================================================= */
+            /* PAGINAÇÃO */
 
             pagination: {
 
@@ -826,9 +796,7 @@
             },
 
 
-            /* =================================================
-               SETAS
-            ================================================= */
+            /* SETAS */
 
             navigation: {
 
@@ -839,9 +807,7 @@
             },
 
 
-            /* =================================================
-               RESPONSIVIDADE
-            ================================================= */
+            /* RESPONSIVIDADE */
 
             breakpoints: {
 
@@ -878,6 +844,37 @@
 
     <!-- FIM -->
 
+    <div class="chatbot-widget" aria-live="polite">
+        <div class="chatbot-panel" id="chatbot-panel" hidden>
+            <div class="chatbot-header">
+                <div class="chatbot-header-title">
+                    <span class="chatbot-dot"></span>
+                    Assistente Living Screen
+                </div>
+
+                <button class="chatbot-close" type="button" aria-label="Fechar chat">×</button>
+            </div>
+
+            <div class="chatbot-messages" id="chatbot-messages">
+                <div class="message bot">
+                    Olá! Como posso ajudar?
+                </div>
+            </div>
+
+            <form class="chatbot-form" id="chatbot-form">
+                <input id="chatbot-input" type="text" placeholder="Pergunte aqui..." aria-label="Digite sua mensagem">
+                <button type="submit" aria-label="Enviar mensagem">
+                    <i class="fa-solid fa-paper-plane"></i>
+                </button>
+            </form>
+        </div>
+
+        <button class="chatbot-toggle" type="button" aria-expanded="false" aria-controls="chatbot-panel"
+            aria-label="Abrir assistente virtual">
+            <span class="chatbot-toggle-icon"><i class="fa-solid fa-comment-dots"></i></span>
+            <span class="chatbot-toggle-label">Chat</span>
+        </button>
+    </div>
 
     <script src="./assets/js/preLoader.js"></script>
     <script type="module" src="./assets/js/script.js"></script>

@@ -181,27 +181,39 @@ const addChatMessage = (text, sender = 'bot') => {
 const chatbotReply = (message) => {
     const text = message.toLowerCase();
 
-    if (text.includes('serviço') || text.includes('servico') || text.includes('site') || text.includes('web')) {
-        return 'A Living Screen desenvolve sites, soluções digitais e suporte técnico para negócios e projetos online.';
+    if (/(serviços|servico|site|website|landing page|suporte|desenvolvimento|sistema)/i.test(text)) {
+        return 'Trabalhamos com desenvolvimento de sites, suporte e soluções digitais.';
     }
 
-    if (text.includes('contato') || text.includes('telefone') || text.includes('whatsapp') || text.includes('falar')) {
-        return 'Você pode falar com a Living Screen pelo contato da página ou pelo WhatsApp disponível no site.';
+    if (/(orçamento|orcamento|orçar|orcar|preço|valor|cotação|cotacao|proposta|orçamento de site|valor do site)/i.test(text)) {
+        return 'Posso te ajudar com orçamento. Use o formulário de contato para solicitar um orçamento.';
     }
 
-    if (text.includes('sobre') || text.includes('empresa') || text.includes('quem')) {
-        return 'A Living Screen é uma empresa de tecnologia focada em inovação, suporte técnico e desenvolvimento digital.';
+    if (/(whatsapp|zap|contato|falar com|telefone|ligar|mensagem|atendimento)/i.test(text)) {
+        return 'Você pode falar com a Living Screen pelo WhatsApp ou pelo formulário de contato.';
     }
 
-    if (text.includes('portfolio') || text.includes('projeto') || text.includes('trabalho')) {
-        return 'Confira a seção de portfólio do site para ver projetos e soluções desenvolvidas pela Living Screen.';
+    return 'Posso ajudar com orçamento, contato ou serviços da Living Screen.';
+};
+
+const chatbotActionReply = (message) => {
+    const text = message.toLowerCase();
+
+    if (/(orçamento|orcamento|orçar|orcar|preço|valor|cotação|cotacao|proposta|orçamento de site|valor do site)/i.test(text)) {
+        window.location.href = './contato.html';
+        return 'Claro! Vou te levar para a página de contato para solicitar o orçamento.';
     }
 
-    if (text.includes('oi') || text.includes('olá') || text.includes('ola') || text.includes('hello')) {
-        return 'Olá! Como posso ajudar você hoje?';
+    if (/(whatsapp|zap|contato|falar com|telefone|ligar|mensagem|atendimento)/i.test(text)) {
+        window.open('https://wa.me/5511999999999', '_blank', 'noopener,noreferrer');
+        return 'Claro! Vou abrir o WhatsApp da Living Screen.';
     }
 
-    return 'Posso te orientar sobre serviços, projetos, contato e soluções digitais da Living Screen.';
+    if (/(serviços|servico|site|website|landing page|suporte|desenvolvimento|sistema)/i.test(text)) {
+        return 'Trabalhamos com desenvolvimento de sites, suporte e soluções digitais.';
+    }
+
+    return null;
 };
 
 if (chatbotWidget && chatbotToggle && chatbotPanel && chatbotForm && chatbotInput && chatbotMessages) {
@@ -295,7 +307,8 @@ if (chatbotWidget && chatbotToggle && chatbotPanel && chatbotForm && chatbotInpu
         chatbotInput.value = '';
 
         setTimeout(() => {
-            addChatMessage(chatbotReply(value), 'bot');
+            const actionReply = chatbotActionReply(value);
+            addChatMessage(actionReply || chatbotReply(value), 'bot');
         }, 350);
     });
 

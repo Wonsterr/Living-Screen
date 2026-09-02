@@ -1,7 +1,4 @@
-/* =========================================================
-vn
-   PRE-LOADER
-========================================================= */
+﻿/* PRE-LOADER */
 
 #preloader {
     position: fixed;
@@ -15,7 +12,7 @@ vn
     /* Fundo quase transparente */
     background: rgba(0, 15, 40, 0.12);
 
-    /* Desfoque bem leve no site atrás */
+    /* Desfoque bem leve no site atrÃ¡s */
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
 
@@ -42,7 +39,7 @@ vn
 
     border-radius: 50%;
 
-    /* Bloom azul/ciano atrás do loader */
+    /* Bloom azul/ciano atrÃ¡s do loader */
     background: radial-gradient(circle,
             rgba(0, 230, 255, 0.28) 0%,
             rgba(0, 170, 255, 0.14) 35%,
@@ -62,7 +59,7 @@ vn
 }
 
 
-/* Área onde as bolhas giram */
+/* Ãrea onde as bolhas giram */
 .loader-bolhas {
     position: relative;
 
@@ -75,7 +72,7 @@ vn
 }
 
 
-/* Aparência das duas bolhas */
+/* AparÃªncia das duas bolhas */
 .bubble-1,
 .bubble-2 {
     position: absolute;
@@ -87,7 +84,7 @@ vn
 
     border-radius: 50%;
 
-    /* Aparência transparente das bolhas */
+    /* AparÃªncia transparente das bolhas */
     background: radial-gradient(circle at 30% 25%,
             rgba(255, 255, 255, 0.75) 0%,
             rgba(255, 255, 255, 0.12) 20%,

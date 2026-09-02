@@ -1,11 +1,11 @@
-/* Define a organização e a aparência dos elementos deste bloco. */
+﻿/* Define a organizaÃ§Ã£o e a aparÃªncia dos elementos deste bloco. */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Define as configurações gerais da página, como fonte, fundo, tamanho e comportamento da rolagem. */
+/* Define as configuraÃ§Ãµes gerais da pÃ¡gina, como fonte, fundo, tamanho e comportamento da rolagem. */
 body,
 html {
 
@@ -471,9 +471,7 @@ textarea.has-value {
         0 0 18px rgba(255, 255, 255, 0.28);
 }
 
-/* =========================================
-   BARRA DE ROLAGEM - HOME
-   ========================================= */
+/* BARRA DE ROLAGEM - HOME */
 
 /* Define a largura da barra */
 ::-webkit-scrollbar {
@@ -503,7 +501,7 @@ textarea.has-value {
 }
 
 
-/* cabeçalho/navbar: aqui fica a parte de cima do site */
+/* cabeÃ§alho/navbar: aqui fica a parte de cima do site */
 header {
 
     position: fixed;
@@ -516,7 +514,7 @@ header {
 
     padding: 30px 0;
 
-    /* aqui mexo nessa parte do código */
+    /* aqui mexo nessa parte do cÃ³digo */
     .container {
 
         width: 92%;
@@ -525,8 +523,8 @@ header {
 
     }
 
-    /* Organiza e estiliza a barra de navegação, incluindo posicionamento, fundo, bordas e efeitos visuais. */
-    /* aqui mexo nessa parte do código */
+    /* Organiza e estiliza a barra de navegaÃ§Ã£o, incluindo posicionamento, fundo, bordas e efeitos visuais. */
+    /* aqui mexo nessa parte do cÃ³digo */
     .navbar {
 
         position: relative;
@@ -568,7 +566,7 @@ header {
 
     }
 
-    /* aqui mexo nessa parte do código */
+    /* aqui mexo nessa parte do cÃ³digo */
     .navbar::before {
 
         content: "";
@@ -595,7 +593,7 @@ header {
 
     }
 
-    /* aqui mexo nessa parte do código */
+    /* aqui mexo nessa parte do cÃ³digo */
     .navbar::after {
 
         content: "";
@@ -623,7 +621,7 @@ header {
     }
 
 
-    /* Organiza os itens do menu e controla a aparência e o espaçamento dos links de navegação. */
+    /* Organiza os itens do menu e controla a aparÃªncia e o espaÃ§amento dos links de navegaÃ§Ã£o. */
     .menu {
 
         display: flex;
@@ -636,7 +634,7 @@ header {
     }
 
 
-    /* Define a organização e a aparência dos elementos deste bloco. */
+    /* Define a organizaÃ§Ã£o e a aparÃªncia dos elementos deste bloco. */
     .esquerda {
 
         justify-self: start;
@@ -644,7 +642,7 @@ header {
     }
 
 
-    /* Define a organização e a aparência dos elementos deste bloco. */
+    /* Define a organizaÃ§Ã£o e a aparÃªncia dos elementos deste bloco. */
     .direita {
 
         justify-self: end;
@@ -652,7 +650,7 @@ header {
     }
 
 
-    /* Organiza os itens do menu e controla a aparência e o espaçamento dos links de navegação. */
+    /* Organiza os itens do menu e controla a aparÃªncia e o espaÃ§amento dos links de navegaÃ§Ã£o. */
     .menu li {
 
         list-style: none;
@@ -660,7 +658,7 @@ header {
     }
 
 
-    /* Organiza os itens do menu e controla a aparência e o espaçamento dos links de navegação. */
+    /* Organiza os itens do menu e controla a aparÃªncia e o espaÃ§amento dos links de navegaÃ§Ã£o. */
     .menu a {
 
         color: white;
@@ -715,7 +713,7 @@ header {
     }
 
 
-    /* Aplica este efeito quando o usuário passa o mouse sobre o elemento. */
+    /* Aplica este efeito quando o usuÃ¡rio passa o mouse sobre o elemento. */
     .menu a:hover {
 
         color: #ffffff;
@@ -742,7 +740,7 @@ header {
     }
 
 
-    /* Controla o posicionamento, o tamanho e os efeitos visuais aplicados à logo. */
+    /* Controla o posicionamento, o tamanho e os efeitos visuais aplicados Ã  logo. */
     .logo {
 
         position: absolute;
@@ -762,7 +760,7 @@ header {
     }
 
 
-    /* Controla o posicionamento, o tamanho e os efeitos visuais aplicados à logo. */
+    /* Controla o posicionamento, o tamanho e os efeitos visuais aplicados Ã  logo. */
     .logo img {
 
         width: 145px;
@@ -774,7 +772,7 @@ header {
     }
 
 
-    /* Aplica este efeito quando o usuário passa o mouse sobre o elemento. */
+    /* Aplica este efeito quando o usuÃ¡rio passa o mouse sobre o elemento. */
     .logo img:hover {
 
         transform: perspective(500px) translateZ(60px) scale(1.08);
@@ -785,7 +783,7 @@ header {
     }
 
 
-    /* Define a aparência e o comportamento visual dos botões. */
+    /* Define a aparÃªncia e o comportamento visual dos botÃµes. */
     .btn {
 
         padding: 14px 28px;
@@ -813,7 +811,7 @@ header {
     }
 
 
-    /* Aplica este efeito quando o usuário passa o mouse sobre o elemento. */
+    /* Aplica este efeito quando o usuÃ¡rio passa o mouse sobre o elemento. */
     .btn:hover {
 
         transform: translateY(-2px);
@@ -827,9 +825,7 @@ header {
     }
 }
 
-   /* =========================================
-   MENU HAMBÚRGUER - LOGIN / CADASTRO
-========================================= */
+   /* MENU HAMBÃšRGUER - LOGIN / CADASTRO */
 
 .auth-buttons {
     position: absolute;
@@ -954,7 +950,7 @@ header {
 }
 
 
-/* Define a organização e a aparência dos elementos deste bloco. */
+/* Define a organizaÃ§Ã£o e a aparÃªncia dos elementos deste bloco. */
 #inicio {
     min-height: 100vh;
     width: 100%;
@@ -976,14 +972,14 @@ header {
     background-repeat: no-repeat;
 }
 
-/* Define a aparência e o espaçamento dos textos desta área. */
-/* aqui mexo nessa parte do código */
+/* Define a aparÃªncia e o espaÃ§amento dos textos desta Ã¡rea. */
+/* aqui mexo nessa parte do cÃ³digo */
 main {
     position: relative;
 }
 
 
-/* Define a organização e a aparência dos elementos deste bloco. */
+/* Define a organizaÃ§Ã£o e a aparÃªncia dos elementos deste bloco. */
 .planta-inicio {
     position: absolute;
     left: 0;
@@ -1016,7 +1012,7 @@ main {
 }
 
 
-/* Organiza o conteúdo principal de destaque da página, como textos, imagens e botões. */
+/* Organiza o conteÃºdo principal de destaque da pÃ¡gina, como textos, imagens e botÃµes. */
 .hero-container {
     position: relative;
     z-index: 2;
@@ -1038,7 +1034,7 @@ main {
 }
 
 
-/* Organiza o conteúdo principal de destaque da página, como textos, imagens e botões. */
+/* Organiza o conteÃºdo principal de destaque da pÃ¡gina, como textos, imagens e botÃµes. */
 .hero-text {
     max-width: 650px;
     color: white;
@@ -1047,7 +1043,7 @@ main {
 }
 
 
-/* Organiza o conteúdo principal de destaque da página, como textos, imagens e botões. */
+/* Organiza o conteÃºdo principal de destaque da pÃ¡gina, como textos, imagens e botÃµes. */
 .hero-tag {
 
     display: inline-block;
@@ -1079,7 +1075,7 @@ main {
 }
 
 
-/* Organiza o conteúdo principal de destaque da página, como textos, imagens e botões. */
+/* Organiza o conteÃºdo principal de destaque da pÃ¡gina, como textos, imagens e botÃµes. */
 .hero-tag strong {
 
     color: #8dff31;
@@ -1089,7 +1085,7 @@ main {
 }
 
 
-/* Organiza o conteúdo principal de destaque da página, como textos, imagens e botões. */
+/* Organiza o conteÃºdo principal de destaque da pÃ¡gina, como textos, imagens e botÃµes. */
 .hero-text h1 {
 
     margin: 0 0 25px;
@@ -1109,7 +1105,7 @@ main {
 }
 
 
-/* Organiza o conteúdo principal de destaque da página, como textos, imagens e botões. */
+/* Organiza o conteÃºdo principal de destaque da pÃ¡gina, como textos, imagens e botÃµes. */
 .hero-text h1 span {
 
     color: #8dff32;
@@ -1150,7 +1146,7 @@ main {
     }
 }
 
-/* Organiza o conteúdo principal de destaque da página, como textos, imagens e botões. */
+/* Organiza o conteÃºdo principal de destaque da pÃ¡gina, como textos, imagens e botÃµes. */
 .hero-text>p {
 
     max-width: 570px;
@@ -1170,7 +1166,7 @@ main {
 }
 
 
-/* Define a aparência e o comportamento visual dos botões. */
+/* Define a aparÃªncia e o comportamento visual dos botÃµes. */
 .hero-buttons {
 
     display: flex;
@@ -1181,7 +1177,7 @@ main {
 }
 
 
-/* Organiza o conteúdo principal de destaque da página, como textos, imagens e botões. */
+/* Organiza o conteÃºdo principal de destaque da pÃ¡gina, como textos, imagens e botÃµes. */
 .hero-btn {
 
     display: flex;
@@ -1214,7 +1210,7 @@ main {
 }
 
 
-/* Organiza o conteúdo principal de destaque da página, como textos, imagens e botões. */
+/* Organiza o conteÃºdo principal de destaque da pÃ¡gina, como textos, imagens e botÃµes. */
 .hero-btn.principal {
 
     background:
@@ -1234,7 +1230,7 @@ main {
 }
 
 
-/* Organiza o conteúdo principal de destaque da página, como textos, imagens e botões. */
+/* Organiza o conteÃºdo principal de destaque da pÃ¡gina, como textos, imagens e botÃµes. */
 .hero-btn.secundario {
 
     background:
@@ -1250,7 +1246,7 @@ main {
 }
 
 
-/* Aplica este efeito quando o usuário passa o mouse sobre o elemento. */
+/* Aplica este efeito quando o usuÃ¡rio passa o mouse sobre o elemento. */
 .hero-btn:hover {
 
     transform: translateY(-5px);
@@ -1265,14 +1261,14 @@ main {
 }
 
 
-/* Organiza o conteúdo principal de destaque da página, como textos, imagens e botões. */
+/* Organiza o conteÃºdo principal de destaque da pÃ¡gina, como textos, imagens e botÃµes. */
 .hero-btn i {
 
     font-size: 15px;
 }
 
 
-/* Organiza o conteúdo principal de destaque da página, como textos, imagens e botões. */
+/* Organiza o conteÃºdo principal de destaque da pÃ¡gina, como textos, imagens e botÃµes. */
 .hero-services {
     position: absolute;
 
@@ -1310,7 +1306,7 @@ main {
 }
 
 
-/* Organiza e estiliza os elementos relacionados aos serviços apresentados no site. */
+/* Organiza e estiliza os elementos relacionados aos serviÃ§os apresentados no site. */
 .service-item {
     display: flex;
     align-items: center;
@@ -1325,13 +1321,13 @@ main {
 }
 
 
-/* Organiza e estiliza os elementos relacionados aos serviços apresentados no site. */
+/* Organiza e estiliza os elementos relacionados aos serviÃ§os apresentados no site. */
 .service-item+.service-item {
     border-left: 1px solid rgba(255, 255, 255, .3);
 }
 
 
-/* Organiza e estiliza os elementos relacionados aos serviços apresentados no site. */
+/* Organiza e estiliza os elementos relacionados aos serviÃ§os apresentados no site. */
 .service-icon {
     width: 50px;
     height: 50px;
@@ -1357,7 +1353,7 @@ main {
 }
 
 
-/* Organiza e estiliza os elementos relacionados aos serviços apresentados no site. */
+/* Organiza e estiliza os elementos relacionados aos serviÃ§os apresentados no site. */
 .service-icon i {
     font-size: 20px;
 
@@ -1368,7 +1364,7 @@ main {
 }
 
 
-/* Organiza e estiliza os elementos relacionados aos serviços apresentados no site. */
+/* Organiza e estiliza os elementos relacionados aos serviÃ§os apresentados no site. */
 .service-item h3 {
     margin: 0 0 4px;
 
@@ -1380,7 +1376,7 @@ main {
 }
 
 
-/* Organiza e estiliza os elementos relacionados aos serviços apresentados no site. */
+/* Organiza e estiliza os elementos relacionados aos serviÃ§os apresentados no site. */
 .service-item p {
     margin: 0;
 
@@ -1392,7 +1388,7 @@ main {
 }
 
 
-/* Controla o posicionamento, o tamanho e os efeitos visuais aplicados à logo. */
+/* Controla o posicionamento, o tamanho e os efeitos visuais aplicados Ã  logo. */
 .logo-flutuante-inicio {
     position: absolute;
 
@@ -1416,11 +1412,11 @@ main {
 }
 
 
-/* Define as etapas da animação e controla como o elemento se movimenta ao longo do tempo. */
+/* Define as etapas da animaÃ§Ã£o e controla como o elemento se movimenta ao longo do tempo. */
 @keyframes logoFlutuando {
 
 
-    /* Define a organização e a aparência dos elementos deste bloco. */
+    /* Define a organizaÃ§Ã£o e a aparÃªncia dos elementos deste bloco. */
     0%,
     100% {
         transform: translateY(-50%);
@@ -1434,9 +1430,7 @@ main {
 }
 
 
-/* =========================================================
-   SOBRE NÓS — QUEM SOMOS + MISSÃO / VISÃO / VALORES
-========================================================= */
+/* SOBRE NÃ“S â€” QUEM SOMOS + MISSÃƒO / VISÃƒO / VALORES */
 
 #sobrenos {
     position: relative;
@@ -1451,9 +1445,7 @@ main {
     background-repeat: no-repeat;
 }
 
-/* =========================================================
-   EFEITO DE ÁGUA — SOMENTE SOBRE NÓS
-========================================================= */
+/* EFEITO DE ÃGUA â€” SOMENTE SOBRE NÃ“S */
 
 #sobrenos #liquid-effect {
     position: absolute;
@@ -1483,9 +1475,7 @@ main {
 
 
 
-/* =========================================================
-   LAYOUT PRINCIPAL
-========================================================= */
+/* LAYOUT PRINCIPAL */
 
 .sobre-layout {
     position: relative;
@@ -1504,9 +1494,7 @@ main {
 }
 
 
-/* =========================================================
-   CARD QUEM SOMOS
-========================================================= */
+/* CARD QUEM SOMOS */
 
 .sobre-info {
     position: relative;
@@ -1556,9 +1544,7 @@ main {
 }
 
 
-/* =========================================================
-   TAG
-========================================================= */
+/* TAG */
 
 .sobre-tag {
     width: fit-content;
@@ -1594,9 +1580,7 @@ main {
 }
 
 
-/* =========================================================
-   TÍTULO
-========================================================= */
+/* TÃTULO */
 
 .sobre-info h2 {
     margin: 0;
@@ -1645,9 +1629,7 @@ main {
 }
 
 
-/* =========================================================
-   CARD SENAC — DENTRO DO QUEM SOMOS
-========================================================= */
+/* CARD SENAC â€” DENTRO DO QUEM SOMOS */
 
 .origem-projeto {
     display: flex;
@@ -1731,9 +1713,7 @@ main {
 }
 
 
-/* =========================================================
-   MISSÃO / VISÃO / VALORES
-========================================================= */
+/* MISSÃƒO / VISÃƒO / VALORES */
 @keyframes blobAnimation {
 
     0%,
@@ -1847,9 +1827,7 @@ main {
 }
 
 
-/* =========================================================
-   ÍCONES MVV
-========================================================= */
+/* ÃCONES MVV */
 
 .mvv-icon {
     width: 68px;
@@ -1890,9 +1868,7 @@ main {
 }
 
 
-/* =========================================================
-   TEXTO MVV
-========================================================= */
+/* TEXTO MVV */
 
 .mvv-conteudo {
     position: relative;
@@ -1932,9 +1908,7 @@ main {
 }
 
 
-/* =========================================================
-   VALORES
-========================================================= */
+/* VALORES */
 
 .lista-valores {
     display: grid;
@@ -1961,9 +1935,7 @@ main {
 }
 
 
-/* =========================================================
-   FRASE INFERIOR
-========================================================= */
+/* FRASE INFERIOR */
 
 .sobre-bottom {
     position: relative;
@@ -2088,9 +2060,7 @@ main {
         0 14px 35px rgba(0, 50, 130, 0.30),
         0 0 28px rgba(60, 220, 255, 0.20);
 }
-/* =========================================================
-   NOSSO TIME — VISUAL FIXO / FRUTIGER AERO
-========================================================= */
+/* NOSSO TIME â€” VISUAL FIXO / FRUTIGER AERO */
 
 .nosso-time {
     position: relative;
@@ -2134,9 +2104,7 @@ main {
 }
 
 
-/* =========================================================
-   BRILHO AMBIENTAL
-========================================================= */
+/* BRILHO AMBIENTAL */
 
 .nosso-time::before {
     content: "";
@@ -2168,9 +2136,7 @@ main {
 }
 
 
-/* =========================================================
-   TÍTULO
-========================================================= */
+/* TÃTULO */
 
 .time-titulo {
     position: relative;
@@ -2221,9 +2187,7 @@ main {
 }
 
 
-/* =========================================================
-   CONTAINER
-========================================================= */
+/* CONTAINER */
 
 .time-container {
     position: relative;
@@ -2235,9 +2199,7 @@ main {
 }
 
 
-/* =========================================================
-   MEMBROS
-========================================================= */
+/* MEMBROS */
 
 .membros {
     position: relative;
@@ -2252,9 +2214,7 @@ main {
 }
 
 
-/* =========================================================
-   CARD
-========================================================= */
+/* CARD */
 
 .membro-card {
     position: relative;
@@ -2289,9 +2249,7 @@ main {
 }
 
 
-/* =========================================================
-   BRILHO FIXO DO CARD
-========================================================= */
+/* BRILHO FIXO DO CARD */
 
 .membro-card::before {
     content: "";
@@ -2322,9 +2280,7 @@ main {
 }
 
 
-/* =========================================================
-   REFLEXO FIXO
-========================================================= */
+/* REFLEXO FIXO */
 
 .membro-card::after {
     content: "";
@@ -2353,9 +2309,7 @@ main {
 }
 
 
-/* =========================================================
-   MOLDURA DA FOTO
-========================================================= */
+/* MOLDURA DA FOTO */
 
 .membro-moldura {
     position: relative;
@@ -2382,9 +2336,7 @@ main {
 }
 
 
-/* =========================================================
-   FOTO
-========================================================= */
+/* FOTO */
 
 .membro-foto {
     position: relative;
@@ -2432,9 +2384,7 @@ main {
 }
 
 
-/* =========================================================
-   REFLEXO DA ÁGUA NA FOTO
-========================================================= */
+/* REFLEXO DA ÃGUA NA FOTO */
 
 .membro-foto::before {
     content: "";
@@ -2457,9 +2407,7 @@ main {
 }
 
 
-/* =========================================================
-   SOMBRA AZUL NA PARTE INFERIOR DA FOTO
-========================================================= */
+/* SOMBRA AZUL NA PARTE INFERIOR DA FOTO */
 
 .membro-foto::after {
     content: "";
@@ -2485,9 +2433,7 @@ main {
 }
 
 
-/* =========================================================
-   INFORMAÇÕES
-========================================================= */
+/* INFORMAÃ‡Ã•ES */
 
 .membro-info {
     position: relative;
@@ -2596,9 +2542,7 @@ main {
 }
 
 
-/* =========================================================
-   NÚMERO
-========================================================= */
+/* NÃšMERO */
 
 .membro-numero {
     display: inline-block;
@@ -2626,9 +2570,7 @@ main {
 }
 
 
-/* =========================================================
-   NOME
-========================================================= */
+/* NOME */
 
 .membro-info h3 {
     margin: 0;
@@ -2643,9 +2585,7 @@ main {
 }
 
 
-/* =========================================================
-   FUNÇÃO
-========================================================= */
+/* FUNÃ‡ÃƒO */
 
 .membro-info p {
     margin: 6px 0 0;
@@ -2656,9 +2596,7 @@ main {
 }
 
 
-/* =========================================================
-   DETALHE AQUÁTICO
-========================================================= */
+/* DETALHE AQUÃTICO */
 
 .membro-info::after {
     content: "";
@@ -2685,9 +2623,7 @@ main {
 }
 
 
-/* =========================================================
-   PEQUENAS BOLHAS — FIXAS
-========================================================= */
+/* PEQUENAS BOLHAS â€” FIXAS */
 
 .membros::before {
     content: "";
@@ -2714,19 +2650,19 @@ main {
 }
 
 
-/* Define a aparência e a organização do rodapé da página. */
+/* Define a aparÃªncia e a organizaÃ§Ã£o do rodapÃ© da pÃ¡gina. */
 footer {
 
-    /* Mantém a continuidade visual com a seção anterior, começando no mesmo tom do fim do Nosso Time */
+    /* MantÃ©m a continuidade visual com a seÃ§Ã£o anterior, comeÃ§ando no mesmo tom do fim do Nosso Time */
     background: linear-gradient(to bottom,
             #050F2D 0%,
             #030A20 55%,
             #010611 100%);
 
-    /* Não cria nenhuma linha entre as duas partes */
+    /* NÃ£o cria nenhuma linha entre as duas partes */
     border-top: none;
 
-    /* Não cria brilho separando o footer */
+    /* NÃ£o cria brilho separando o footer */
     box-shadow: none;
 
     color: white;
@@ -2805,7 +2741,7 @@ footer {
 
 
     .navegacao a::before {
-        content: "›";
+        content: "â€º";
         color: #00AEEF;
         margin-right: 5px;
         font-size: 25px;
@@ -2961,7 +2897,7 @@ footer {
 
 
 
-/* Define as etapas da animação e controla como o elemento se movimenta ao longo do tempo. */
+/* Define as etapas da animaÃ§Ã£o e controla como o elemento se movimenta ao longo do tempo. */
 @keyframes shine {
 
 
@@ -2981,7 +2917,7 @@ footer {
 }
 
 
-/* Define a organização e a aparência dos elementos deste bloco. */
+/* Define a organizaÃ§Ã£o e a aparÃªncia dos elementos deste bloco. */
 ::selection {
     background: rgba(120, 225, 255, 0.40);
     color: #ffffff;
@@ -2992,7 +2928,7 @@ footer {
         0 0 14px rgba(50, 200, 255, 0.6);
 }
 
-/* Define a organização e a aparência dos elementos deste bloco. */
+/* Define a organizaÃ§Ã£o e a aparÃªncia dos elementos deste bloco. */
 ::-moz-selection {
     background: rgba(120, 225, 255, 0.40);
     color: #ffffff;
@@ -3029,9 +2965,7 @@ footer {
     }
 }
 
-/* =========================================================
-   EFEITO DE ÁGUA
-========================================================= */
+/* EFEITO DE ÃGUA */
 
 #liquid-effect,
 .liquid-effect {
@@ -3056,9 +2990,7 @@ footer {
 }
 
 
-/* =========================================================
-   CONTEÚDO DO SOBRE NÓS NA FRENTE DA ÁGUA
-========================================================= */
+/* CONTEÃšDO DO SOBRE NÃ“S NA FRENTE DA ÃGUA */
 
 #sobrenos > *:not(#liquid-effect):not(.liquid-effect) {
     position: relative;
@@ -3066,9 +2998,7 @@ footer {
 }
 
 
-/* =========================================================
-   CONTEÚDO DO NOSSO TIME NA FRENTE DA ÁGUA
-========================================================= */
+/* CONTEÃšDO DO NOSSO TIME NA FRENTE DA ÃGUA */
 
 .nosso-time > *:not(#liquid-effect):not(.liquid-effect) {
     position: relative;
@@ -3100,9 +3030,7 @@ footer {
     animation-delay: -20s;
 }
 
-/* =========================================================
-   EFEITO DE ÁGUA DO SITE
-========================================================= */
+/* EFEITO DE ÃGUA DO SITE */
 
 .nosso-time #liquid-effect,
 .nosso-time .liquid-effect {
@@ -3130,9 +3058,7 @@ footer {
 }
 
 
-/* =========================================================
-   CONTEÚDO NA FRENTE DO EFEITO
-========================================================= */
+/* CONTEÃšDO NA FRENTE DO EFEITO */
 
 .nosso-time .time-titulo,
 .nosso-time .time-container {

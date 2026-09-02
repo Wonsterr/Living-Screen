@@ -1,6 +1,4 @@
-/* =========================================
-   CONFIGURAÇÃO GERAL
-========================================= */
+/* CONFIGURAÇÃO GERAL */
 
 * {
     margin: 0;
@@ -131,10 +129,7 @@ summary,
 }
 
 
-/* =========================================
-   NAVBAR
-   SOMENTE LOGO + VOLTAR
-========================================= */
+/* NAVBAR */
 
 .login-header {
     position: absolute;
@@ -154,9 +149,7 @@ summary,
 }
 
 
-/* =========================================
-   LOGO
-========================================= */
+/* LOGO */
 
 .login-logo {
     width: 200px;
@@ -180,9 +173,7 @@ summary,
 }
 
 
-/* =========================================
-   BOTÃO VOLTAR
-========================================= */
+/* BOTÃO VOLTAR */
 
 .login-header .voltar {
     display: inline-flex;
@@ -229,18 +220,14 @@ summary,
 }
 
 
-/* =========================================
-   ÍCONE DO VOLTAR
-========================================= */
+/* ÍCONE DO VOLTAR */
 
 .login-header .voltar i {
     font-size: 13px;
 }
 
 
-/* =========================================
-   HOVER DO VOLTAR
-========================================= */
+/* HOVER DO VOLTAR */
 
 .login-header .voltar:hover {
     transform: translateY(-2px);
@@ -256,9 +243,7 @@ summary,
 }
 
 
-/* =========================================
-   CONTAINER DO LOGIN
-========================================= */
+/* CONTAINER DO LOGIN */
 
 .login-container {
     position: relative;
@@ -274,9 +259,7 @@ summary,
 }
 
 
-/* =========================================
-   MOLDURA DA FOTO
-========================================= */
+/* MOLDURA DA FOTO */
 
 .user-frame {
     width: 300px;
@@ -306,9 +289,7 @@ summary,
 }
 
 
-/* =========================================
-   IMAGEM DO USUÁRIO
-========================================= */
+/* IMAGEM DO USUÁRIO */
 
 .login-icon {
     width: 100%;
@@ -320,9 +301,7 @@ summary,
 }
 
 
-/* =========================================
-   CAIXA DOS INPUTS
-========================================= */
+/* CAIXA DOS INPUTS */
 
 .input-box {
     position: relative;
@@ -334,9 +313,7 @@ summary,
 }
 
 
-/* =========================================
-   INPUT
-========================================= */
+/* INPUT */
 
 .login-input {
     width: 100%;
@@ -375,18 +352,14 @@ summary,
 }
 
 
-/* =========================================
-   PLACEHOLDER
-========================================= */
+/* PLACEHOLDER */
 
 .login-input::placeholder {
     color: rgba(255, 255, 255, 0.85);
 }
 
 
-/* =========================================
-   INPUT SELECIONADO
-========================================= */
+/* INPUT SELECIONADO */
 
 .login-input:focus {
     border-color: rgba(210, 255, 220, 0.95);
@@ -398,9 +371,7 @@ summary,
 }
 
 
-/* =========================================
-   ÍCONES DOS INPUTS
-========================================= */
+/* ÍCONE DO INPUT */
 
 .input-icon {
     position: absolute;
@@ -462,9 +433,7 @@ summary,
 }
 
 
-/* =========================================
-   MENSAGEM DE LOGIN
-========================================= */
+/* MENSAGEM DE LOGIN */
 
 .login-form {
     display: flex;
@@ -534,9 +503,7 @@ summary,
     }
 }
 
-/* =========================================
-   BOTÃO ENTRAR
-========================================= */
+/* BOTÃO ENTRAR */
 
 .login-button {
     width: 440px;
@@ -577,9 +544,7 @@ summary,
 }
 
 
-/* =========================================
-   ÍCONE DO BOTÃO
-========================================= */
+/* ÍCONE DO BOTÃO */
 
 .login-button svg {
     width: 22px;
@@ -591,9 +556,7 @@ summary,
 }
 
 
-/* =========================================
-   HOVER DO BOTÃO
-========================================= */
+/* HOVER DO BOTÃO */
 
 .login-button:hover {
     transform: translateY(-3px);
@@ -662,9 +625,7 @@ summary,
 
 
 
-/* =========================================
-   CELULAR
-========================================= */
+/* CELULAR */
 
 @media (max-width: 600px) {
 
@@ -712,9 +673,7 @@ summary,
 }
 
 
-/* =========================================
-   CELULAR PEQUENO
-========================================= */
+/* CELULAR PEQUENO */
 
 @media (max-width: 380px) {
 

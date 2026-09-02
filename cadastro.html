@@ -41,9 +41,7 @@
 
 <body>
 
-    <!-- =====================================================
-     PRE-LOADER
-====================================================== -->
+    <!-- PRE-LOADER -->
 
     <div id="preloader">
 
@@ -62,9 +60,7 @@
 
     <main class="cadastro">
 
-        <!-- =====================================================
-             NAVBAR
-        ====================================================== -->
+        <!-- NAVBAR -->
 
         <header class="cadastro-header">
 
@@ -93,16 +89,12 @@
         </header>
 
 
-        <!-- =====================================================
-             ÁREA CENTRAL
-        ====================================================== -->
+        <!-- ÁREA CENTRAL -->
 
         <section class="cadastro-area">
 
 
-            <!-- =================================================
-                 TEXTO
-            ================================================== -->
+            <!-- TEXTO -->
 
             <div class="cadastro-intro">
 
@@ -160,9 +152,7 @@
             </div>
 
 
-            <!-- =================================================
-                 FORMULÁRIO
-            ================================================== -->
+            <!-- FORMULÁRIO -->
 
             <div class="form-container">
 
@@ -345,13 +335,43 @@
         </section>
 
 
-        <!-- =====================================================
-             PLANTA DECORATIVA
-        ====================================================== -->
+        <!-- PLANTA DECORATIVA -->
 
         <img class="planta" src="./assets/img/planta.png" alt="" aria-hidden="true">
 
     </main>
+
+    <div class="chatbot-widget" aria-live="polite">
+        <div class="chatbot-panel" id="chatbot-panel" hidden>
+            <div class="chatbot-header">
+                <div class="chatbot-header-title">
+                    <span class="chatbot-dot"></span>
+                    Assistente Living Screen
+                </div>
+
+                <button class="chatbot-close" type="button" aria-label="Fechar chat">×</button>
+            </div>
+
+            <div class="chatbot-messages" id="chatbot-messages">
+                <div class="message bot">
+                    Olá! Como posso ajudar?
+                </div>
+            </div>
+
+            <form class="chatbot-form" id="chatbot-form">
+                <input id="chatbot-input" type="text" placeholder="Pergunte aqui..." aria-label="Digite sua mensagem">
+                <button type="submit" aria-label="Enviar mensagem">
+                    <i class="fa-solid fa-paper-plane"></i>
+                </button>
+            </form>
+        </div>
+
+        <button class="chatbot-toggle" type="button" aria-expanded="false" aria-controls="chatbot-panel"
+            aria-label="Abrir assistente virtual">
+            <span class="chatbot-toggle-icon"><i class="fa-solid fa-comment-dots"></i></span>
+            <span class="chatbot-toggle-label">Chat</span>
+        </button>
+    </div>
 
     <!-- SWIPER JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>

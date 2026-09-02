@@ -1,8 +1,4 @@
-/* ================================
-    vini
-
-   CONFIGURAÇÕES GERAIS DA PÁGINA
-   ================================ */
+/* CONFIGURAÇÕES GERAIS DA PÁGINA */
 
 /* Remove margens e espaçamentos padrões do navegador
    e faz o cálculo de tamanho considerar padding e borda */
@@ -90,9 +86,7 @@ label,
     cursor: none;
 }
 
-/* ================================
-   LOGO
-   ================================ */
+/* LOGO */
 
 /* Define a posição da logo no canto superior esquerdo */
 .logo-contato {
@@ -136,9 +130,7 @@ label,
 }
 
 
-/* =========================================
-   BOTÃO VOLTAR AO INÍCIO
-   ========================================= */
+/* BOTÃO VOLTAR AO INÍCIO */
 
 /* Estiliza o botão para seguir o mesmo visual
    de vidro utilizado no login e no cadastro */
@@ -240,9 +232,7 @@ label,
 }
 
 
-/* ================================
-   CONTAINER PRINCIPAL
-   ================================ */
+/* CONTAINER PRINCIPAL */
 
 /* Área que agrupa o texto e o formulário */
 .contato-container {
@@ -268,9 +258,7 @@ label,
 }
 
 
-/* ================================
-   PARTE DE TEXTO
-   ================================ */
+/* PARTE DE TEXTO */
 
 /* Controla a área de apresentação da página */
 .contato-texto {
@@ -434,9 +422,7 @@ label,
 }
 
 
-/* ================================
-   FORMULÁRIO DE CONTATO
-   ================================ */
+/* FORMULÁRIO DE CONTATO */
 
 /* Caixa principal do formulário */
 .form-contato {
@@ -524,9 +510,7 @@ label,
 }
 
 
-/* ================================
-   CAMPOS DO FORMULÁRIO
-   ================================ */
+/* CAMPOS DO FORMULÁRIO */
 
 /* Agrupa ícone e campo de texto */
 .campo {
@@ -633,9 +617,7 @@ label,
 }
 
 
-/* ================================
-   CAMPO DE MENSAGEM
-   ================================ */
+/* CAMPO DE MENSAGEM */
 
 /* Ajusta especificamente a área de mensagem */
 .campo textarea {
@@ -664,9 +646,7 @@ label,
 }
 
 
-/* ================================
-   BOTÃO ENVIAR
-   ================================ */
+/* BOTÃO ENVIAR */
 
 /* Estiliza o botão de envio */
 .form-contato button {
@@ -727,9 +707,7 @@ label,
 }
 
 
-/* ================================
-   RESPONSIVIDADE
-   ================================ */
+/* RESPONSIVIDADE */
 
 /* Ajustes para tablets e telas menores */
 @media (max-width: 900px) {
@@ -821,9 +799,7 @@ label,
 
 }
 
-/* =========================================
-   MENSAGEM DE ENVIO DO FORMULÁRIO
-   ========================================= */
+/* MENSAGEM DE ENVIO DO FORMULÁRIO */
 
 /* Texto que informa se a mensagem foi enviada */
 #status-form {

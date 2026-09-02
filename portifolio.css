@@ -1,6 +1,4 @@
-/* =========================================================
-   RESET
-========================================================= */
+﻿/* RESET */
 
 * {
     margin: 0;
@@ -9,9 +7,7 @@
 }
 
 
-/* =========================================================
-   BODY
-========================================================= */
+/* BODY */
 
 body {
     font-family: "Orbitron", sans-serif;
@@ -84,9 +80,7 @@ label,
     cursor: none;
 }
 
-/* =========================================
-   BARRA DE ROLAGEM - PORTFÓLIO
-   ========================================= */
+/* BARRA DE ROLAGEM - PORTFÃ“LIO */
 
 ::-webkit-scrollbar {
     width: 10px;
@@ -97,7 +91,7 @@ label,
 }
 
 ::-webkit-scrollbar-thumb {
-    /* Azul luminoso para acompanhar o visual do portfólio */
+    /* Azul luminoso para acompanhar o visual do portfolio */
     background: linear-gradient(180deg,
             #53efff,
             #008cff,
@@ -116,13 +110,9 @@ label,
 
 
 
-/* =========================================================
-   NAVBAR
-========================================================= */
+/* NAVBAR */
 
-/* =========================================================
-   LOGO DO PORTFÓLIO
-========================================================= */
+/* LOGO DO PORTFÓLIO */
 
 .logo-portfolio {
     position: absolute;
@@ -146,9 +136,7 @@ label,
 }
 
 
-/* =========================================================
-   BOTÃO VOLTAR AO INÍCIO
-========================================================= */
+/* BOTÃO VOLTAR AO INÍCIO */
 
 .voltar-inicio {
     position: absolute;
@@ -198,9 +186,7 @@ label,
 }
 
 
-/* =========================================================
-   LOGIN / CADASTRO
-========================================================= */
+/* LOGIN / CADASTRO */
 
 .auth-buttons {
     position: absolute;
@@ -259,9 +245,7 @@ label,
 }
 
 
-/* =========================================================
-   PORTFÓLIO
-========================================================= */
+/* PORTFÓLIO */
 
 #portfolio {
     width: 100%;
@@ -276,9 +260,7 @@ label,
 }
 
 
-/* =========================================================
-   CABEÇALHO DO PORTFÓLIO
-========================================================= */
+/* CABEÇALHO DO PORTFÓLIO */
 
 .portfolio-header {
     width: 100%;
@@ -324,7 +306,7 @@ label,
 }
 
 
-/* TÍTULO */
+/* TÍTULO  */
 
 .portfolio-header h2 {
     margin: 15px 0 10px;
@@ -389,9 +371,7 @@ label,
 }
 
 
-/* =========================================================
-   SWIPER
-========================================================= */
+/* SWIPER */
 
 .portfolio-swiper {
     width: 100%;
@@ -423,9 +403,7 @@ label,
 }
 
 
-/* =========================================================
-   CARD
-========================================================= */
+/* CARD */
 
 .portfolio-card {
     width: 100%;
@@ -478,9 +456,7 @@ label,
 }
 
 
-/* =========================================================
-   TOPO DA JANELA
-========================================================= */
+/* TOPO DA JANELA */
 
 .portfolio-top {
     height: 78px;
@@ -528,9 +504,7 @@ label,
 }
 
 
-/* =========================================================
-   INFORMAÇÕES DO TOPO
-========================================================= */
+/* INFORMAÇÕES DO TOPO */
 
 .portfolio-info {
     display: flex;
@@ -561,9 +535,7 @@ label,
 }
 
 
-/* =========================================================
-   BOLINHAS DO TOPO
-========================================================= */
+/* BOLINHAS DO TOPO */
 
 .portfolio-dots {
     display: flex;
@@ -619,9 +591,7 @@ label,
 }
 
 
-/* =========================================================
-   CORPO DO PROJETO
-========================================================= */
+/* CORPO DO PROJETO */
 
 .portfolio-body {
     width: 100%;
@@ -635,9 +605,7 @@ label,
 }
 
 
-/* =========================================================
-   PREVIEW
-========================================================= */
+/* PREVIEW */
 
 .portfolio-preview {
     width: 100%;
@@ -674,9 +642,7 @@ label,
 }
 
 
-/* =========================================================
-   DETALHES
-========================================================= */
+/* DETALHES */
 
 .portfolio-details {
     display: flex;
@@ -787,7 +753,7 @@ label,
 }
 
 .details-list li::before {
-    content: "✓";
+    content: "âœ“";
 
     color: #168bd0;
 
@@ -797,9 +763,7 @@ label,
 }
 
 
-/* =========================================================
-   BOTÃO DO PROJETO
-========================================================= */
+/* BOTÃO DO PROJETO */
 
 .btn-projeto {
     width: fit-content;
@@ -865,9 +829,7 @@ label,
 }
 
 
-/* =========================================================
-   PAGINAÇÃO
-========================================================= */
+/* PAGINAÇÃO */
 
 .portfolio-swiper .swiper-pagination {
     position: absolute;
@@ -942,9 +904,7 @@ label,
     display: none !important;
 }
 
-/* =========================================================
-   CTA FINAL DO PORTFÓLIO
-========================================================= */
+/* CTA FINAL DO PORTFÓLIO */
 
 @keyframes portfolioCtaReveal {
     from {
@@ -1053,9 +1013,7 @@ label,
 }
 
 
-/* =========================================================
-   FOOTER
-========================================================= */
+/* FOOTER */
 
 footer {
 
@@ -1065,15 +1023,15 @@ footer {
             rgba(0, 30, 70, 0.76) 50%,
             rgba(0, 18, 48, 0.87) 100%);
 
-    /* Desfoca o conteúdo que aparece atrás do footer */
+    /* Desfoca o conteÃºdo que aparece atrÃ¡s do footer */
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
 
-    /* Pequeno brilho interno para reforçar o efeito de vidro */
+    /* Pequeno brilho interno para reforÃ§ar o efeito de vidro */
     box-shadow:
         inset 0 1px 0 rgba(255, 255, 255, 0.10);
 
-    /* Sem linha separando o footer da página */
+    /* Sem linha separando o footer da pÃ¡gina */
     border-top: none;
 
     color: white;
@@ -1100,9 +1058,7 @@ footer .container {
 }
 
 
-/* =========================================================
-   LOGO DO FOOTER
-========================================================= */
+/* LOGO DO FOOTER */
 
 footer .logofooter {
     width: 300px;
@@ -1125,9 +1081,7 @@ footer .logofooter p {
 }
 
 
-/* =========================================================
-   REDES SOCIAIS
-========================================================= */
+/* REDES SOCIAIS */
 
 footer .redes {
     display: flex;
@@ -1166,9 +1120,7 @@ footer .redes a:hover {
 }
 
 
-/* =========================================================
-   NAVEGAÇÃO DO FOOTER
-========================================================= */
+/* NAVEGAÇÃO DO FOOTER */
 
 footer .navegacao {
     display: flex;
@@ -1179,7 +1131,7 @@ footer .navegacao {
 }
 
 footer .navegacao a::before {
-    content: "›";
+    content: "â€º";
 
     color: #00AEEF;
 
@@ -1189,9 +1141,7 @@ footer .navegacao a::before {
 }
 
 
-/* =========================================================
-   SERVIÇOS
-========================================================= */
+/* SERVIÇOS */
 
 footer .servicos {
     display: flex;
@@ -1206,9 +1156,7 @@ footer .servicos i {
 }
 
 
-/* =========================================================
-   CONTATO
-========================================================= */
+/* CONTATO */
 
 footer .contato {
     display: flex;
@@ -1231,9 +1179,7 @@ footer .contato .endereco {
 }
 
 
-/* =========================================================
-   NOVIDADES
-========================================================= */
+/* NOVIDADES */
 
 footer .novidades {
     width: 240px;
@@ -1289,9 +1235,7 @@ footer .novidades button {
 }
 
 
-/* =========================================================
-   TÍTULOS DO FOOTER
-========================================================= */
+/* TÍTULOS DO FOOTER */
 
 footer h2 {
     color: #00AEEF;
@@ -1317,9 +1261,7 @@ footer h3:hover {
 }
 
 
-/* =========================================================
-   LINKS DO FOOTER
-========================================================= */
+/* LINKS DO FOOTER */
 
 footer a {
     color: white;
@@ -1354,9 +1296,7 @@ footer .copy {
 }
 
 
-/* =========================================================
-   ANIMAÇÃO
-========================================================= */
+/* ANIMAÇÃO */
 
 @keyframes shine {
 
@@ -1370,9 +1310,7 @@ footer .copy {
 }
 
 
-/* =========================================================
-   SELEÇÃO DE TEXTO
-========================================================= */
+/* SELEÇÃO DE TEXTO */
 
 ::selection {
     background:
@@ -1399,9 +1337,7 @@ footer .copy {
 }
 
 
-/* =========================================================
-   RESPONSIVIDADE — TABLET
-========================================================= */
+/* RESPONSIVIDADE TABLET */
 
 @media (max-width: 1000px) {
 
@@ -1475,9 +1411,7 @@ footer .copy {
 }
 
 
-/* =========================================================
-   RESPONSIVIDADE — CELULAR
-========================================================= */
+/* RESPONSIVIDADE — CELULAR */
 
 @media (max-width: 600px) {
 
@@ -1694,4 +1628,5 @@ footer .copy {
         justify-content: center;
     }
 }
+
 
