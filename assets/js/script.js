@@ -178,22 +178,40 @@ const addChatMessage = (text, sender = 'bot') => {
     chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
 };
 
+const pickRandom = (items) => items[Math.floor(Math.random() * items.length)];
+
 const chatbotReply = (message) => {
     const text = message.toLowerCase();
 
     if (/(serviços|servico|site|website|landing page|suporte|desenvolvimento|sistema)/i.test(text)) {
-        return 'Trabalhamos com desenvolvimento de sites, suporte e soluções digitais.';
+        return pickRandom([
+            'Fazemos sites, suporte técnico e soluções digitais para negócios.',
+            'Temos desenvolvimento de sites e suporte para empresas e projetos online.',
+            'A Living Screen trabalha com sites, suporte e soluções digitais sob medida.'
+        ]);
     }
 
     if (/(orçamento|orcamento|orçar|orcar|preço|valor|cotação|cotacao|proposta|orçamento de site|valor do site)/i.test(text)) {
-        return 'Posso te ajudar com orçamento. Use o formulário de contato para solicitar um orçamento.';
+        return pickRandom([
+            'Posso te ajudar com orçamento. A melhor forma é entrar em contato pelo formulário.',
+            'Claro! Você pode solicitar o orçamento pela página de contato.',
+            'Para orçamento, o ideal é abrir o formulário de contato e mandar os detalhes.'
+        ]);
     }
 
     if (/(whatsapp|zap|contato|falar com|telefone|ligar|mensagem|atendimento)/i.test(text)) {
-        return 'Você pode falar com a Living Screen pelo WhatsApp ou pelo formulário de contato.';
+        return pickRandom([
+            'Você pode falar com a Living Screen pelo WhatsApp ou pelo formulário de contato.',
+            'O jeito mais rápido é pelo WhatsApp ou pelo formulário do site.',
+            'Podemos te atender pelo WhatsApp ou pelo contato da página.'
+        ]);
     }
 
-    return 'Posso ajudar com orçamento, contato ou serviços da Living Screen.';
+    return pickRandom([
+        'Posso ajudar com orçamento, contato ou serviços da Living Screen.',
+        'Se quiser, posso te orientar sobre orçamento, serviços ou contato.',
+        'Posso te ajudar com sites, orçamento e contato.'
+    ]);
 };
 
 const chatbotActionReply = (message) => {
@@ -201,16 +219,28 @@ const chatbotActionReply = (message) => {
 
     if (/(orçamento|orcamento|orçar|orcar|preço|valor|cotação|cotacao|proposta|orçamento de site|valor do site)/i.test(text)) {
         window.location.href = './contato.html';
-        return 'Claro! Vou te levar para a página de contato para solicitar o orçamento.';
+        return pickRandom([
+            'Claro! Vou te levar para a página de contato para solicitar o orçamento.',
+            'Perfeito. Vou abrir a página de contato para você mandar o pedido.',
+            'Vamos para o contato para você pedir o orçamento.'
+        ]);
     }
 
     if (/(whatsapp|zap|contato|falar com|telefone|ligar|mensagem|atendimento)/i.test(text)) {
         window.open('https://wa.me/5511999999999', '_blank', 'noopener,noreferrer');
-        return 'Claro! Vou abrir o WhatsApp da Living Screen.';
+        return pickRandom([
+            'Claro! Vou abrir o WhatsApp da Living Screen.',
+            'Perfeito, estou abrindo o WhatsApp para você falar com a equipe.',
+            'Vou abrir o contato direto pelo WhatsApp.'
+        ]);
     }
 
     if (/(serviços|servico|site|website|landing page|suporte|desenvolvimento|sistema)/i.test(text)) {
-        return 'Trabalhamos com desenvolvimento de sites, suporte e soluções digitais.';
+        return pickRandom([
+            'Trabalhamos com desenvolvimento de sites, suporte técnico e soluções digitais.',
+            'A Living Screen atende com sites, suporte e projetos digitais.',
+            'Temos serviços de desenvolvimento web e suporte para negócios.'
+        ]);
     }
 
     return null;
@@ -314,6 +344,109 @@ if (chatbotWidget && chatbotToggle && chatbotPanel && chatbotForm && chatbotInpu
 
     window.addEventListener('resize', updateWidgetPosition);
 }
+
+// Garante que exista um controle de tema em todas as páginas.
+// Quando o botão do menu principal não existir, cria um switch flutuante compatível.
+const ensureThemeToggle = () => {
+    const existingToggles = document.querySelectorAll('.theme-toggle');
+
+    if (existingToggles.length > 0) {
+        return existingToggles;
+    }
+
+    const floatingToggle = document.createElement('button');
+    floatingToggle.type = 'button';
+    floatingToggle.className = 'theme-toggle floating-theme-toggle';
+    floatingToggle.setAttribute('aria-label', 'Alternar modo noturno');
+    floatingToggle.setAttribute('aria-pressed', 'false');
+    floatingToggle.title = 'Modo noturno';
+    floatingToggle.dataset.theme = 'light';
+    floatingToggle.innerHTML = `
+        <span class="theme-toggle-track" aria-hidden="true">
+            <span class="theme-toggle-thumb">
+                <i class="theme-toggle-thumb-icon fa-solid fa-sun"></i>
+            </span>
+        </span>
+        <span class="theme-toggle-icons" aria-hidden="true">
+            <i class="fa-solid fa-sun"></i>
+            <i class="fa-solid fa-moon"></i>
+        </span>
+    `;
+
+    document.body.appendChild(floatingToggle);
+
+    return document.querySelectorAll('.theme-toggle');
+};
+
+const themeToggles = ensureThemeToggle();
+
+// Mantém o estado do tema visível e persistente em localStorage.
+// Também permite alternar por clique ou arraste do thumb do switch.
+themeToggles.forEach((themeToggle) => {
+    const setTheme = (isDark) => {
+        document.body.classList.toggle('dark-mode', isDark);
+        themeToggle.dataset.theme = isDark ? 'dark' : 'light';
+        themeToggle.setAttribute('aria-pressed', String(isDark));
+
+        const thumbIcon = themeToggle.querySelector('.theme-toggle-thumb-icon');
+        if (thumbIcon) {
+            thumbIcon.classList.toggle('fa-sun', !isDark);
+            thumbIcon.classList.toggle('fa-moon', isDark);
+        }
+
+        localStorage.setItem('livingScreenTheme', isDark ? 'dark' : 'light');
+    };
+
+    let dragStarted = false;
+    let pointerMoved = false;
+
+    const syncFromPointer = (event) => {
+        const track = themeToggle.querySelector('.theme-toggle-track');
+        if (!track) return;
+
+        const rect = track.getBoundingClientRect();
+        const threshold = rect.left + rect.width / 2;
+        const shouldBeDark = event.clientX >= threshold;
+
+        if (document.body.classList.contains('dark-mode') !== shouldBeDark) {
+            setTheme(shouldBeDark);
+        }
+    };
+
+    themeToggle.addEventListener('pointerdown', (event) => {
+        dragStarted = true;
+        pointerMoved = false;
+        themeToggle.setPointerCapture?.(event.pointerId);
+    });
+
+    themeToggle.addEventListener('pointermove', (event) => {
+        if (!dragStarted) return;
+        pointerMoved = true;
+        syncFromPointer(event);
+    });
+
+    themeToggle.addEventListener('pointerup', () => {
+        dragStarted = false;
+    });
+
+    themeToggle.addEventListener('pointerleave', () => {
+        dragStarted = false;
+    });
+
+    themeToggle.addEventListener('click', (event) => {
+        if (pointerMoved) {
+            pointerMoved = false;
+            event.preventDefault();
+            return;
+        }
+
+        setTheme(!document.body.classList.contains('dark-mode'));
+    });
+
+    const savedTheme = localStorage.getItem('livingScreenTheme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    setTheme(savedTheme ? savedTheme === 'dark' : prefersDark);
+});
 
 const loginForm = document.querySelector('.login-form');
 const loginMessage = document.querySelector('#login-message');

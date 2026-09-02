@@ -104,6 +104,259 @@ body.cursor-active .cursor-ring {
     transform: translateX(-50%) translateY(0);
 }
 
+/* Controle de tema: switch deslizante com indicador visual do estado atual. */
+.theme-toggle {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px 12px;
+    border: 1px solid rgba(154, 218, 255, 0.55);
+    border-radius: 999px;
+    background: rgba(7, 27, 46, 0.8);
+    color: #eefcff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    cursor: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.auth-menu .theme-toggle {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.theme-toggle-track {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    width: 66px;
+    height: 32px;
+    padding: 4px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(166, 228, 255, 0.3);
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.theme-toggle-thumb {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: linear-gradient(180deg, #fff5b0, #f9c74f);
+    box-shadow: 0 6px 14px rgba(255, 199, 79, 0.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(0);
+    transition: transform 0.35s ease, background 0.35s ease, box-shadow 0.35s ease;
+}
+
+.theme-toggle-thumb-icon {
+    font-size: 10px;
+    color: #1c2d3d;
+}
+
+.theme-toggle-icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 46px;
+    min-width: 46px;
+    font-size: 12px;
+    color: rgba(238, 252, 255, 0.85);
+}
+
+.theme-toggle-icons .fa-sun {
+    color: #f9c74f;
+}
+
+.theme-toggle-icons .fa-moon {
+    color: #9ec9ff;
+}
+
+.theme-toggle[data-theme="dark"] .theme-toggle-thumb {
+    transform: translateX(34px);
+    background: linear-gradient(180deg, #90d7ff, #4a7cff);
+    box-shadow: 0 6px 14px rgba(74, 124, 255, 0.5);
+}
+
+.theme-toggle[data-theme="dark"] .theme-toggle-thumb-icon {
+    color: #f4fbff;
+}
+
+.theme-toggle[data-theme="dark"] .theme-toggle-icons .fa-sun {
+    opacity: 0.42;
+}
+
+.theme-toggle[data-theme="dark"] .theme-toggle-icons .fa-moon {
+    opacity: 1;
+}
+
+.theme-toggle[data-theme="light"] .theme-toggle-icons .fa-sun {
+    opacity: 1;
+}
+
+.theme-toggle[data-theme="light"] .theme-toggle-icons .fa-moon {
+    opacity: 0.42;
+}
+
+.theme-toggle.floating-theme-toggle {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    z-index: 12001;
+    width: auto;
+    min-width: 116px;
+    border-radius: 999px;
+    box-shadow: 0 12px 22px rgba(4, 17, 31, 0.35);
+}
+
+.theme-toggle:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 20px rgba(4, 17, 31, 0.25);
+}
+
+body.dark-mode {
+    background-image:
+        linear-gradient(180deg, rgba(3, 12, 22, 0.88), rgba(5, 19, 34, 0.9)),
+        url("../img/img-fundo-do-site.png");
+    color: #ebf8ff;
+}
+
+body.dark-mode header,
+body.dark-mode .navbar,
+body.dark-mode .auth-menu,
+body.dark-mode .hero-services .service-item,
+body.dark-mode .sobre-card,
+body.dark-mode .sobre-info,
+body.dark-mode footer,
+body.dark-mode .footer-card,
+body.dark-mode .contato,
+body.dark-mode .portfolio-card,
+body.dark-mode .form-container,
+body.dark-mode .chatbot-panel,
+body.dark-mode section,
+body.dark-mode main,
+body.dark-mode .sobre-layout,
+body.dark-mode .destaque,
+body.dark-mode .cadastro-area,
+body.dark-mode .form-titulo,
+body.dark-mode .campo,
+body.dark-mode .input-container,
+body.dark-mode .login-container,
+body.dark-mode .form-box,
+body.dark-mode .contato-box,
+body.dark-mode .box,
+body.dark-mode .card,
+body.dark-mode .container,
+body.dark-mode .content,
+body.dark-mode .panel {
+    background: rgba(10, 21, 33, 0.82);
+    border-color: rgba(151, 218, 255, 0.25);
+    box-shadow: 0 12px 30px rgba(2, 10, 20, 0.42);
+}
+
+body.dark-mode,
+body.dark-mode * {
+    color: #ebf8ff;
+}
+
+body.dark-mode .menu a,
+body.dark-mode .auth-menu a,
+body.dark-mode .hero-text,
+body.dark-mode .hero-text p,
+body.dark-mode .hero-tag,
+body.dark-mode .service-item h3,
+body.dark-mode .service-item p,
+body.dark-mode .sobre-tag,
+body.dark-mode .sobre-info p,
+body.dark-mode .sobre-bottom p,
+body.dark-mode .sobre-bottom a,
+body.dark-mode .footer-info,
+body.dark-mode .contato a,
+body.dark-mode .navegacao a,
+body.dark-mode .servicos a,
+body.dark-mode .novidades p,
+body.dark-mode .hero-btn,
+body.dark-mode .logo,
+body.dark-mode .voltar,
+body.dark-mode .login-logo,
+body.dark-mode .tag,
+body.dark-mode .cadastro-intro p,
+body.dark-mode .cadastro-intro h1,
+body.dark-mode .subtitulo,
+body.dark-mode .campo label,
+body.dark-mode .input-container input,
+body.dark-mode .input-container i,
+body.dark-mode .form-titulo p,
+body.dark-mode .form-titulo h2,
+body.dark-mode .mini-destaques span,
+body.dark-mode .mini-destaques i {
+    color: #ebf8ff;
+}
+
+body.dark-mode .hero-btn.secundario,
+body.dark-mode .auth-menu a,
+body.dark-mode .theme-toggle,
+body.dark-mode .voltar,
+body.dark-mode .tag,
+body.dark-mode .form-container,
+body.dark-mode .input-container,
+body.dark-mode .campo input,
+body.dark-mode .campo textarea,
+body.dark-mode .input-container input {
+    border-color: rgba(124, 208, 255, 0.5);
+}
+
+body.dark-mode .hero-btn.principal {
+    background: linear-gradient(180deg, rgba(105, 233, 156, 0.95), rgba(44, 176, 104, 0.9));
+    color: #061914;
+}
+
+body.dark-mode .hero-btn.secundario {
+    background: rgba(9, 31, 48, 0.75);
+}
+
+body.dark-mode .service-item {
+    border: 1px solid rgba(140, 215, 255, 0.22);
+}
+
+body.dark-mode .service-icon {
+    background: rgba(19, 45, 76, 0.9);
+    box-shadow: inset 0 0 16px rgba(143, 208, 255, 0.12);
+}
+
+body.dark-mode .chatbot-panel {
+    background: rgba(7, 19, 30, 0.95);
+}
+
+body.dark-mode .site-toast {
+    background: rgba(8, 22, 33, 0.9);
+    border-color: rgba(143, 214, 255, 0.38);
+}
+
+body.dark-mode .campo input,
+body.dark-mode .campo textarea,
+body.dark-mode .input-container input,
+body.dark-mode .input-container {
+    background: rgba(8, 21, 32, 0.8);
+}
+
+body.dark-mode .mini-destaques .destaque,
+body.dark-mode .sobre-card,
+body.dark-mode .portfolio-card,
+body.dark-mode .card,
+body.dark-mode .contato-box,
+body.dark-mode .login-card,
+body.dark-mode .info-box,
+body.dark-mode .box {
+    background: rgba(12, 25, 38, 0.85);
+    border: 1px solid rgba(151, 218, 255, 0.2);
+}
+
 .chatbot-widget {
     position: fixed;
     right: 24px;

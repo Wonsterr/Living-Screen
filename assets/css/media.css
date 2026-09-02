@@ -1,5 +1,4 @@
-﻿/* RESPONSIVIDADE REAL - FRUTIGER AERO / AQUA */
-
+﻿/* Responsividade geral do site: ajustes de layout, espaçamento e menu para desktop, tablet e mobile. */
 html {
     scroll-behavior: smooth;
 }
@@ -39,6 +38,7 @@ select {
     word-break: break-word;
 }
 
+/* Ajustes para telas muito grandes. */
 @media (max-width: 1920px) {
     .hero-container {
         max-width: 1460px;
@@ -51,6 +51,7 @@ select {
     }
 }
 
+/* Ajustes para desktops e notebooks de tamanho médio. */
 @media (max-width: 1440px) {
     header .container {
         width: 94%;
@@ -71,6 +72,7 @@ select {
     }
 }
 
+/* Ajustes para tablets em paisagem e telas intermediárias. */
 @media (max-width: 1280px) {
     .navbar {
         height: 88px;
@@ -160,6 +162,7 @@ select {
     }
 }
 
+/* Ajustes para tablets em retrato e navegadores menores. */
 @media (max-width: 1024px) {
     header {
         padding-top: 18px;
@@ -646,6 +649,7 @@ select {
     }
 }
 
+/* Ajustes para celulares menores. */
 @media (max-width: 390px) {
 
     #inicio {
@@ -711,6 +715,7 @@ select {
     }
 }
 
+/* Ajustes para telas extra largas. */
 @media (min-width: 1600px) {
     .hero-container {
         max-width: 1500px;
