@@ -43,13 +43,11 @@ html {
     height: 34px;
     border-radius: 50%;
     border: 1px solid rgba(255, 255, 255, 0.85);
-    background: radial-gradient(
-        circle at 35% 35%,
-        rgba(255, 255, 255, 0.82),
-        rgba(116, 222, 255, 0.38) 26%,
-        rgba(93, 164, 255, 0.18) 58%,
-        rgba(15, 33, 58, 0.06) 100%
-    );
+    background: radial-gradient(circle at 35% 35%,
+            rgba(255, 255, 255, 0.82),
+            rgba(116, 222, 255, 0.38) 26%,
+            rgba(93, 164, 255, 0.18) 58%,
+            rgba(15, 33, 58, 0.06) 100%);
     box-shadow:
         inset 0 1px 10px rgba(255, 255, 255, 0.7),
         0 0 16px rgba(126, 233, 255, 0.28),
@@ -358,13 +356,11 @@ body.cursor-active .cursor-ring {
     position: absolute;
     inset: 7px;
     border-radius: 50%;
-    background: radial-gradient(
-        circle at 33% 28%,
-        rgba(255, 255, 255, 0.78),
-        rgba(135, 236, 255, 0.34) 20%,
-        rgba(31, 111, 214, 0.16) 48%,
-        rgba(2, 20, 49, 0.08) 100%
-    );
+    background: radial-gradient(circle at 33% 28%,
+            rgba(255, 255, 255, 0.78),
+            rgba(135, 236, 255, 0.34) 20%,
+            rgba(31, 111, 214, 0.16) 48%,
+            rgba(2, 20, 49, 0.08) 100%);
     border: 1px solid rgba(255, 255, 255, 0.12);
 }
 
@@ -425,6 +421,7 @@ summary,
 }
 
 @media (pointer: coarse) {
+
     body,
     html,
     a,
@@ -825,7 +822,7 @@ header {
     }
 }
 
-   /* MENU HAMBÃšRGUER - LOGIN / CADASTRO */
+/* MENU HAMBÃšRGUER - LOGIN / CADASTRO */
 
 .auth-buttons {
     position: absolute;
@@ -1138,10 +1135,14 @@ main {
 }
 
 @keyframes typingCursor {
-    0%, 49% {
+
+    0%,
+    49% {
         opacity: 1;
     }
-    50%, 100% {
+
+    50%,
+    100% {
         opacity: 0;
     }
 }
@@ -2060,6 +2061,7 @@ main {
         0 14px 35px rgba(0, 50, 130, 0.30),
         0 0 28px rgba(60, 220, 255, 0.20);
 }
+
 /* NOSSO TIME â€” VISUAL FIXO / FRUTIGER AERO */
 
 .nosso-time {
@@ -2071,11 +2073,9 @@ main {
     margin-top: -1px;
 
     background:
-        linear-gradient(
-            to bottom,
+        linear-gradient(to bottom,
             #0E235F 0%,
-            #050F2D 100%
-        );
+            #050F2D 100%);
 
     background-size: cover;
     background-position: center;
@@ -2090,13 +2090,11 @@ main {
     right: 0;
     top: -58px;
     height: 120px;
-    background: linear-gradient(
-        180deg,
-        rgba(115, 220, 255, 0.34) 0%,
-        rgba(91, 170, 255, 0.18) 28%,
-        rgba(8, 18, 56, 0.06) 58%,
-        rgba(8, 18, 56, 0) 100%
-    );
+    background: linear-gradient(180deg,
+            rgba(115, 220, 255, 0.34) 0%,
+            rgba(91, 170, 255, 0.18) 28%,
+            rgba(8, 18, 56, 0.06) 58%,
+            rgba(8, 18, 56, 0) 100%);
     filter: blur(18px);
     opacity: 0.9;
     pointer-events: none;
@@ -2122,11 +2120,9 @@ main {
     border-radius: 50%;
 
     background:
-        radial-gradient(
-            ellipse,
+        radial-gradient(ellipse,
             rgba(0, 220, 255, 0.10),
-            transparent 70%
-        );
+            transparent 70%);
 
     filter: blur(20px);
 
@@ -2231,12 +2227,10 @@ main {
     border: 1px solid rgba(135, 255, 239, 0.50);
 
     background:
-        linear-gradient(
-            145deg,
+        linear-gradient(145deg,
             rgba(80, 255, 228, 0.22),
             rgba(0, 166, 218, 0.20),
-            rgba(0, 58, 135, 0.40)
-        );
+            rgba(0, 58, 135, 0.40));
 
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
@@ -2265,12 +2259,10 @@ main {
     border-radius: 50%;
 
     background:
-        radial-gradient(
-            ellipse,
+        radial-gradient(ellipse,
             rgba(255, 255, 255, 0.28),
             rgba(120, 255, 240, 0.08) 40%,
-            transparent 70%
-        );
+            transparent 70%);
 
     filter: blur(8px);
 
@@ -2296,12 +2288,10 @@ main {
     transform: rotate(28deg);
 
     background:
-        linear-gradient(
-            90deg,
+        linear-gradient(90deg,
             transparent,
             rgba(255, 255, 255, 0.06),
-            transparent
-        );
+            transparent);
 
     pointer-events: none;
 
@@ -2320,12 +2310,10 @@ main {
     border-radius: 23px;
 
     background:
-        linear-gradient(
-            145deg,
+        linear-gradient(145deg,
             rgba(175, 255, 247, 0.55),
             rgba(0, 190, 225, 0.25),
-            rgba(0, 70, 150, 0.45)
-        );
+            rgba(0, 70, 150, 0.45));
 
     border: 1px solid rgba(255, 255, 255, 0.28);
 
@@ -2349,11 +2337,9 @@ main {
     border-radius: 18px;
 
     background:
-        linear-gradient(
-            145deg,
+        linear-gradient(145deg,
             #13afd5,
-            #075aa8
-        );
+            #075aa8);
 
     border: 1px solid rgba(255, 255, 255, 0.25);
 
@@ -2373,9 +2359,7 @@ main {
     object-position: center;
 
     filter:
-        saturate(1.05)
-        brightness(1.02)
-        contrast(0.98);
+        saturate(1.05) brightness(1.02) contrast(0.98);
 }
 
 .membro-card:nth-of-type(4) .membro-foto img {
@@ -2398,12 +2382,10 @@ main {
     pointer-events: none;
 
     background:
-        linear-gradient(
-            115deg,
+        linear-gradient(115deg,
             transparent 15%,
             rgba(255, 255, 255, 0.13) 42%,
-            transparent 58%
-        );
+            transparent 58%);
 }
 
 
@@ -2425,11 +2407,9 @@ main {
     pointer-events: none;
 
     background:
-        linear-gradient(
-            to top,
+        linear-gradient(to top,
             rgba(0, 75, 165, 0.30),
-            transparent
-        );
+            transparent);
 }
 
 
@@ -2464,11 +2444,9 @@ main {
     border-radius: 999px;
     border: 1px solid rgba(255, 255, 255, 0.38);
 
-    background: linear-gradient(
-        180deg,
-        rgba(116, 233, 255, 0.20),
-        rgba(36, 118, 255, 0.18)
-    );
+    background: linear-gradient(180deg,
+            rgba(116, 233, 255, 0.20),
+            rgba(36, 118, 255, 0.18));
 
     box-shadow:
         inset 0 1px 2px rgba(255, 255, 255, 0.40),
@@ -2495,11 +2473,9 @@ main {
     box-shadow:
         inset 0 1px 2px rgba(255, 255, 255, 0.45),
         0 0 18px rgba(84, 223, 255, 0.22);
-    background: linear-gradient(
-        180deg,
-        rgba(122, 248, 255, 0.26),
-        rgba(42, 123, 255, 0.2)
-    );
+    background: linear-gradient(180deg,
+            rgba(122, 248, 255, 0.26),
+            rgba(42, 123, 255, 0.2));
 }
 
 .membro-socials {
@@ -2611,12 +2587,10 @@ main {
     border-radius: 20px;
 
     background:
-        linear-gradient(
-            90deg,
+        linear-gradient(90deg,
             #5fffdc,
             #29cfff,
-            transparent
-        );
+            transparent);
 
     box-shadow:
         0 0 8px rgba(66, 255, 225, 0.30);
@@ -2992,7 +2966,7 @@ footer {
 
 /* CONTEÃšDO DO SOBRE NÃ“S NA FRENTE DA ÃGUA */
 
-#sobrenos > *:not(#liquid-effect):not(.liquid-effect) {
+#sobrenos>*:not(#liquid-effect):not(.liquid-effect) {
     position: relative;
     z-index: 2;
 }
@@ -3000,7 +2974,7 @@ footer {
 
 /* CONTEÃšDO DO NOSSO TIME NA FRENTE DA ÃGUA */
 
-.nosso-time > *:not(#liquid-effect):not(.liquid-effect) {
+.nosso-time>*:not(#liquid-effect):not(.liquid-effect) {
     position: relative;
     z-index: 5;
 }
