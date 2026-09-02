@@ -345,16 +345,45 @@ body.dark-mode .input-container {
     background: rgba(8, 21, 32, 0.8);
 }
 
+body.dark-mode .service-item,
+body.dark-mode .destaque,
 body.dark-mode .mini-destaques .destaque,
+body.dark-mode .membro-card,
 body.dark-mode .sobre-card,
 body.dark-mode .portfolio-card,
-body.dark-mode .card,
+body.dark-mode .form-container,
 body.dark-mode .contato-box,
-body.dark-mode .login-card,
+body.dark-mode .card,
+body.dark-mode .box,
 body.dark-mode .info-box,
-body.dark-mode .box {
-    background: rgba(12, 25, 38, 0.85);
+body.dark-mode .login-card,
+body.dark-mode .input-box {
+    background: rgba(12, 25, 38, 0.88);
     border: 1px solid rgba(151, 218, 255, 0.2);
+    box-shadow: 0 12px 28px rgba(2, 10, 20, 0.38);
+}
+
+body.dark-mode .portfolio-card::before,
+body.dark-mode .portfolio-top,
+body.dark-mode .portfolio-top::before {
+    background: rgba(16, 31, 46, 0.9);
+    border-color: rgba(151, 218, 255, 0.18);
+}
+
+body.dark-mode .portfolio-info h3,
+body.dark-mode .membro-card h3,
+body.dark-mode .membro-card p,
+body.dark-mode .portfolio-card h3,
+body.dark-mode .portfolio-card p,
+body.dark-mode .destaque,
+body.dark-mode .destaque i,
+body.dark-mode .mini-destaques span,
+body.dark-mode .mini-destaques i,
+body.dark-mode .form-titulo h2,
+body.dark-mode .form-titulo p,
+body.dark-mode .subtitulo,
+body.dark-mode .campo label {
+    color: #ebf8ff;
 }
 
 .chatbot-widget {

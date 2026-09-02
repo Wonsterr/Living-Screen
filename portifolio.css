@@ -403,6 +403,26 @@ label,
 
 /* CARD */
 
+body.dark-mode {
+    background-image: linear-gradient(180deg, rgba(3, 12, 22, 0.88), rgba(5, 19, 34, 0.92));
+}
+
+body.dark-mode .portfolio-card,
+body.dark-mode .portfolio-top,
+body.dark-mode .portfolio-info,
+body.dark-mode .portfolio-card .portfolio-top {
+    background: rgba(12, 25, 38, 0.88);
+    border-color: rgba(151, 218, 255, 0.2);
+    box-shadow: 0 12px 28px rgba(2, 10, 20, 0.38);
+}
+
+body.dark-mode .portfolio-card h3,
+body.dark-mode .portfolio-card p,
+body.dark-mode .portfolio-info h3,
+body.dark-mode .portfolio-card .portfolio-title {
+    color: #ebf8ff;
+}
+
 .portfolio-card {
     width: 100%;
     height: 100%;
